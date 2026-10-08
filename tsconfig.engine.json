@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "ES2022", "module": "ESNext", "moduleResolution": "bundler", "strict": true, "noEmit": true,
     "allowImportingTsExtensions": true, "verbatimModuleSyntax": true, "skipLibCheck": true, "lib": ["ES2022", "DOM"],
-    "types": []
+    "types": ["node"]
   },
   "include": ["src/engine/**/*.ts"]
 }

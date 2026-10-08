@@ -3,3 +3,6 @@ dist
 .vite
 *.log
 .DS_Store
+__pycache__/
+*.pyc
+dist-esbuild
