@@ -5,6 +5,7 @@ import { buildCalendar, INTERVALS_PER_DAY } from '../calendar.ts';
 import { buildSolar, intradayWeights } from '../solar.ts';
 import { runDayView, evaluateAllocation, evaluateBess } from '../dayview.ts';
 import { buildYearSeries, evaluateYear, sizingSweep } from '../yearsizing.ts';
+import { mixInputsFromYear, evaluateMix, MH_WIND_MONTHLY_CUF } from '../remix.ts';
 import { defaultPlant as defaultPlantSeed } from '../seed.ts';
 import { settleConsumer } from '../settlement.ts';
 import { dispatchBess } from '../bess.ts';
@@ -310,4 +311,23 @@ test('Year series: Chettinad daily profile lands on every calendar day, year bal
   assert.ok(r15.usedKwh <= r.usedKwh + 1e-6, '15-min never uses more than block netting');
   const sw = sizingSweep(ys, [7.5, 9], 'tod_block', 4, [1.75, 0.1, 0.1, 0.15, 0.05, 0.05, 0.2, 0.1, 5]);
   assert.ok(sw[1].marginalUtilisationPct < sw[0].utilisationPct, 'marginal utilisation of extra capacity below average');
+});
+
+test('RE mix: synthetic wind hits its monthly CUF, mix balance holds, zero RE equals grid-only, wind-on-used ≤ wind-on-generated cost', () => {
+  const seedCase = JSON.parse(fs.readFileSync(new URL('../../data/seed/seed_case.json', import.meta.url), 'utf8'));
+  const chet = JSON.parse(fs.readFileSync(new URL('../../data/seed/chettinad_profile.json', import.meta.url), 'utf8'));
+  const ys = buildYearSeries(defaultPlantSeed(seedCase), seedCase.consumers, seedCase.rulePack, seedCase.calendar.months, { latitude: seedCase.plant.latitude, longitude: seedCase.plant.longitude }, 4, { daily: chet.daily, tariffRsPerKwh: 2.5, avoidedRsPerKwh: 8.44, scale: 1 });
+  const inp = mixInputsFromYear(ys, seedCase.rulePack);
+  let w = 0; for (const v of inp.windPerMw) w += v; const cuf = w / 8760 / 1000; const expected = Object.values(MH_WIND_MONTHLY_CUF).reduce((a, b) => a + b, 0) / 12;
+  assert.ok(Math.abs(cuf - expected) < 0.01, `annual wind CUF ${cuf} ≈ mean monthly ${expected}`);
+  assert.ok(Math.max(...Array.from(inp.windPerMw)) <= 250 + 1e-9, 'wind never exceeds 1 MW x 0.25 h per block');
+  const base = { mode: 'tod_block' as const, solarRsPerKwhUsed: 2.5, windRsPerKwhGenerated: 3.5, windPaidOnUsedOnly: false, gridRsPerKwh: 8.44, oaRsPerKwhUsed: 1.1 };
+  const r = evaluateMix(inp.load, inp.solarPerMwp, inp.windPerMw, inp.months, inp.dayMonthIdx, inp.bandOfInterval, { ...base, solarMwp: 5, windMw: 2.5 });
+  assert.ok(Math.abs(r.reGenKwh - (r.usedKwh + r.lapsedKwh)) < 1e-3, 'RE = used + lapsed');
+  assert.ok(Math.abs(r.loadKwh - (r.usedKwh + r.gridKwh)) < 1e-3, 'load = RE used + grid');
+  assert.ok(Math.abs(r.loadKwh - chet.annualKwh) / chet.annualKwh < 0.01, 'load is Chettinad year');
+  const z = evaluateMix(inp.load, inp.solarPerMwp, inp.windPerMw, inp.months, inp.dayMonthIdx, inp.bandOfInterval, { ...base, solarMwp: 0, windMw: 0 });
+  assert.ok(Math.abs(z.totalCostRs - z.gridOnlyCostRs) < 1e-6 && z.savingRs === 0, 'no RE = grid only');
+  const u = evaluateMix(inp.load, inp.solarPerMwp, inp.windPerMw, inp.months, inp.dayMonthIdx, inp.bandOfInterval, { ...base, windPaidOnUsedOnly: true, solarMwp: 5, windMw: 2.5 });
+  assert.ok(u.costWindRs <= r.costWindRs + 1e-6, 'paying on credited wind is never dearer than on generated');
 });

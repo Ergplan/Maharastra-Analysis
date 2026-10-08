@@ -43,6 +43,10 @@ The first tab is a printable one-page summary: plant export, useful solar, lapsi
 
 Full-year (365 × 96) evaluation with the reported daily export, bill-calibrated loads and Chettinad's own 15-minute series per calendar day: month-by-month useful/lapsing, per-consumer year results, a full-year greedy re-allocation, and a plant-size sweep (4–15 MWp) showing marginal utilisation and payback of each added step.
 
+## Chettinad RE mix
+
+Solar (share of the existing plant) + new wind sized against Chettinad's own 15-minute year: a solar × wind saving grid, monthly RE/grid/lapsing, and a cost build-up (solar on credited kWh, wind on generated or credited kWh, OA charges, grid). The wind series is **synthetic** (Maharashtra wind-belt monthly CUF, evening/night bias) and must be replaced by a real WRA/plant series before any decision.
+
 ## Day view (simple)
 
 The first tab shows one representative day (annual average, or any month's average) for the whole 7.5 MWp plant with **all factories and stores treated as eligible** and solar pooled across them. It draws the ToD-zone supply chart (solar used · in-band credit · grid below the demand line; surplus sold / lapsing above it), a 15-minute timeline, the day's energy balance with losses, and an **Add Chettinad** switch that drops the supplied 15-minute Maharashtra profile (`source-files/Chettinad_Consumption_profile.xlsx` → `src/data/seed/chettinad_profile.json`) onto the residual surplus and reports the gain (extra kWh sold, ₹/yr at ₹2.50, lapsing cut). Existing consumers keep first claim on solar; the new consumer only takes what is left.

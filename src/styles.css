@@ -84,3 +84,5 @@ ul.tight { margin: 4px 0; padding-left: 18px; } ul.tight li { margin: 2px 0; }
 .tight { margin: 0; padding-left: 18px; font-size: 13px; } .tight li { margin-bottom: 6px; }
 .onepage input[type=range] { width: 220px; }
 @media print { .onepage { font-size: 11px; } .onepage .kpi-value { font-size: 16px; } .fields, .btn { display: none; } }
+
+table.heat td, table.heat th { padding: 4px 8px; font-size: 12px; }

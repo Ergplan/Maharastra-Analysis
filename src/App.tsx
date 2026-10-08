@@ -4,6 +4,7 @@ import { Badge } from './components/charts.tsx';
 import OnePageTab from './tabs/OnePage.tsx';
 import DayViewTab from './tabs/DayView.tsx';
 import YearSizingTab from './tabs/YearSizing.tsx';
+import ReMixTab from './tabs/ReMix.tsx';
 import CurrentTab from './tabs/Current.tsx';
 import OptimiseTab from './tabs/Optimise.tsx';
 import NewCustomerTab from './tabs/NewCustomer.tsx';
@@ -12,7 +13,7 @@ import ReturnsTab from './tabs/Returns.tsx';
 import DataTab from './tabs/Data.tsx';
 import { monthLabel } from './lib/format.ts';
 
-const TABS = ['One page', 'Day view (simple)', 'Year & sizing', '1 · Current situation', '2 · Optimise existing users', '3 · Add 132 kV customer', '4 · Optional BESS', '5 · Returns & comparison', '6 · Data, assumptions & rules'];
+const TABS = ['One page', 'Day view (simple)', 'Year & sizing', 'Chettinad RE mix', '1 · Current situation', '2 · Optimise existing users', '3 · Add 132 kV customer', '4 · Optional BESS', '5 · Returns & comparison', '6 · Data, assumptions & rules'];
 
 function Shell() {
   const { state, dispatch } = useStore();
@@ -55,12 +56,13 @@ function Shell() {
         {state.activeTab === 0 && <OnePageTab />}
         {state.activeTab === 1 && <DayViewTab />}
         {state.activeTab === 2 && <YearSizingTab />}
-        {state.activeTab === 3 && <CurrentTab />}
-        {state.activeTab === 4 && <OptimiseTab />}
-        {state.activeTab === 5 && <NewCustomerTab />}
-        {state.activeTab === 6 && <BessTab />}
-        {state.activeTab === 7 && <ReturnsTab />}
-        {state.activeTab === 8 && <DataTab />}
+        {state.activeTab === 3 && <ReMixTab />}
+        {state.activeTab === 4 && <CurrentTab />}
+        {state.activeTab === 5 && <OptimiseTab />}
+        {state.activeTab === 6 && <NewCustomerTab />}
+        {state.activeTab === 7 && <BessTab />}
+        {state.activeTab === 8 && <ReturnsTab />}
+        {state.activeTab === 9 && <DataTab />}
       </main>
     </>
   );
