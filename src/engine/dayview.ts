@@ -166,3 +166,66 @@ export function runDayView(inp: DayViewInput): DayViewResult {
   notes.push('Existing-consumer savings are approximate: pooled solar is valued at each band\'s load-weighted avoided rate (energy charge + ToD + FAC, kVAh via PF). Demand charges unchanged.');
   return { period: inp.period, daysAveraged: dayIdx.length, mode: inp.mode, x: Array.from({ length: INTERVALS_PER_DAY }, (_, i) => i * INTERVAL_HOURS), solarKw, solarDeliveredKw, loadKw, directKw, gridKw, surplusKw, newLoadKw, newUsedKw, residualSurplusKw, perConsumerLoadKw, bands: dayBands, totals: t, money, annualised, notes };
 }
+
+// ---------------------------------------------------------------------------------------------
+// Capacity allocation on the representative day.
+// Each consumer holds a frozen share s_c of every interval's plant export (contractual MWp = s_c x 7.5).
+// Useful energy for a share: Σ_t min(load_c(t), s_c·E(t)) (+ same-band credit under ToD-block settlement).
+// Greedy search in fixed MWp steps: give the next step to the consumer whose marginal useful energy x tariff is highest.
+// This is a bounded search ("best evaluated"), not a proven optimum. Objective 'energy' ignores tariffs.
+// ---------------------------------------------------------------------------------------------
+
+export interface AllocConsumer { id: string; name: string; kind: 'existing' | 'new'; loadKw: number[]; tariffRsPerKwh: number; avoidedRsPerKwh: number[]; currentMwp: number; maxMwp?: number }
+export interface AllocRow { id: string; name: string; kind: 'existing' | 'new'; mwp: number; currentMwp: number; energyEquivalentMwp: number; loadKwh: number; allocatedKwh: number; usedKwh: number; creditKwh: number; lapsedKwh: number; gridKwh: number; utilisationPct: number; solarSharePct: number; spvRevenueRs: number; consumerSavingRs: number; marginalUtilAtCutPct: number }
+export interface AllocResult { rows: AllocRow[]; totalMwp: number; unallocatedMwp: number; stepMwp: number; objective: 'revenue' | 'energy'; totals: { usedKwh: number; lapsedKwh: number; unallocatedKwh: number; spvRevenueRs: number; consumerSavingRs: number; utilisationPct: number }; note: string }
+
+function usedForShare(load: number[], solarKw: number[], share: number, bandOf: Int8Array, nBands: number, mode: SettlementMode): { used: number; credit: number; alloc: number } {
+  const h = INTERVAL_HOURS; let used = 0, alloc = 0;
+  const bandSurplus = new Array(nBands).fill(0), bandGrid = new Array(nBands).fill(0);
+  for (let i = 0; i < load.length; i++) {
+    const s = solarKw[i] * share * h, l = load[i] * h, d = Math.min(s, l);
+    used += d; alloc += s; bandSurplus[bandOf[i]] += s - d; bandGrid[bandOf[i]] += l - d;
+  }
+  let credit = 0;
+  if (mode === 'tod_block') for (let b = 0; b < nBands; b++) credit += Math.min(bandSurplus[b], bandGrid[b]);
+  return { used, credit, alloc };
+}
+
+export function allocateCapacity(consumers: AllocConsumer[], solarKw: number[], rules: RulePack, mode: SettlementMode, plantMwp: number, objective: 'revenue' | 'energy', stepMwp = 0.05): AllocResult {
+  const cal = buildCalendar(['2026-01'], rules.todBands); const bandOf = cal.bandOfInterval; const nB = rules.todBands.length;
+  const dayExport = solarKw.reduce((a, v) => a + v * INTERVAL_HOURS, 0);
+  const yieldPerMwp = dayExport / plantMwp; // kWh/day per MWp
+  const shares = consumers.map(() => 0);
+  const value = (ci: number, share: number) => { const u = usedForShare(consumers[ci].loadKw, solarKw, share, bandOf, nB, mode); const e = u.used + u.credit; return objective === 'energy' ? e : e * consumers[ci].tariffRsPerKwh; };
+  const cur = consumers.map((_, ci) => value(ci, 0));
+  let placed = 0; const stepShare = stepMwp / plantMwp; const marginalAtCut = consumers.map(() => 0);
+  while (placed + stepMwp <= plantMwp + 1e-9) {
+    let best = -1, bestGain = 1e-6, bestVal = 0;
+    for (let ci = 0; ci < consumers.length; ci++) {
+      const max = consumers[ci].maxMwp ?? plantMwp; if (shares[ci] * plantMwp + stepMwp > max + 1e-9) continue;
+      const v = value(ci, shares[ci] + stepShare); const gain = v - cur[ci];
+      if (gain > bestGain) { best = ci; bestGain = gain; bestVal = v; }
+    }
+    if (best < 0) break;
+    const stepEnergy = stepMwp * yieldPerMwp; marginalAtCut[best] = objective === 'energy' ? bestGain / stepEnergy : bestGain / consumers[best].tariffRsPerKwh / stepEnergy;
+    shares[best] += stepShare; cur[best] = bestVal; placed += stepMwp;
+  }
+  const rows: AllocRow[] = consumers.map((c, ci) => {
+    const u = usedForShare(c.loadKw, solarKw, shares[ci], bandOf, nB, mode);
+    const loadKwh = c.loadKw.reduce((a, v) => a + v * INTERVAL_HOURS, 0);
+    const used = u.used + u.credit; const h = INTERVAL_HOURS;
+    // consumer saving: used energy valued at band avoided rate minus PPA
+    let avoided = 0; const bandUsed = new Array(nB).fill(0);
+    for (let i = 0; i < c.loadKw.length; i++) bandUsed[bandOf[i]] += Math.min(solarKw[i] * shares[ci] * h, c.loadKw[i] * h);
+    const creditScale = u.used > 0 ? used / u.used : 1; // spread in-band credit pro rata over bands
+    for (let b = 0; b < nB; b++) avoided += bandUsed[b] * creditScale * (c.avoidedRsPerKwh[b] ?? 0);
+    return { id: c.id, name: c.name, kind: c.kind, mwp: +(shares[ci] * plantMwp).toFixed(2), currentMwp: c.currentMwp, energyEquivalentMwp: yieldPerMwp > 0 ? +(loadKwh / yieldPerMwp).toFixed(2) : 0,
+      loadKwh, allocatedKwh: u.alloc, usedKwh: used, creditKwh: u.credit, lapsedKwh: u.alloc - used, gridKwh: loadKwh - used, utilisationPct: u.alloc > 0 ? (used / u.alloc) * 100 : 0, solarSharePct: loadKwh > 0 ? (used / loadKwh) * 100 : 0,
+      spvRevenueRs: used * c.tariffRsPerKwh, consumerSavingRs: avoided - used * c.tariffRsPerKwh, marginalUtilAtCutPct: marginalAtCut[ci] * 100 };
+  });
+  const usedKwh = rows.reduce((a, r) => a + r.usedKwh, 0), lapsed = rows.reduce((a, r) => a + r.lapsedKwh, 0);
+  const totalMwp = +placed.toFixed(2);
+  return { rows, totalMwp, unallocatedMwp: +(plantMwp - placed).toFixed(2), stepMwp, objective,
+    totals: { usedKwh, lapsedKwh: lapsed, unallocatedKwh: dayExport * (1 - placed / plantMwp), spvRevenueRs: rows.reduce((a, r) => a + r.spvRevenueRs, 0), consumerSavingRs: rows.reduce((a, r) => a + r.consumerSavingRs, 0), utilisationPct: dayExport > 0 ? (usedKwh / dayExport) * 100 : 0 },
+    note: `Greedy ${stepMwp} MWp steps on the representative day, objective = ${objective === 'revenue' ? 'SPV revenue (₹ tariff x useful kWh)' : 'useful kWh'}; frozen share of every interval's export per consumer; best evaluated allocation, not a proven optimum.` };
+}

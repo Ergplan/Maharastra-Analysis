@@ -2,7 +2,7 @@ import React, { useMemo, useState } from 'react';
 import { useStore, seed, site } from '../state/store.tsx';
 import { Kpi, Badge, Section, Table, Details, NumberInput, Toggle, Select } from '../components/charts.tsx';
 import { TodStepChart, TodTimelineChart, DAY_COLORS } from '../components/TodDayChart.tsx';
-import { runDayView, type DayViewResult } from '../engine/dayview.ts';
+import { runDayView, allocateCapacity, type DayViewResult, type AllocConsumer } from '../engine/dayview.ts';
 import { fmtInr, fmtKwh, fmtNum, monthLabel } from '../lib/format.ts';
 import chettinadJson from '../data/seed/chettinad_profile.json';
 
@@ -21,6 +21,7 @@ export default function DayViewTab() {
   const [newTariff, setNewTariff] = useState(2.5);
   const [newAvoided, setNewAvoided] = useState(8.44);
   const [ppa, setPpa] = useState(4.0);
+  const [objective, setObjective] = useState<'revenue' | 'energy'>('revenue');
   const [eligible, setEligible] = useState<Record<string, boolean>>(() => Object.fromEntries(state.consumers.map((c) => [c.id, true])));
 
   const newDayKw = useMemo(() => {
@@ -37,6 +38,15 @@ export default function DayViewTab() {
   const withNew = useMemo(() => (addNew ? run(true) : null), [addNew, base, newDayKw, newTariff, newAvoided]); // eslint-disable-line react-hooks/exhaustive-deps
   const r = withNew ?? base;
   const t = r.totals, m = r.money;
+
+  const alloc = useMemo(() => {
+    const bands = state.rules.todBands;
+    const avoided = (c: typeof state.consumers[number]) => bands.map((_, b) => (c.tariff.energyRsPerKvah + (c.tariff.todRsPerKvah[b] ?? 0) + (c.tariff.facRsPerKvah ?? 0) + (c.tariff.wheelingRsPerKvah ?? 0)) / Math.max(0.8, c.pf || 1));
+    const cons: AllocConsumer[] = state.consumers.filter((c) => eligible[c.id]).map((c) => ({ id: c.id, name: c.name, kind: 'existing', loadKw: r.perConsumerLoadKw[c.id], tariffRsPerKwh: ppa, avoidedRsPerKwh: avoided(c), currentMwp: c.currentAllocation.mwp }));
+    if (withNew) cons.push({ id: 'NEW', name: chettinad.name, kind: 'new', loadKw: newDayKw, tariffRsPerKwh: newTariff, avoidedRsPerKwh: bands.map(() => newAvoided), currentMwp: 0 });
+    return allocateCapacity(cons, r.solarKw, state.rules, state.mode, seed.plant.dcMwp, objective);
+  }, [r, withNew, newDayKw, newTariff, newAvoided, ppa, objective, eligible, state.consumers, state.rules, state.mode]);
+  const f = r.annualised.factor;
 
   const bandRows = r.bands.map((b) => ({ zone: `${b.id} · ${b.label} h`, hours: b.hours, load: b.loadKwh, solar: b.solarKwh, direct: b.solarDirectKwh, credit: b.blockCreditKwh, grid: b.gridKwh, surplus: b.surplusAfterGroupKwh, newUsed: b.newUsedKwh + b.newBlockCreditKwh, expired: b.expiredKwh, loss: b.lossKwh }));
   bandRows.push({ zone: 'Day total', hours: 24, load: t.loadKwh, solar: t.solarKwh, direct: t.directKwh, credit: t.blockCreditKwh, grid: t.gridKwh, surplus: t.surplusAfterGroupKwh, newUsed: t.newUsedKwh + t.newBlockCreditKwh, expired: t.expiredKwh, loss: t.lossKwh });
@@ -94,6 +104,25 @@ export default function DayViewTab() {
           <p className="note">Chettinad's profile (Maharashtra 15-min sheet) is night-heavy: ~2.05 MW 00–06 h, 1.9 MW 06–09 h, but only ~1.4 MW in the 09–17 h solar window and 1.3 MW in the evening. That daytime 1.4 MW is what absorbs surplus; scaling the profile up (or finding a day-shift load) absorbs more.</p>
         </Section>
       )}
+
+      <Section title={`Capacity allocation — ${alloc.totalMwp} of ${seed.plant.dcMwp} MWp placed`}
+        right={<Select label="Objective" value={objective} options={[{ value: 'revenue', label: 'Max SPV revenue (₹4 existing / ₹2.50 new on used kWh)' }, { value: 'energy', label: 'Max useful solar (kWh)' }]} onChange={setObjective} />}
+        note={`Each consumer holds a frozen share of every interval's plant export (its MWp ÷ 7.5). Capacity is added in ${alloc.stepMwp} MWp steps to whoever earns most on the next step, until the plant is placed or nothing more earns. "Energy-equivalent MWp" = annual load ÷ plant yield — shown for orientation only. Best evaluated allocation on this representative day, not a proven optimum.`}>
+        <Table dense columns={[
+          { key: 'name', label: 'Consumer' }, { key: 'kind', label: '' , render: (v) => !v ? null : <Badge tone={v === 'new' ? 'info' : 'neutral'}>{v === 'new' ? 'new @ ₹' + newTariff.toFixed(2) : 'existing @ ₹' + ppa.toFixed(2)}</Badge> },
+          { key: 'currentMwp', label: 'Now MWp', align: 'right', render: (v) => (v as number).toFixed(2) },
+          { key: 'mwp', label: 'Recommended MWp', align: 'right', render: (v) => <b>{(v as number).toFixed(2)}</b> },
+          { key: 'energyEquivalentMwp', label: 'Energy-eq. MWp', align: 'right', render: (v) => (v as number).toFixed(2) },
+          { key: 'loadKwh', label: 'Load/day', align: 'right', render: (v) => mwh(v as number) },
+          { key: 'usedKwh', label: 'Solar used/day', align: 'right', render: (v) => mwh(v as number) },
+          { key: 'solarSharePct', label: 'Solar share of load', align: 'right', render: (v) => `${(v as number).toFixed(0)}%` },
+          { key: 'utilisationPct', label: 'Allocation used', align: 'right', render: (v) => `${(v as number).toFixed(0)}%` },
+          { key: 'lapsedKwh', label: 'Lapsing/day', align: 'right', render: (v) => mwh(v as number) },
+          { key: 'spvRevenueRs', label: 'SPV revenue/yr', align: 'right', render: (v) => fmtInr((v as number) * f) },
+          { key: 'consumerSavingRs', label: 'Consumer saving/yr', align: 'right', render: (v) => fmtInr((v as number) * f) },
+        ]} rows={[...alloc.rows.map((x) => ({ ...x })), { name: 'Total', kind: '', currentMwp: alloc.rows.reduce((a, x) => a + x.currentMwp, 0), mwp: alloc.totalMwp, energyEquivalentMwp: alloc.rows.reduce((a, x) => a + x.energyEquivalentMwp, 0), loadKwh: alloc.rows.reduce((a, x) => a + x.loadKwh, 0), usedKwh: alloc.totals.usedKwh, solarSharePct: alloc.rows.reduce((a, x) => a + x.usedKwh, 0) / Math.max(1, alloc.rows.reduce((a, x) => a + x.loadKwh, 0)) * 100, utilisationPct: alloc.totals.utilisationPct, lapsedKwh: alloc.totals.lapsedKwh, spvRevenueRs: alloc.totals.spvRevenueRs, consumerSavingRs: alloc.totals.consumerSavingRs }]} />
+        <p className="note" style={{ marginTop: 8 }}>{alloc.unallocatedMwp > 0 ? `${alloc.unallocatedMwp} MWp left unallocated — no consumer can use another step.` : 'Whole plant placed.'} Useful solar {alloc.totals.utilisationPct.toFixed(0)}% of export; {mwh(alloc.totals.lapsedKwh)}/day still lapses because there is no more daytime load — a battery or another day-time consumer is the only way to use it. {!withNew && 'Switch on the new consumer above to include it in the allocation.'}</p>
+      </Section>
 
       <Section title="Where the day's solar goes" note="Energy balance for the representative day. Lapsing surplus is the settlement loss; network losses are physical.">
         <Table dense columns={[{ key: 'item', label: 'Item' }, { key: 'kwh', label: 'kWh/day', align: 'right', render: (v) => mwh(v as number) }, { key: 'pct', label: '% of export', align: 'right', render: (v) => `${(v as number).toFixed(1)}%` }, { key: 'rs', label: '₹/day', align: 'right', render: (v) => (v === null ? '—' : fmtInr(v as number)) }, { key: 'note', label: '' }]}
