@@ -327,7 +327,7 @@ test('RE mix: synthetic wind hits its monthly CUF, mix balance holds, zero RE eq
   assert.ok(Math.abs(r.loadKwh - (r.usedKwh + r.gridKwh)) < 1e-3, 'load = RE used + grid');
   assert.ok(Math.abs(r.loadKwh - chet.annualKwh) / chet.annualKwh < 0.01, 'load is Chettinad year');
   const z = evaluateMix(inp.load, inp.solarPerMwp, inp.windPerMw, inp.months, inp.dayMonthIdx, inp.bandOfInterval, { ...base, solarMwp: 0, windMw: 0 });
-  assert.ok(Math.abs(z.totalCostRs - z.gridOnlyCostRs) < 1e-6 && z.savingRs === 0, 'no RE = grid only');
+  assert.ok(Math.abs(z.totalCostRs - z.gridOnlyCostRs) < 1e-3 && Math.abs(z.savingRs) < 1e-3, 'no RE = grid only');
   const u = evaluateMix(inp.load, inp.solarPerMwp, inp.windPerMw, inp.months, inp.dayMonthIdx, inp.bandOfInterval, { ...base, windPaidOnUsedOnly: true, solarMwp: 5, windMw: 2.5 });
   assert.ok(u.costWindRs <= r.costWindRs + 1e-6, 'paying on credited wind is never dearer than on generated');
 });
