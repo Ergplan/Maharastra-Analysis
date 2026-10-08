@@ -3,6 +3,8 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import { buildCalendar, INTERVALS_PER_DAY } from '../calendar.ts';
 import { buildSolar, intradayWeights } from '../solar.ts';
+import { runDayView } from '../dayview.ts';
+import { defaultPlant as defaultPlantSeed } from '../seed.ts';
 import { settleConsumer } from '../settlement.ts';
 import { dispatchBess } from '../bess.ts';
 import { irr, npv, buildFinance } from '../finance.ts';
@@ -252,3 +254,25 @@ test('BESS scenario: battery charges only from physical surplus, S3 bridge balan
 });
 
 void INTERVALS_PER_DAY;
+
+test('Day view: energy balance holds, new consumer only takes residual surplus, zero-scale new consumer reproduces baseline', () => {
+  const seedCase = JSON.parse(fs.readFileSync(new URL('../../data/seed/seed_case.json', import.meta.url), 'utf8'));
+  const chet = JSON.parse(fs.readFileSync(new URL('../../data/seed/chettinad_profile.json', import.meta.url), 'utf8'));
+  const common = { plant: defaultPlantSeed(seedCase), consumers: seedCase.consumers, rules: seedCase.rulePack, months: seedCase.calendar.months, site: { latitude: seedCase.plant.latitude, longitude: seedCase.plant.longitude }, period: 'annual' as const, networkLossPct: 3, eligibleIds: seedCase.consumers.map((c: { id: string }) => c.id), existingPpaRsPerKwh: 4 };
+  for (const mode of ['tod_block', 'interval_15min'] as const) {
+    const base = runDayView({ ...common, mode, newConsumer: null });
+    const t = base.totals;
+    assert.ok(Math.abs(t.solarKwh - (t.lossKwh + t.directKwh + t.blockCreditKwh + t.expiredKwh)) < 1e-6, `${mode}: export = losses + used + credited + lapsed`);
+    assert.ok(Math.abs(t.loadKwh - (t.directKwh + t.blockCreditKwh + t.gridKwh)) < 1e-6, `${mode}: load = solar + grid`);
+    assert.ok(Math.abs(t.solarKwh * 365 - 13343724.83) / 13343724.83 < 0.002, 'annual-average day x 365 ≈ flat annualisation');
+    const withNew = runDayView({ ...common, mode, newConsumer: { enabled: true, name: 'C', dayKw: chet.annualAvgDayKw, tariffRsPerKwh: 2.5, avoidedRsPerKwh: 8 } });
+    const w = withNew.totals;
+    assert.ok(Math.abs(w.directKwh - t.directKwh) < 1e-9 && Math.abs(w.gridKwh - t.gridKwh) < 1e-9, 'existing group unchanged by the new consumer');
+    assert.ok(w.newUsedKwh + w.newBlockCreditKwh <= t.expiredKwh + 1e-6, 'new consumer takes only residual surplus');
+    assert.ok(Math.abs(w.solarKwh - (w.lossKwh + w.directKwh + w.blockCreditKwh + w.newUsedKwh + w.newBlockCreditKwh + w.expiredKwh)) < 1e-6, 'balance with new consumer');
+    const zero = runDayView({ ...common, mode, newConsumer: { enabled: true, name: 'C', dayKw: chet.annualAvgDayKw.map(() => 0), tariffRsPerKwh: 2.5, avoidedRsPerKwh: 8 } });
+    assert.ok(Math.abs(zero.totals.expiredKwh - t.expiredKwh) < 1e-9, 'zero-load new consumer reproduces baseline');
+  }
+  const b15 = runDayView({ ...common, mode: 'interval_15min', newConsumer: null }).totals, bTod = runDayView({ ...common, mode: 'tod_block', newConsumer: null }).totals;
+  assert.ok(bTod.expiredKwh <= b15.expiredKwh + 1e-9 && bTod.blockCreditKwh >= 0, 'block netting never lapses more than 15-min');
+});

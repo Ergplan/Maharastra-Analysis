@@ -14,10 +14,10 @@ npm run dev          # http://localhost:5173
 Other commands:
 
 ```bash
-npm test             # engine tests (node:test, no extra deps) - 15 tests
+npm test             # engine tests (node:test, no extra deps) - 16 tests
 npm run build        # production build to dist/
 npm run typecheck    # tsc over src/
-npm run extract      # rebuild src/data/seed/*.json from source-files/ (needs python3, openpyxl, poppler-utils)
+npm run extract      # rebuild src/data/seed/*.json (incl. chettinad_profile.json) from source-files/ (needs python3, openpyxl, poppler-utils)
 ```
 
 Requirements: Node ≥ 22.6 (tests use Node's built-in TypeScript type-stripping) and npm. Python is only needed to re-run the extraction.
@@ -34,6 +34,10 @@ Requirements: Node ≥ 22.6 (tests use Node's built-in TypeScript type-stripping
 | `src/worker/` | Web Worker that owns the full-year 15-minute arrays; the UI thread only receives summaries |
 | `src/tabs/` | The six tabs; `src/components/charts.tsx` holds dependency-free SVG charts |
 | `scripts/dev/` | Sandbox helpers used while building (esbuild bundle + Playwright smoke test); not needed with Vite |
+
+## Day view (simple) — start here
+
+The first tab shows one representative day (annual average, or any month's average) for the whole 7.5 MWp plant with **all factories and stores treated as eligible** and solar pooled across them. It draws the ToD-zone supply chart (solar used · in-band credit · grid below the demand line; surplus sold / lapsing above it), a 15-minute timeline, the day's energy balance with losses, and an **Add Chettinad** switch that drops the supplied 15-minute Maharashtra profile (`source-files/Chettinad_Consumption_profile.xlsx` → `src/data/seed/chettinad_profile.json`) onto the residual surplus and reports the gain (extra kWh sold, ₹/yr at ₹2.50, lapsing cut). Existing consumers keep first claim on solar; the new consumer only takes what is left.
 
 ## How the model works (short)
 

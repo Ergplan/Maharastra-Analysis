@@ -75,3 +75,7 @@ details > summary { cursor: pointer; font-weight: 600; }
 .small { font-size: 12px; }
 ul.tight { margin: 4px 0; padding-left: 18px; } ul.tight li { margin: 2px 0; }
 @media print { .app-header, .tabs { display: none; } .card { break-inside: avoid; } }
+
+.seg { display: inline-flex; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+.seg button { font: inherit; font-size: 12.5px; padding: 5px 12px; border: none; background: #fff; color: var(--muted); cursor: pointer; }
+.seg button.active { background: var(--accent); color: #fff; }

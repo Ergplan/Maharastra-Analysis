@@ -10,7 +10,7 @@
     "preview": "vite preview",
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "test": "node --experimental-strip-types --test src/engine/__tests__/*.test.ts",
-    "extract": "python3 -I scripts/extract/extract_generation.py source-files src/data/seed/generation_daily.json && python3 -I scripts/extract/extract_bills.py source-files/Harrshiv_OA_Bills.zip source-files/Elec._Bills-_Stores.zip src/data/seed/bills.json && python3 -I scripts/extract/build_seed_case.py src/data/seed/bills.json src/data/seed/generation_daily.json src/data/seed/seed_case.json"
+    "extract": "python3 -I scripts/extract/extract_generation.py source-files src/data/seed/generation_daily.json && python3 -I scripts/extract/extract_bills.py source-files/Harrshiv_OA_Bills.zip source-files/Elec._Bills-_Stores.zip src/data/seed/bills.json && python3 -I scripts/extract/build_seed_case.py src/data/seed/bills.json src/data/seed/generation_daily.json src/data/seed/seed_case.json && python3 -I scripts/extract/extract_chettinad.py source-files/Chettinad_Consumption_profile.xlsx src/data/seed/chettinad_profile.json"
   },
   "dependencies": {
     "react": "^19.1.0",
@@ -24,5 +24,7 @@
     "typescript": "^5.8.0",
     "vite": "^6.3.0"
   },
-  "engines": { "node": ">=22.6" }
+  "engines": {
+    "node": ">=22.6"
+  }
 }
