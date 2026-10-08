@@ -23,7 +23,7 @@ export interface DayViewInput {
 }
 
 export interface DayBand { id: string; label: string; startHour: number; endHour: number; hours: number;
-  loadKwh: number; solarDirectKwh: number; blockCreditKwh: number; gridKwh: number; surplusAfterGroupKwh: number; newUsedKwh: number; newBlockCreditKwh: number; newLoadKwh: number; newGridKwh: number; expiredKwh: number; lossKwh: number; solarKwh: number }
+  loadKwh: number; solarDirectKwh: number; blockCreditKwh: number; gridKwh: number; surplusAfterGroupKwh: number; newUsedKwh: number; newBlockCreditKwh: number; newLoadKwh: number; newGridKwh: number; expiredKwh: number; lossKwh: number; solarKwh: number; bessChargeKwh?: number; bessToExistingKwh?: number; bessToNewKwh?: number }
 
 export interface DayViewResult {
   period: string; daysAveraged: number; mode: SettlementMode;
@@ -261,4 +261,60 @@ export function evaluateAllocation(consumers: AllocConsumer[], mwps: number[], s
   const ex = rows.filter((r) => r.kind === 'existing'), nw = rows.filter((r) => r.kind === 'new');
   const usedEx = ex.reduce((a, r) => a + r.usedKwh, 0), usedNew = nw.reduce((a, r) => a + r.usedKwh, 0);
   return { rows, bands, totalMwp: mwps.reduce((a, b) => a + b, 0), totals: { exportKwh: dayExport, allocatedKwh: allocTot, usedExistingKwh: usedEx, usedNewKwh: usedNew, usedKwh: usedEx + usedNew, lapsedKwh: allocTot - usedEx - usedNew, unallocatedKwh: Math.max(0, unalloc), utilisationPct: dayExport > 0 ? ((usedEx + usedNew) / dayExport) * 100 : 0, spvRevenueRs: rows.reduce((a, r) => a + r.spvRevenueRs, 0), existingSavingRs: ex.reduce((a, r) => a + r.consumerSavingRs, 0), newSavingRs: nw.reduce((a, r) => a + r.consumerSavingRs, 0), existingGridKwh: ex.reduce((a, r) => a + r.gridKwh, 0), existingLoadKwh: ex.reduce((a, r) => a + r.loadKwh, 0) } };
+}
+
+// ---------------------------------------------------------------------------------------------
+// Simple daily BESS on top of an allocation case: charge from lapsing surplus in the solar zones,
+// discharge into grid demand in the permitted zones (existing group first, highest avoided value first,
+// then the new consumer). One cycle per representative day; SOC starts and ends empty.
+// ---------------------------------------------------------------------------------------------
+export interface BessParams { energyMwh: number; powerMw: number; capexRsCrPerMwh: number; usableFraction: number; etaRoundTrip: number; dischargeBandIds: string[]; omPctOfCapex: number; lifeYears: number; discountRatePct: number; degradationPctPerYear: number; existingTariffRsPerKwh: number; newTariffRsPerKwh: number; existingAvoidedRsPerKwhByBand: number[]; newAvoidedRsPerKwh: number }
+export interface BessCaseResult { bands: DayBand[]; chargeKwh: number; dischargeKwh: number; toExistingKwh: number; toNewKwh: number; lapsedBeforeKwh: number; lapsedAfterKwh: number; existingGridBeforeKwh: number; existingGridAfterKwh: number; capexRs: number; omRsPerYear: number; spvRevenueRsPerYear: number; existingSavingRsPerYear: number; newSavingRsPerYear: number; netCashRsPerYear: number; simplePaybackYears: number | null; npvRs: number; utilisationPct: number; cyclesPerDay: number; note: string }
+
+export function evaluateBess(c: AllocCase, p: BessParams, days = 365): BessCaseResult {
+  const bands = c.bands.map((b) => ({ ...b, bessChargeKwh: 0, bessToExistingKwh: 0, bessToNewKwh: 0 }));
+  const usable = p.energyMwh * 1000 * p.usableFraction;             // kWh deliverable per cycle (DC)
+  const etaC = Math.sqrt(p.etaRoundTrip), etaD = Math.sqrt(p.etaRoundTrip);
+  // Charging: take lapsing surplus (solar zones first = where expired lives), limited by power x hours and usable/etaC
+  const chargeHoursPerBand = (b: DayBand) => b.hours;
+  let needDc = usable / etaC;                                         // kWh of surplus needed to fill the usable window
+  let charged = 0;
+  for (const b of bands.slice().sort((x, y) => y.expiredKwh - x.expiredKwh)) {
+    const take = Math.min(b.expiredKwh, needDc, p.powerMw * 1000 * chargeHoursPerBand(b));
+    if (take <= 0) continue; b.bessChargeKwh = take; b.expiredKwh -= take; charged += take; needDc -= take;
+    if (needDc <= 1e-9) break;
+  }
+  let deliverable = charged * etaC * etaD;                            // kWh available at the meter
+  // Discharge priority: existing group in permitted bands by avoided value (desc), then the new consumer.
+  const order = bands.map((b, i) => ({ b, i })).filter(({ b }) => p.dischargeBandIds.includes(b.id)).sort((x, y) => (p.existingAvoidedRsPerKwhByBand[y.i] ?? 0) - (p.existingAvoidedRsPerKwhByBand[x.i] ?? 0));
+  let toEx = 0, toNew = 0;
+  for (const { b } of order) {
+    const d = Math.min(b.gridKwh, deliverable, p.powerMw * 1000 * b.hours - b.bessToExistingKwh);
+    if (d <= 0) continue; b.bessToExistingKwh = d; b.gridKwh -= d; deliverable -= d; toEx += d;
+  }
+  for (const { b } of order) {
+    const d = Math.min(b.newGridKwh, deliverable, Math.max(0, p.powerMw * 1000 * b.hours - b.bessToExistingKwh));
+    if (d <= 0) continue; b.bessToNewKwh = d; b.newGridKwh -= d; deliverable -= d; toNew += d;
+  }
+  const discharged = toEx + toNew;
+  // If not everything could be discharged, give the unused charge back to lapsing (battery would not have charged it).
+  if (deliverable > 1e-6 && charged > 0) {
+    const unusedDc = deliverable / (etaC * etaD); const scale = (charged - unusedDc) / charged;
+    for (const b of bands) { const back = b.bessChargeKwh * (1 - scale); b.bessChargeKwh -= back; b.expiredKwh += back; }
+    charged -= unusedDc;
+  }
+  let exSaving = 0, exRev = 0;
+  bands.forEach((b, i) => { exRev += b.bessToExistingKwh * p.existingTariffRsPerKwh; exSaving += b.bessToExistingKwh * ((p.existingAvoidedRsPerKwhByBand[i] ?? 0) - p.existingTariffRsPerKwh); });
+  const newRev = toNew * p.newTariffRsPerKwh, newSaving = toNew * (p.newAvoidedRsPerKwh - p.newTariffRsPerKwh);
+  const capexRs = p.energyMwh * p.capexRsCrPerMwh * 1e7, omRs = capexRs * p.omPctOfCapex / 100;
+  const spvRevYear = (exRev + newRev) * days; const netYear1 = spvRevYear - omRs;
+  // NPV of SPV cash flows (revenue less O&M), degrading output, at the discount rate; no terminal value, no replacement.
+  let npv = -capexRs; const r = p.discountRatePct / 100;
+  for (let y = 1; y <= p.lifeYears; y++) npv += (spvRevYear * Math.pow(1 - p.degradationPctPerYear / 100, y - 1) - omRs) / Math.pow(1 + r, y);
+  const lapsedBefore = c.bands.reduce((a, b) => a + b.expiredKwh, 0), lapsedAfter = bands.reduce((a, b) => a + b.expiredKwh, 0);
+  return { bands, chargeKwh: charged, dischargeKwh: discharged, toExistingKwh: toEx, toNewKwh: toNew, lapsedBeforeKwh: lapsedBefore, lapsedAfterKwh: lapsedAfter,
+    existingGridBeforeKwh: c.bands.reduce((a, b) => a + b.gridKwh, 0), existingGridAfterKwh: bands.reduce((a, b) => a + b.gridKwh, 0),
+    capexRs, omRsPerYear: omRs, spvRevenueRsPerYear: spvRevYear, existingSavingRsPerYear: exSaving * days, newSavingRsPerYear: newSaving * days, netCashRsPerYear: netYear1,
+    simplePaybackYears: netYear1 > 0 ? capexRs / netYear1 : null, npvRs: npv, utilisationPct: usable > 0 ? (discharged / usable) * 100 : 0, cyclesPerDay: usable > 0 ? discharged / usable : 0,
+    note: `One cycle on the representative day: charge ${(charged / 1000).toFixed(1)} MWh from lapsing surplus, deliver ${(discharged / 1000).toFixed(1)} MWh in zones ${p.dischargeBandIds.join('/')} (round-trip ${(p.etaRoundTrip * 100).toFixed(0)}%, usable ${(p.usableFraction * 100).toFixed(0)}%). Battery energy billed at the consumer's PPA tariff; the consumer saves the avoided grid rate less the tariff. Capex ₹${p.capexRsCrPerMwh} Cr/MWh nameplate (PCS included, no adders), O&M ${p.omPctOfCapex}%/yr, ${p.lifeYears}-year life, ${p.degradationPctPerYear}%/yr degradation, ${p.discountRatePct}% discount rate, no replacement or terminal value.` };
 }

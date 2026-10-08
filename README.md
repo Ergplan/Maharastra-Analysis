@@ -14,7 +14,7 @@ npm run dev          # http://localhost:5173
 Other commands:
 
 ```bash
-npm test             # engine tests (node:test, no extra deps) - 16 tests
+npm test             # engine tests (node:test, no extra deps) - 17 tests
 npm run build        # production build to dist/
 npm run typecheck    # tsc over src/
 npm run extract      # rebuild src/data/seed/*.json (incl. chettinad_profile.json) from source-files/ (needs python3, openpyxl, poppler-utils)
@@ -37,7 +37,7 @@ Requirements: Node ≥ 22.6 (tests use Node's built-in TypeScript type-stripping
 
 ## One page — start here
 
-The first tab is a printable one-page summary: plant export, useful solar, lapsing, SPV revenue and savings for three allocations on one representative day — current (factory only), the search's recommendation, and a chosen split with a **Chettinad slider** (default 5 MWp; stores keep their recommended shares, the factory takes the remainder). The ToD-zone chart shows the chosen case. "Print / PDF" uses the browser's print dialog.
+The first tab is a printable one-page summary: plant export, useful solar, lapsing, SPV revenue and savings for three allocations on one representative day — current (factory only), the search's recommendation, and a chosen split with a **Chettinad slider** (default 5 MWp; stores keep their recommended shares, the factory takes the remainder). The ToD-zone chart draws consumption bars with the plant export as a translucent overlay (the hatched slice at the top is wasted solar). A **battery block** on the same base (default ₹1 Cr/MWh, 2-hour, charged from lapsing surplus, discharged into evening/night grid demand) shows SPV and owner-group economics for a size grid; "Best for group" / "Best for SPV" pick from it. "Print / PDF" uses the browser's print dialog.
 
 ## Day view (simple)
 

@@ -2,7 +2,7 @@ import React, { useMemo, useState } from 'react';
 import { useStore, seed, site } from '../state/store.tsx';
 import { Kpi, Badge, Section, Table, Select } from '../components/charts.tsx';
 import { TodStepChart } from '../components/TodDayChart.tsx';
-import { runDayView, allocateCapacity, evaluateAllocation, type AllocConsumer, type DayViewResult, type AllocCase } from '../engine/dayview.ts';
+import { runDayView, allocateCapacity, evaluateAllocation, evaluateBess, type AllocConsumer, type DayViewResult, type AllocCase, type BessParams } from '../engine/dayview.ts';
 import { fmtInr, fmtKwh, monthLabel } from '../lib/format.ts';
 import chettinadJson from '../data/seed/chettinad_profile.json';
 
@@ -12,8 +12,8 @@ const mwh = (kwh: number) => fmtKwh(kwh, 1);
 const PLANT = seed.plant.dcMwp;
 
 /** Wrap an allocation case into the DayViewResult shape the ToD chart expects (bands + 15-min arrays unused by the step chart). */
-function asDayView(base: DayViewResult, c: AllocCase): DayViewResult {
-  return { ...base, bands: c.bands };
+function asDayView(base: DayViewResult, c: AllocCase, bands?: AllocCase['bands']): DayViewResult {
+  return { ...base, bands: bands ?? c.bands };
 }
 
 export default function OnePageTab() {
@@ -21,6 +21,8 @@ export default function OnePageTab() {
   const [period, setPeriod] = useState<'annual' | string>('annual');
   const [chetMwp, setChetMwp] = useState(5.0);
   const [ppa] = useState(4.0), [newTariff] = useState(2.5), [newAvoided] = useState(8.44);
+  const [bessMwh, setBessMwh] = useState(0);
+  const [bessCost, setBessCost] = useState(1.0);
 
   const day = useMemo(() => runDayView({ plant: state.plant, consumers: state.consumers, rules: state.rules, months: seed.calendar.months, site, period, mode: state.mode, networkLossPct: 0, eligibleIds: state.consumers.map((c) => c.id), newConsumer: null, existingPpaRsPerKwh: ppa }), [state.plant, state.consumers, state.rules, state.mode, period, ppa]);
   const chetKw = period === 'annual' ? chettinad.annualAvgDayKw : (chettinad.monthlyAvgDayKw[period.slice(5)] ?? chettinad.annualAvgDayKw);
@@ -41,6 +43,17 @@ export default function OnePageTab() {
   const factoryMwp = +(PLANT - chet - storesTot).toFixed(2);
   const chosen = useMemo(() => ev([factoryMwp, ...storesRec, chet]), [cons, day, state.mode, factoryMwp, chet]); // eslint-disable-line react-hooks/exhaustive-deps
   const f = day.annualised.factor;
+
+  const bessParams = (mwh: number): BessParams => {
+    const bands = state.rules.todBands;
+    // existing-group avoided rate per band = load-weighted across existing consumers
+    const exAvoided = bands.map((_, b) => { let w = 0, v = 0; cons.filter((c) => c.kind === 'existing').forEach((c) => { const l = c.loadKw.reduce((a, x) => a + x, 0); w += l; v += l * c.avoidedRsPerKwh[b]; }); return w ? v / w : 0; });
+    return { energyMwh: mwh, powerMw: mwh / 2, capexRsCrPerMwh: bessCost, usableFraction: 0.9, etaRoundTrip: 0.88, dischargeBandIds: ['D', 'A', 'B'], omPctOfCapex: 2, lifeYears: 12, discountRatePct: 10, degradationPctPerYear: 2, existingTariffRsPerKwh: ppa, newTariffRsPerKwh: newTariff, existingAvoidedRsPerKwhByBand: exAvoided, newAvoidedRsPerKwh: newAvoided };
+  };
+  const bessGrid = useMemo(() => [0.5, 1, 1.5, 2, 3, 4, 5, 6, 8, 10, 12].map((mwh) => { const r = evaluateBess(chosen, bessParams(mwh), f); let cons12 = 0; for (let y = 1; y <= 12; y++) cons12 += (r.existingSavingRsPerYear + r.newSavingRsPerYear) * Math.pow(0.98, y - 1) / Math.pow(1.1, y); return { mwh, r, groupNpv: r.npvRs + cons12 }; }), [chosen, bessCost, cons, ppa, newTariff, newAvoided]); // eslint-disable-line react-hooks/exhaustive-deps
+  const bestSpv = bessGrid.reduce((best, x) => (x.r.npvRs > (best?.r.npvRs ?? 0) ? x : best), null as null | typeof bessGrid[number]);
+  const bestGroup = bessGrid.reduce((best, x) => (x.groupNpv > (best?.groupNpv ?? 0) ? x : best), null as null | typeof bessGrid[number]);
+  const bess = useMemo(() => (bessMwh > 0 ? evaluateBess(chosen, bessParams(bessMwh), f) : null), [chosen, bessMwh, bessCost, cons, ppa, newTariff, newAvoided]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const caseRows = [
     { k: 'Current (factory only, 4.41 MWp; 3.09 MWp outside this group)', c: current },
@@ -70,8 +83,8 @@ export default function OnePageTab() {
         <Kpi label="Chettinad" value={`${chet.toFixed(2)} MWp`} sub={`uses ${mwh(newRow.usedKwh)}/day (${newRow.utilisationPct.toFixed(0)}% of its share) · saves ${fmtInr(newRow.consumerSavingRs * f)}/yr (illustrative)`} tone={newRow.utilisationPct < 70 ? 'warn' : 'good'} />
       </div>
 
-      <Section title="Energy supply by ToD zone — chosen allocation" note="Below the dashed line: how the existing group's demand is met (solar directly · solar credited in-band · grid). Above it: Chettinad's uptake (purple), its grid (lilac) and solar that lapses (hatched).">
-        <TodStepChart r={asDayView(day, chosen)} showNew height={330} />
+      <Section title={`Energy supply by ToD zone — chosen allocation${bess ? ` + ${bessMwh} MWh battery` : ''}`} note="Solid bars = consumption and how it is met (existing group first, then Chettinad). The translucent yellow block is the plant's export in that zone; the hatched slice at its top is solar nobody consumed — wasted. A battery turns part of that slice teal (charged) and adds teal into the evening/night bars (discharged).">
+        <TodStepChart r={asDayView(day, chosen, bess?.bands)} showNew height={340} />
       </Section>
 
       <div className="grid two">
@@ -89,6 +102,28 @@ export default function OnePageTab() {
           </ul>
         </Section>
       </div>
+
+      <Section title={`Battery on the same base — ₹${bessCost.toFixed(2)} Cr/MWh`} right={<div className="fields" style={{ margin: 0 }}>
+          <label className="field"><span>Battery size (MWh)</span><input type="range" min={0} max={12} step={0.5} value={bessMwh} onChange={(e) => setBessMwh(Number(e.target.value))} /><b style={{ color: '#1f2a37' }}>{bessMwh > 0 ? `${bessMwh} MWh · ${(bessMwh / 2).toFixed(1)} MW` : 'no battery'}</b></label>
+          <label className="field"><span>Cost (₹ Cr/MWh)</span><input type="number" step={0.1} min={0.3} value={bessCost} onChange={(e) => setBessCost(Number(e.target.value) || 1)} style={{ width: 80 }} /></label>
+          {bestGroup && <button className="btn" onClick={() => setBessMwh(bestGroup.mwh)}>Best for group ({bestGroup.mwh} MWh)</button>}
+          {bestSpv && bestSpv.r.npvRs > 0 && <button className="btn" onClick={() => setBessMwh(bestSpv.mwh)}>Best for SPV ({bestSpv.mwh} MWh)</button>}
+        </div>}
+        note="Charges from the lapsing midday surplus, discharges into evening (17–24) then night (00–06, 06–09) grid demand — existing consumers first, Chettinad after. Battery energy is billed at each consumer's PPA tariff; the consumer saves its avoided grid rate (incl. the evening ToD surcharge) less that tariff. 2-hour battery (MW = MWh/2), 90% usable, 88% round-trip, 2% O&M, 12-year life, 2%/yr degradation, 10% discount rate, no replacement/terminal value — editable in the code, labelled modelling assumptions.">
+        {bess ? (
+          <div className="grid kpis">
+            <Kpi label="Charged from surplus" value={`${mwh(bess.chargeKwh)}/day`} sub={`lapsing ${mwh(bess.lapsedBeforeKwh)} → ${mwh(bess.lapsedAfterKwh)}`} tone="good" />
+            <Kpi label="Delivered in evening/night" value={`${mwh(bess.dischargeKwh)}/day`} sub={`${mwh(bess.toExistingKwh)} to existing · ${mwh(bess.toNewKwh)} to Chettinad · ${bess.cyclesPerDay.toFixed(2)} cycles`} tone="good" />
+            <Kpi label="Capex" value={fmtInr(bess.capexRs)} sub={`O&M ${fmtInr(bess.omRsPerYear)}/yr`} />
+            <Kpi label="SPV revenue from battery" value={fmtInr(bess.spvRevenueRsPerYear)} sub={`per year · net of O&M ${fmtInr(bess.netCashRsPerYear)}`} tone="good" />
+            <Kpi label="Consumers' extra saving" value={fmtInr(bess.existingSavingRsPerYear + bess.newSavingRsPerYear)} sub={`existing ${fmtInr(bess.existingSavingRsPerYear)} · Chettinad ${fmtInr(bess.newSavingRsPerYear)} per year`} tone="good" />
+            <Kpi label="SPV payback / NPV (12 y, 10%)" value={bess.simplePaybackYears ? `${bess.simplePaybackYears.toFixed(1)} y` : 'never'} sub={`NPV ${fmtInr(bess.npvRs)} · ${bess.npvRs > 0 ? 'adds value' : 'destroys value at this tariff'}`} tone={bess.npvRs > 0 ? 'good' : 'bad'} />
+          </div>
+        ) : <p className="note">No battery selected. {bestSpv && bestSpv.r.npvRs > 0 ? `Best size for the SPV alone: ${bestSpv.mwh} MWh (NPV ${fmtInr(bestSpv.r.npvRs)}).` : 'At the PPA tariffs no size in the grid pays for the SPV alone — "No BESS" is the SPV answer unless battery energy is priced above the PPA rate.'} {bestGroup && bestGroup.groupNpv > 0 ? `For the owner group (SPV + consumers) the best evaluated size is ${bestGroup.mwh} MWh (group NPV ${fmtInr(bestGroup.groupNpv)}).` : ''}</p>}
+        <Table dense columns={[{ key: 'mwh', label: 'MWh', align: 'right' }, { key: 'd', label: 'Delivered/day', align: 'right' }, { key: 'lap', label: 'Lapsing after', align: 'right' }, { key: 'capex', label: 'Capex', align: 'right' }, { key: 'rev', label: 'SPV revenue/yr', align: 'right' }, { key: 'sav', label: 'Consumer saving/yr', align: 'right' }, { key: 'pb', label: 'Payback', align: 'right' }, { key: 'npv', label: 'SPV NPV', align: 'right' }, { key: 'total', label: 'Group NPV (SPV + consumers)', align: 'right' }]}
+          rows={bessGrid.map(({ mwh: m, r, groupNpv }) => { return { mwh: m, d: mwh(r.dischargeKwh), lap: mwh(r.lapsedAfterKwh), capex: fmtInr(r.capexRs), rev: fmtInr(r.spvRevenueRsPerYear), sav: fmtInr(r.existingSavingRsPerYear + r.newSavingRsPerYear), pb: r.simplePaybackYears ? `${r.simplePaybackYears.toFixed(1)} y` : '—', npv: fmtInr(r.npvRs), total: fmtInr(groupNpv) }; })} />
+        <p className="note">Two readings: the <b>SPV</b> earns only the PPA tariff on battery energy (₹{ppa} existing / ₹{newTariff} Chettinad), so at ₹{bessCost} Cr/MWh the battery rarely pays for the SPV alone. The <b>group</b> view adds the consumers' avoided evening grid cost (₹8–10/kWh HT, ~₹20/kWh LT incl. the 17–24 h surcharge); where consumer and SPV are the same owner, that is the number that matters.</p>
+      </Section>
 
       <Section title="Allocation by consumer — chosen case">
         <Table dense columns={[

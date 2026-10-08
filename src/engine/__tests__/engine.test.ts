@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import { buildCalendar, INTERVALS_PER_DAY } from '../calendar.ts';
 import { buildSolar, intradayWeights } from '../solar.ts';
-import { runDayView } from '../dayview.ts';
+import { runDayView, evaluateAllocation, evaluateBess } from '../dayview.ts';
 import { defaultPlant as defaultPlantSeed } from '../seed.ts';
 import { settleConsumer } from '../settlement.ts';
 import { dispatchBess } from '../bess.ts';
@@ -275,4 +275,22 @@ test('Day view: energy balance holds, new consumer only takes residual surplus, 
   }
   const b15 = runDayView({ ...common, mode: 'interval_15min', newConsumer: null }).totals, bTod = runDayView({ ...common, mode: 'tod_block', newConsumer: null }).totals;
   assert.ok(bTod.expiredKwh <= b15.expiredKwh + 1e-9 && bTod.blockCreditKwh >= 0, 'block netting never lapses more than 15-min');
+});
+
+test('One-page BESS: charge comes only from lapsing surplus, discharge ≤ charge x round-trip, zero battery leaves the case unchanged', () => {
+  const seedCase = JSON.parse(fs.readFileSync(new URL('../../data/seed/seed_case.json', import.meta.url), 'utf8'));
+  const chet = JSON.parse(fs.readFileSync(new URL('../../data/seed/chettinad_profile.json', import.meta.url), 'utf8'));
+  const day = runDayView({ plant: defaultPlantSeed(seedCase), consumers: seedCase.consumers, rules: seedCase.rulePack, months: seedCase.calendar.months, site: { latitude: seedCase.plant.latitude, longitude: seedCase.plant.longitude }, period: 'annual', mode: 'tod_block', networkLossPct: 0, eligibleIds: seedCase.consumers.map((c: { id: string }) => c.id), newConsumer: null, existingPpaRsPerKwh: 4 });
+  const bands = seedCase.rulePack.todBands;
+  const cons = [...seedCase.consumers.map((c: any) => ({ id: c.id, name: c.name, kind: 'existing' as const, loadKw: day.perConsumerLoadKw[c.id], tariffRsPerKwh: 4, avoidedRsPerKwh: bands.map(() => 9), currentMwp: c.currentAllocation.mwp })), { id: 'N', name: 'C', kind: 'new' as const, loadKw: chet.annualAvgDayKw, tariffRsPerKwh: 2.5, avoidedRsPerKwh: bands.map(() => 8), currentMwp: 0 }];
+  const kase = evaluateAllocation(cons, [1.75, 0.1, 0.1, 0.15, 0.05, 0.05, 0.2, 0.1, 5], day.solarKw, seedCase.rulePack, 'tod_block', 7.5);
+  const params = { energyMwh: 4, powerMw: 2, capexRsCrPerMwh: 1, usableFraction: 0.9, etaRoundTrip: 0.88, dischargeBandIds: ['D', 'A', 'B'], omPctOfCapex: 2, lifeYears: 12, discountRatePct: 10, degradationPctPerYear: 2, existingTariffRsPerKwh: 4, newTariffRsPerKwh: 2.5, existingAvoidedRsPerKwhByBand: bands.map(() => 9), newAvoidedRsPerKwh: 8 };
+  const b = evaluateBess(kase, params, 365);
+  assert.ok(b.chargeKwh <= b.lapsedBeforeKwh + 1e-6, 'charge only from lapsing surplus');
+  assert.ok(Math.abs(b.lapsedBeforeKwh - b.lapsedAfterKwh - b.chargeKwh) < 1e-6, 'lapsing falls by exactly the charge');
+  assert.ok(b.dischargeKwh <= b.chargeKwh * 0.88 + 1e-6 && b.dischargeKwh <= 4000 * 0.9 + 1e-6, 'discharge bounded by round-trip and usable energy');
+  assert.ok(Math.abs((b.existingGridBeforeKwh - b.existingGridAfterKwh) - b.toExistingKwh) < 1e-6, 'existing grid falls by the energy delivered');
+  assert.ok(Math.abs(b.capexRs - 4e7) < 1, '4 MWh at ₹1 Cr/MWh = ₹4 Cr');
+  const z = evaluateBess(kase, { ...params, energyMwh: 0, powerMw: 0 }, 365);
+  assert.equal(z.dischargeKwh, 0); assert.ok(Math.abs(z.lapsedAfterKwh - kase.bands.reduce((a, x) => a + x.expiredKwh, 0)) < 1e-9, 'zero battery reproduces the case');
 });
