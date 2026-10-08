@@ -35,7 +35,11 @@ Requirements: Node ≥ 22.6 (tests use Node's built-in TypeScript type-stripping
 | `src/tabs/` | The six tabs; `src/components/charts.tsx` holds dependency-free SVG charts |
 | `scripts/dev/` | Sandbox helpers used while building (esbuild bundle + Playwright smoke test); not needed with Vite |
 
-## Day view (simple) — start here
+## One page — start here
+
+The first tab is a printable one-page summary: plant export, useful solar, lapsing, SPV revenue and savings for three allocations on one representative day — current (factory only), the search's recommendation, and a chosen split with a **Chettinad slider** (default 5 MWp; stores keep their recommended shares, the factory takes the remainder). The ToD-zone chart shows the chosen case. "Print / PDF" uses the browser's print dialog.
+
+## Day view (simple)
 
 The first tab shows one representative day (annual average, or any month's average) for the whole 7.5 MWp plant with **all factories and stores treated as eligible** and solar pooled across them. It draws the ToD-zone supply chart (solar used · in-band credit · grid below the demand line; surplus sold / lapsing above it), a 15-minute timeline, the day's energy balance with losses, and an **Add Chettinad** switch that drops the supplied 15-minute Maharashtra profile (`source-files/Chettinad_Consumption_profile.xlsx` → `src/data/seed/chettinad_profile.json`) onto the residual surplus and reports the gain (extra kWh sold, ₹/yr at ₹2.50, lapsing cut). Existing consumers keep first claim on solar; the new consumer only takes what is left.
 

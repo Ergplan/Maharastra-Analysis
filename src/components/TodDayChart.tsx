@@ -17,7 +17,7 @@ export function TodStepChart({ r, showNew, height = 360 }: { r: DayViewResult; s
   const W = 960, H = height, padL = 70, padR = 16, padT = 36, padB = 52;
   const plotW = W - padL - padR, plotH = H - padT - padB;
   const avg = (kwh: number, b: DayBand) => kwh / b.hours; // kW
-  const tops = r.bands.map((b) => avg(b.loadKwh + (showNew ? b.newLoadKwh : 0), b) + avg(b.surplusAfterGroupKwh - (showNew ? b.newUsedKwh : 0), b));
+  const tops = r.bands.map((b) => avg(b.solarDirectKwh + b.blockCreditKwh + b.gridKwh + (showNew ? b.newUsedKwh + b.newBlockCreditKwh + b.newGridKwh : 0) + b.expiredKwh, b));
   const maxKw = Math.max(1, ...tops) * 1.12;
   const yScale = (v: number) => padT + plotH - (v / maxKw) * plotH;
   const xScale = (h: number) => padL + (h / 24) * plotW;

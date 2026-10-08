@@ -1,6 +1,7 @@
 import React from 'react';
 import { StoreProvider, useStore, seed } from './state/store.tsx';
 import { Badge } from './components/charts.tsx';
+import OnePageTab from './tabs/OnePage.tsx';
 import DayViewTab from './tabs/DayView.tsx';
 import CurrentTab from './tabs/Current.tsx';
 import OptimiseTab from './tabs/Optimise.tsx';
@@ -10,7 +11,7 @@ import ReturnsTab from './tabs/Returns.tsx';
 import DataTab from './tabs/Data.tsx';
 import { monthLabel } from './lib/format.ts';
 
-const TABS = ['Day view (simple)', '1 · Current situation', '2 · Optimise existing users', '3 · Add 132 kV customer', '4 · Optional BESS', '5 · Returns & comparison', '6 · Data, assumptions & rules'];
+const TABS = ['One page', 'Day view (simple)', '1 · Current situation', '2 · Optimise existing users', '3 · Add 132 kV customer', '4 · Optional BESS', '5 · Returns & comparison', '6 · Data, assumptions & rules'];
 
 function Shell() {
   const { state, dispatch } = useStore();
@@ -50,13 +51,14 @@ function Shell() {
       </header>
       <nav className="tabs">{TABS.map((t, i) => <button key={t} className={state.activeTab === i ? 'active' : ''} onClick={() => dispatch({ type: 'set', patch: { activeTab: i } })}>{t}</button>)}</nav>
       <main>
-        {state.activeTab === 0 && <DayViewTab />}
-        {state.activeTab === 1 && <CurrentTab />}
-        {state.activeTab === 2 && <OptimiseTab />}
-        {state.activeTab === 3 && <NewCustomerTab />}
-        {state.activeTab === 4 && <BessTab />}
-        {state.activeTab === 5 && <ReturnsTab />}
-        {state.activeTab === 6 && <DataTab />}
+        {state.activeTab === 0 && <OnePageTab />}
+        {state.activeTab === 1 && <DayViewTab />}
+        {state.activeTab === 2 && <CurrentTab />}
+        {state.activeTab === 3 && <OptimiseTab />}
+        {state.activeTab === 4 && <NewCustomerTab />}
+        {state.activeTab === 5 && <BessTab />}
+        {state.activeTab === 6 && <ReturnsTab />}
+        {state.activeTab === 7 && <DataTab />}
       </main>
     </>
   );

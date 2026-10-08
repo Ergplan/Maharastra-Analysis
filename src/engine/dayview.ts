@@ -229,3 +229,36 @@ export function allocateCapacity(consumers: AllocConsumer[], solarKw: number[], 
     totals: { usedKwh, lapsedKwh: lapsed, unallocatedKwh: dayExport * (1 - placed / plantMwp), spvRevenueRs: rows.reduce((a, r) => a + r.spvRevenueRs, 0), consumerSavingRs: rows.reduce((a, r) => a + r.consumerSavingRs, 0), utilisationPct: dayExport > 0 ? (usedKwh / dayExport) * 100 : 0 },
     note: `Greedy ${stepMwp} MWp steps on the representative day, objective = ${objective === 'revenue' ? 'SPV revenue (₹ tariff x useful kWh)' : 'useful kWh'}; frozen share of every interval's export per consumer; best evaluated allocation, not a proven optimum.` };
 }
+
+/** Evaluate a given MWp allocation (frozen shares) on the representative day, with per-band detail for the ToD chart. */
+export interface AllocCase { rows: AllocRow[]; bands: DayBand[]; totals: { exportKwh: number; allocatedKwh: number; usedExistingKwh: number; usedNewKwh: number; usedKwh: number; lapsedKwh: number; unallocatedKwh: number; utilisationPct: number; spvRevenueRs: number; existingSavingRs: number; newSavingRs: number; existingGridKwh: number; existingLoadKwh: number }; totalMwp: number }
+
+export function evaluateAllocation(consumers: AllocConsumer[], mwps: number[], solarKw: number[], rules: RulePack, mode: SettlementMode, plantMwp: number): AllocCase {
+  const bandsDef = rules.todBands; const cal = buildCalendar(['2026-01'], bandsDef); const bandOf = cal.bandOfInterval; const nB = bandsDef.length; const h = INTERVAL_HOURS;
+  const dayExport = solarKw.reduce((a, v) => a + v * h, 0); const yieldPerMwp = dayExport / plantMwp;
+  const bands: DayBand[] = bandsDef.map((b) => ({ id: b.id, label: b.label, startHour: b.startHour, endHour: b.endHour, hours: b.endHour - b.startHour, loadKwh: 0, solarDirectKwh: 0, blockCreditKwh: 0, gridKwh: 0, surplusAfterGroupKwh: 0, newUsedKwh: 0, newBlockCreditKwh: 0, newLoadKwh: 0, newGridKwh: 0, expiredKwh: 0, lossKwh: 0, solarKwh: 0 }));
+  for (let i = 0; i < 96; i++) bands[bandOf[i]].solarKwh += solarKw[i] * h;
+  let allocTot = 0;
+  const rows: AllocRow[] = consumers.map((c, ci) => {
+    const share = (mwps[ci] ?? 0) / plantMwp; let used = 0, alloc = 0, loadKwh = 0;
+    const bs = new Array(nB).fill(0), bg = new Array(nB).fill(0), bu = new Array(nB).fill(0), bl = new Array(nB).fill(0);
+    for (let i = 0; i < 96; i++) { const s = solarKw[i] * share * h, l = c.loadKw[i] * h, d = Math.min(s, l); const b = bandOf[i]; used += d; alloc += s; loadKwh += l; bs[b] += s - d; bg[b] += l - d; bu[b] += d; bl[b] += l; }
+    let credit = 0; const bc = new Array(nB).fill(0);
+    if (mode === 'tod_block') for (let b = 0; b < nB; b++) { bc[b] = Math.min(bs[b], bg[b]); credit += bc[b]; }
+    let avoided = 0;
+    for (let b = 0; b < nB; b++) {
+      avoided += (bu[b] + bc[b]) * (c.avoidedRsPerKwh[b] ?? 0);
+      const B = bands[b];
+      if (c.kind === 'existing') { B.loadKwh += bl[b]; B.solarDirectKwh += bu[b]; B.blockCreditKwh += bc[b]; B.gridKwh += bg[b] - bc[b]; B.surplusAfterGroupKwh += bs[b]; B.expiredKwh += bs[b] - bc[b]; }
+      else { B.newLoadKwh += bl[b]; B.newUsedKwh += bu[b]; B.newBlockCreditKwh += bc[b]; B.newGridKwh += bg[b] - bc[b]; B.expiredKwh += bs[b] - bc[b]; }
+    }
+    allocTot += alloc; const tot = used + credit;
+    return { id: c.id, name: c.name, kind: c.kind, mwp: mwps[ci] ?? 0, currentMwp: c.currentMwp, energyEquivalentMwp: yieldPerMwp > 0 ? +(loadKwh / yieldPerMwp).toFixed(2) : 0, loadKwh, allocatedKwh: alloc, usedKwh: tot, creditKwh: credit, lapsedKwh: alloc - tot, gridKwh: loadKwh - tot, utilisationPct: alloc > 0 ? (tot / alloc) * 100 : 0, solarSharePct: loadKwh > 0 ? (tot / loadKwh) * 100 : 0, spvRevenueRs: tot * c.tariffRsPerKwh, consumerSavingRs: avoided - tot * c.tariffRsPerKwh, marginalUtilAtCutPct: 0 };
+  });
+  // Unallocated export goes to "surplus after group" so the chart shows it above the demand line as lapsing (disposition unknown).
+  const unalloc = dayExport - allocTot;
+  if (unalloc > 1e-9) for (let i = 0; i < 96; i++) { const e = solarKw[i] * h * (unalloc / dayExport); bands[bandOf[i]].surplusAfterGroupKwh += e; bands[bandOf[i]].expiredKwh += e; }
+  const ex = rows.filter((r) => r.kind === 'existing'), nw = rows.filter((r) => r.kind === 'new');
+  const usedEx = ex.reduce((a, r) => a + r.usedKwh, 0), usedNew = nw.reduce((a, r) => a + r.usedKwh, 0);
+  return { rows, bands, totalMwp: mwps.reduce((a, b) => a + b, 0), totals: { exportKwh: dayExport, allocatedKwh: allocTot, usedExistingKwh: usedEx, usedNewKwh: usedNew, usedKwh: usedEx + usedNew, lapsedKwh: allocTot - usedEx - usedNew, unallocatedKwh: Math.max(0, unalloc), utilisationPct: dayExport > 0 ? ((usedEx + usedNew) / dayExport) * 100 : 0, spvRevenueRs: rows.reduce((a, r) => a + r.spvRevenueRs, 0), existingSavingRs: ex.reduce((a, r) => a + r.consumerSavingRs, 0), newSavingRs: nw.reduce((a, r) => a + r.consumerSavingRs, 0), existingGridKwh: ex.reduce((a, r) => a + r.gridKwh, 0), existingLoadKwh: ex.reduce((a, r) => a + r.loadKwh, 0) } };
+}
