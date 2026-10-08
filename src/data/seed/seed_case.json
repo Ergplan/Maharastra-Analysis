@@ -1,0 +1,6141 @@
+{
+ "version": 1,
+ "builtOn": "2026-10-08",
+ "calendar": {
+  "months": [
+   "2025-11",
+   "2025-12",
+   "2026-01",
+   "2026-02",
+   "2026-03",
+   "2026-04",
+   "2026-05",
+   "2026-06",
+   "2026-07",
+   "2026-08",
+   "2026-09",
+   "2026-10"
+  ],
+  "timezone": "Asia/Kolkata",
+  "observedThrough": "2026-09-30",
+  "estimatedMonths": [
+   "2026-10"
+  ],
+  "intervalsPerDay": 96
+ },
+ "plant": {
+  "name": "7.5 MWp Deoli Maharastra Site",
+  "dcMwp": 7.5,
+  "acMwInverter": {
+   "value": 6.5,
+   "tag": "user_assumption",
+   "status": "unverified",
+   "note": "Inverter MWac / approved export capacity not documented. 6.5 MWac placeholder (DC/AC ~1.15). Used only for the intraday ceiling check; days whose reconstructed peak exceeds it are flagged, never clipped."
+  },
+  "capexRsCrPerMw": 4.0,
+  "capexRsCr": 30.0,
+  "latitude": 20.65,
+  "longitude": 78.48,
+  "export": {
+   "seriesType": "daily ABT meter EXPORT (kWh), reported = (FMR - IMR) x 90",
+   "meterFactor": {
+    "value": 90,
+    "status": "unverified",
+    "note": "Column headers say MWh but the daily difference formula multiplies by 90. Consistent with a secondary-kWh ABT meter with MF 90; the Harrshiv OA bill (Jul-2026, Open Access Permissions table) lists Ortusun meter 100-Q0827721 with MF 90. Treat as provisional until the metering certificate is documented."
+   },
+   "days": [
+    {
+     "date": "2025-11-01",
+     "kwh": 7.471799999999789,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Nov-25",
+      "row": 8
+     }
+    },
+    {
+     "date": "2025-11-02",
+     "kwh": 25467.1938,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Nov-25",
+      "row": 9
+     }
+    },
+    {
+     "date": "2025-11-03",
+     "kwh": 38952.8973,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Nov-25",
+      "row": 10
+     }
+    },
+    {
+     "date": "2025-11-04",
+     "kwh": 39608.49870000001,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Nov-25",
+      "row": 11
+     }
+    },
+    {
+     "date": "2025-11-05",
+     "kwh": 42352.98659999999,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Nov-25",
+      "row": 12
+     }
+    },
+    {
+     "date": "2025-11-06",
+     "kwh": 46512.53550000001,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Nov-25",
+      "row": 13
+     }
+    },
+    {
+     "date": "2025-11-07",
+     "kwh": 47898.404999999984,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Nov-25",
+      "row": 14
+     }
+    },
+    {
+     "date": "2025-11-08",
+     "kwh": 0.0,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Nov-25",
+      "row": 15
+     }
+    },
+    {
+     "date": "2025-11-09",
+     "kwh": 0.0,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Nov-25",
+      "row": 16
+     }
+    },
+    {
+     "date": "2025-11-10",
+     "kwh": 0.0,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Nov-25",
+      "row": 17
+     }
+    },
+    {
+     "date": "2025-11-11",
+     "kwh": 7237.576799999997,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Nov-25",
+      "row": 18
+     }
+    },
+    {
+     "date": "2025-11-12",
+     "kwh": 29849.708700000007,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Nov-25",
+      "row": 19
+     }
+    },
+    {
+     "date": "2025-11-13",
+     "kwh": 29452.95810000001,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Nov-25",
+      "row": 20
+     }
+    },
+    {
+     "date": "2025-11-14",
+     "kwh": 29894.94269999999,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Nov-25",
+      "row": 21
+     }
+    },
+    {
+     "date": "2025-11-15",
+     "kwh": 30328.308899999993,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Nov-25",
+      "row": 22
+     }
+    },
+    {
+     "date": "2025-11-16",
+     "kwh": 29386.42289999999,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Nov-25",
+      "row": 23
+     }
+    },
+    {
+     "date": "2025-11-17",
+     "kwh": 27076.217400000052,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Nov-25",
+      "row": 24
+     }
+    },
+    {
+     "date": "2025-11-18",
+     "kwh": 29187.91529999998,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Nov-25",
+      "row": 25
+     }
+    },
+    {
+     "date": "2025-11-19",
+     "kwh": 27893.679299999974,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Nov-25",
+      "row": 26
+     }
+    },
+    {
+     "date": "2025-11-20",
+     "kwh": 27682.017300000025,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Nov-25",
+      "row": 27
+     }
+    },
+    {
+     "date": "2025-11-21",
+     "kwh": 29689.11900000001,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Nov-25",
+      "row": 28
+     }
+    },
+    {
+     "date": "2025-11-22",
+     "kwh": 31073.27489999999,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Nov-25",
+      "row": 29
+     }
+    },
+    {
+     "date": "2025-11-23",
+     "kwh": 26876.4444,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Nov-25",
+      "row": 30
+     }
+    },
+    {
+     "date": "2025-11-24",
+     "kwh": 26081.50770000001,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Nov-25",
+      "row": 31
+     }
+    },
+    {
+     "date": "2025-11-25",
+     "kwh": 24575.189399999952,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Nov-25",
+      "row": 32
+     }
+    },
+    {
+     "date": "2025-11-26",
+     "kwh": 22427.57610000005,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Nov-25",
+      "row": 33
+     }
+    },
+    {
+     "date": "2025-11-27",
+     "kwh": 20200.094100000006,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Nov-25",
+      "row": 34
+     }
+    },
+    {
+     "date": "2025-11-28",
+     "kwh": 28993.418099999988,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Nov-25",
+      "row": 35
+     }
+    },
+    {
+     "date": "2025-11-29",
+     "kwh": 28073.934899999986,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Nov-25",
+      "row": 36
+     }
+    },
+    {
+     "date": "2025-11-30",
+     "kwh": 26712.07559999999,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Nov-25",
+      "row": 37
+     }
+    },
+    {
+     "date": "2025-12-01",
+     "kwh": 26534.01690000006,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Dec-25",
+      "row": 7
+     }
+    },
+    {
+     "date": "2025-12-02",
+     "kwh": 31147.52940000002,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Dec-25",
+      "row": 8
+     }
+    },
+    {
+     "date": "2025-12-03",
+     "kwh": 32165.48879999995,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Dec-25",
+      "row": 9
+     }
+    },
+    {
+     "date": "2025-12-04",
+     "kwh": 34516.87200000002,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Dec-25",
+      "row": 10
+     }
+    },
+    {
+     "date": "2025-12-05",
+     "kwh": 42394.962600000035,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Dec-25",
+      "row": 11
+     }
+    },
+    {
+     "date": "2025-12-06",
+     "kwh": 43084.634399999864,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Dec-25",
+      "row": 12
+     }
+    },
+    {
+     "date": "2025-12-07",
+     "kwh": 43897.67010000012,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Dec-25",
+      "row": 13
+     }
+    },
+    {
+     "date": "2025-12-08",
+     "kwh": 46553.21729999989,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Dec-25",
+      "row": 14
+     }
+    },
+    {
+     "date": "2025-12-09",
+     "kwh": 47798.65350000011,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Dec-25",
+      "row": 15
+     }
+    },
+    {
+     "date": "2025-12-10",
+     "kwh": 47611.37429999999,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Dec-25",
+      "row": 16
+     }
+    },
+    {
+     "date": "2025-12-11",
+     "kwh": 45916.1531999999,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Dec-25",
+      "row": 17
+     }
+    },
+    {
+     "date": "2025-12-12",
+     "kwh": 43676.894699999975,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Dec-25",
+      "row": 18
+     }
+    },
+    {
+     "date": "2025-12-13",
+     "kwh": 43748.920800000065,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Dec-25",
+      "row": 19
+     }
+    },
+    {
+     "date": "2025-12-14",
+     "kwh": 45138.24269999994,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Dec-25",
+      "row": 20
+     }
+    },
+    {
+     "date": "2025-12-15",
+     "kwh": 40287.74400000008,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Dec-25",
+      "row": 21
+     }
+    },
+    {
+     "date": "2025-12-16",
+     "kwh": 39281.183099999995,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Dec-25",
+      "row": 22
+     }
+    },
+    {
+     "date": "2025-12-17",
+     "kwh": 43017.767099999925,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Dec-25",
+      "row": 23
+     }
+    },
+    {
+     "date": "2025-12-18",
+     "kwh": 47113.02720000007,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Dec-25",
+      "row": 24
+     }
+    },
+    {
+     "date": "2025-12-19",
+     "kwh": 46517.01749999989,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Dec-25",
+      "row": 25
+     }
+    },
+    {
+     "date": "2025-12-20",
+     "kwh": 45764.77500000012,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Dec-25",
+      "row": 26
+     }
+    },
+    {
+     "date": "2025-12-21",
+     "kwh": 42081.78780000009,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Dec-25",
+      "row": 27
+     }
+    },
+    {
+     "date": "2025-12-22",
+     "kwh": 42372.246599999926,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Dec-25",
+      "row": 28
+     }
+    },
+    {
+     "date": "2025-12-23",
+     "kwh": 46190.519999999924,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Dec-25",
+      "row": 29
+     }
+    },
+    {
+     "date": "2025-12-24",
+     "kwh": 41786.169299999965,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Dec-25",
+      "row": 30
+     }
+    },
+    {
+     "date": "2025-12-25",
+     "kwh": 43648.27110000013,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Dec-25",
+      "row": 31
+     }
+    },
+    {
+     "date": "2025-12-26",
+     "kwh": 43391.98169999985,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Dec-25",
+      "row": 32
+     }
+    },
+    {
+     "date": "2025-12-27",
+     "kwh": 43842.74400000024,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Dec-25",
+      "row": 33
+     }
+    },
+    {
+     "date": "2025-12-28",
+     "kwh": 44557.17209999988,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Dec-25",
+      "row": 34
+     }
+    },
+    {
+     "date": "2025-12-29",
+     "kwh": 45447.21270000002,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Dec-25",
+      "row": 35
+     }
+    },
+    {
+     "date": "2025-12-30",
+     "kwh": 46261.9791000001,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Dec-25",
+      "row": 36
+     }
+    },
+    {
+     "date": "2025-12-31",
+     "kwh": 43417.27349999972,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Dec-25",
+      "row": 37
+     }
+    },
+    {
+     "date": "2026-01-01",
+     "kwh": 36917.154000000155,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Jan-26",
+      "row": 7
+     }
+    },
+    {
+     "date": "2026-01-02",
+     "kwh": 29860.67969999989,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Jan-26",
+      "row": 8
+     }
+    },
+    {
+     "date": "2026-01-03",
+     "kwh": 31653.69660000015,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Jan-26",
+      "row": 9
+     }
+    },
+    {
+     "date": "2026-01-04",
+     "kwh": 32700.229199999885,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Jan-26",
+      "row": 10
+     }
+    },
+    {
+     "date": "2026-01-05",
+     "kwh": 33514.82729999996,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Jan-26",
+      "row": 11
+     }
+    },
+    {
+     "date": "2026-01-06",
+     "kwh": 47249.42310000017,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Jan-26",
+      "row": 12
+     }
+    },
+    {
+     "date": "2026-01-07",
+     "kwh": 44465.18310000003,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Jan-26",
+      "row": 13
+     }
+    },
+    {
+     "date": "2026-01-08",
+     "kwh": 41758.699499999784,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Jan-26",
+      "row": 14
+     }
+    },
+    {
+     "date": "2026-01-09",
+     "kwh": 41757.61860000024,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Jan-26",
+      "row": 15
+     }
+    },
+    {
+     "date": "2026-01-10",
+     "kwh": 44628.86969999992,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Jan-26",
+      "row": 16
+     }
+    },
+    {
+     "date": "2026-01-11",
+     "kwh": 42947.157600000064,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Jan-26",
+      "row": 17
+     }
+    },
+    {
+     "date": "2026-01-12",
+     "kwh": 43803.19889999995,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Jan-26",
+      "row": 18
+     }
+    },
+    {
+     "date": "2026-01-13",
+     "kwh": 42715.198800000035,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Jan-26",
+      "row": 19
+     }
+    },
+    {
+     "date": "2026-01-14",
+     "kwh": 35645.27310000005,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Jan-26",
+      "row": 20
+     }
+    },
+    {
+     "date": "2026-01-15",
+     "kwh": 43552.07639999979,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Jan-26",
+      "row": 21
+     }
+    },
+    {
+     "date": "2026-01-16",
+     "kwh": 46000.84320000013,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Jan-26",
+      "row": 22
+     }
+    },
+    {
+     "date": "2026-01-17",
+     "kwh": 46425.39659999991,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Jan-26",
+      "row": 23
+     }
+    },
+    {
+     "date": "2026-01-18",
+     "kwh": 43454.07359999994,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Jan-26",
+      "row": 24
+     }
+    },
+    {
+     "date": "2026-01-19",
+     "kwh": 39864.520800000246,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Jan-26",
+      "row": 25
+     }
+    },
+    {
+     "date": "2026-01-20",
+     "kwh": 39230.63639999982,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Jan-26",
+      "row": 26
+     }
+    },
+    {
+     "date": "2026-01-21",
+     "kwh": 37427.38560000009,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Jan-26",
+      "row": 27
+     }
+    },
+    {
+     "date": "2026-01-22",
+     "kwh": 37997.689499999724,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Jan-26",
+      "row": 28
+     }
+    },
+    {
+     "date": "2026-01-23",
+     "kwh": 36697.40370000014,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Jan-26",
+      "row": 29
+     }
+    },
+    {
+     "date": "2026-01-24",
+     "kwh": 37743.68070000011,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Jan-26",
+      "row": 30
+     }
+    },
+    {
+     "date": "2026-01-25",
+     "kwh": 39849.80669999968,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Jan-26",
+      "row": 31
+     }
+    },
+    {
+     "date": "2026-01-26",
+     "kwh": 37050.71670000012,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Jan-26",
+      "row": 32
+     }
+    },
+    {
+     "date": "2026-01-27",
+     "kwh": 37693.01069999994,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Jan-26",
+      "row": 33
+     }
+    },
+    {
+     "date": "2026-01-28",
+     "kwh": 31602.13830000015,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Jan-26",
+      "row": 34
+     }
+    },
+    {
+     "date": "2026-01-29",
+     "kwh": 38739.6522000002,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Jan-26",
+      "row": 35
+     }
+    },
+    {
+     "date": "2026-01-30",
+     "kwh": 40258.51829999956,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Jan-26",
+      "row": 36
+     }
+    },
+    {
+     "date": "2026-01-31",
+     "kwh": 40260.20310000022,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Jan-26",
+      "row": 37
+     }
+    },
+    {
+     "date": "2026-02-01",
+     "kwh": 44386.4681999998,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Feb-26",
+      "row": 7
+     }
+    },
+    {
+     "date": "2026-02-02",
+     "kwh": 43038.75509999998,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Feb-26",
+      "row": 8
+     }
+    },
+    {
+     "date": "2026-02-03",
+     "kwh": 42009.80400000008,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Feb-26",
+      "row": 9
+     }
+    },
+    {
+     "date": "2026-02-04",
+     "kwh": 40707.662400000554,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Feb-26",
+      "row": 10
+     }
+    },
+    {
+     "date": "2026-02-05",
+     "kwh": 42376.33889999968,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Feb-26",
+      "row": 11
+     }
+    },
+    {
+     "date": "2026-02-06",
+     "kwh": 42069.07619999969,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Feb-26",
+      "row": 12
+     }
+    },
+    {
+     "date": "2026-02-07",
+     "kwh": 46511.00730000013,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Feb-26",
+      "row": 13
+     }
+    },
+    {
+     "date": "2026-02-08",
+     "kwh": 46324.0575000002,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Feb-26",
+      "row": 14
+     }
+    },
+    {
+     "date": "2026-02-09",
+     "kwh": 46722.539699999834,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Feb-26",
+      "row": 15
+     }
+    },
+    {
+     "date": "2026-02-10",
+     "kwh": 47919.32819999987,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Feb-26",
+      "row": 16
+     }
+    },
+    {
+     "date": "2026-02-11",
+     "kwh": 46313.3439000004,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Feb-26",
+      "row": 17
+     }
+    },
+    {
+     "date": "2026-02-12",
+     "kwh": 44307.39689999973,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Feb-26",
+      "row": 18
+     }
+    },
+    {
+     "date": "2026-02-13",
+     "kwh": 41223.41820000009,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Feb-26",
+      "row": 19
+     }
+    },
+    {
+     "date": "2026-02-14",
+     "kwh": 43136.9208000003,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Feb-26",
+      "row": 20
+     }
+    },
+    {
+     "date": "2026-02-15",
+     "kwh": 42047.195399999764,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Feb-26",
+      "row": 21
+     }
+    },
+    {
+     "date": "2026-02-16",
+     "kwh": 47396.02139999988,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Feb-26",
+      "row": 22
+     }
+    },
+    {
+     "date": "2026-02-17",
+     "kwh": 49255.477200000096,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Feb-26",
+      "row": 23
+     }
+    },
+    {
+     "date": "2026-02-18",
+     "kwh": 46933.98930000032,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Feb-26",
+      "row": 24
+     }
+    },
+    {
+     "date": "2026-02-19",
+     "kwh": 45055.190699999584,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Feb-26",
+      "row": 25
+     }
+    },
+    {
+     "date": "2026-02-20",
+     "kwh": 44962.21890000001,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Feb-26",
+      "row": 26
+     }
+    },
+    {
+     "date": "2026-02-21",
+     "kwh": 38228.7779999998,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Feb-26",
+      "row": 27
+     }
+    },
+    {
+     "date": "2026-02-22",
+     "kwh": 39823.22610000061,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Feb-26",
+      "row": 28
+     }
+    },
+    {
+     "date": "2026-02-23",
+     "kwh": 38350.88639999936,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Feb-26",
+      "row": 29
+     }
+    },
+    {
+     "date": "2026-02-24",
+     "kwh": 39802.08150000042,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Feb-26",
+      "row": 30
+     }
+    },
+    {
+     "date": "2026-02-25",
+     "kwh": 40617.47879999995,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Feb-26",
+      "row": 31
+     }
+    },
+    {
+     "date": "2026-02-26",
+     "kwh": 43300.79099999981,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Feb-26",
+      "row": 32
+     }
+    },
+    {
+     "date": "2026-02-27",
+     "kwh": 33887.96640000037,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Feb-26",
+      "row": 33
+     }
+    },
+    {
+     "date": "2026-02-28",
+     "kwh": 41525.50949999975,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "Feb-26",
+      "row": 34
+     }
+    },
+    {
+     "date": "2026-03-01",
+     "kwh": 51788.54610000031,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "March-26",
+      "row": 7
+     }
+    },
+    {
+     "date": "2026-03-02",
+     "kwh": 52224.13619999992,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "March-26",
+      "row": 8
+     }
+    },
+    {
+     "date": "2026-03-03",
+     "kwh": 52476.67259999973,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "March-26",
+      "row": 9
+     }
+    },
+    {
+     "date": "2026-03-04",
+     "kwh": 53228.350800000335,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "March-26",
+      "row": 10
+     }
+    },
+    {
+     "date": "2026-03-05",
+     "kwh": 54976.09589999993,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "March-26",
+      "row": 11
+     }
+    },
+    {
+     "date": "2026-03-06",
+     "kwh": 54299.49660000006,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "March-26",
+      "row": 12
+     }
+    },
+    {
+     "date": "2026-03-07",
+     "kwh": 53576.55359999975,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "March-26",
+      "row": 13
+     }
+    },
+    {
+     "date": "2026-03-08",
+     "kwh": 53711.00910000008,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "March-26",
+      "row": 14
+     }
+    },
+    {
+     "date": "2026-03-09",
+     "kwh": 54285.43679999966,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "March-26",
+      "row": 15
+     }
+    },
+    {
+     "date": "2026-03-10",
+     "kwh": 51939.69840000056,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "March-26",
+      "row": 16
+     }
+    },
+    {
+     "date": "2026-03-11",
+     "kwh": 48144.56399999981,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "March-26",
+      "row": 17
+     }
+    },
+    {
+     "date": "2026-03-12",
+     "kwh": 50806.70640000011,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "March-26",
+      "row": 18
+     }
+    },
+    {
+     "date": "2026-03-13",
+     "kwh": 50069.23019999958,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "March-26",
+      "row": 19
+     }
+    },
+    {
+     "date": "2026-03-14",
+     "kwh": 47523.58650000009,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "March-26",
+      "row": 20
+     }
+    },
+    {
+     "date": "2026-03-15",
+     "kwh": 44756.431200000225,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "March-26",
+      "row": 21
+     }
+    },
+    {
+     "date": "2026-03-16",
+     "kwh": 47409.903899999845,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "March-26",
+      "row": 22
+     }
+    },
+    {
+     "date": "2026-03-17",
+     "kwh": 48774.62609999988,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "March-26",
+      "row": 23
+     }
+    },
+    {
+     "date": "2026-03-18",
+     "kwh": 40120.606800000096,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "March-26",
+      "row": 24
+     }
+    },
+    {
+     "date": "2026-03-19",
+     "kwh": 48433.338899999944,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "March-26",
+      "row": 25
+     }
+    },
+    {
+     "date": "2026-03-20",
+     "kwh": 45561.6485999999,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "March-26",
+      "row": 26
+     }
+    },
+    {
+     "date": "2026-03-21",
+     "kwh": 54503.287200000195,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "March-26",
+      "row": 27
+     }
+    },
+    {
+     "date": "2026-03-22",
+     "kwh": 54304.20809999989,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "March-26",
+      "row": 28
+     }
+    },
+    {
+     "date": "2026-03-23",
+     "kwh": 52110.30509999982,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "March-26",
+      "row": 29
+     }
+    },
+    {
+     "date": "2026-03-24",
+     "kwh": 46754.52120000031,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "March-26",
+      "row": 30
+     }
+    },
+    {
+     "date": "2026-03-25",
+     "kwh": 52643.26710000016,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "March-26",
+      "row": 31
+     }
+    },
+    {
+     "date": "2026-03-26",
+     "kwh": 49526.613899999866,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "March-26",
+      "row": 32
+     }
+    },
+    {
+     "date": "2026-03-27",
+     "kwh": 44542.8585,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "March-26",
+      "row": 33
+     }
+    },
+    {
+     "date": "2026-03-28",
+     "kwh": 54417.86460000047,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "March-26",
+      "row": 34
+     }
+    },
+    {
+     "date": "2026-03-29",
+     "kwh": 52674.70949999886,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "March-26",
+      "row": 35
+     }
+    },
+    {
+     "date": "2026-03-30",
+     "kwh": 48053.169000000344,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "March-26",
+      "row": 36
+     }
+    },
+    {
+     "date": "2026-03-31",
+     "kwh": 52537.52970000089,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "March-26",
+      "row": 37
+     }
+    },
+    {
+     "date": "2026-04-01",
+     "kwh": 43662.28499999939,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "April-26",
+      "row": 7
+     }
+    },
+    {
+     "date": "2026-04-02",
+     "kwh": 42047.26469999965,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "April-26",
+      "row": 8
+     }
+    },
+    {
+     "date": "2026-04-03",
+     "kwh": 48306.34800000029,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "April-26",
+      "row": 9
+     }
+    },
+    {
+     "date": "2026-04-04",
+     "kwh": 31448.7089999998,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "April-26",
+      "row": 10
+     }
+    },
+    {
+     "date": "2026-04-05",
+     "kwh": 44419.63140000022,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "April-26",
+      "row": 11
+     }
+    },
+    {
+     "date": "2026-04-06",
+     "kwh": 53050.694400000066,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "April-26",
+      "row": 12
+     }
+    },
+    {
+     "date": "2026-04-07",
+     "kwh": 53261.992800000444,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "April-26",
+      "row": 13
+     }
+    },
+    {
+     "date": "2026-04-08",
+     "kwh": 49951.89180000001,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "April-26",
+      "row": 14
+     }
+    },
+    {
+     "date": "2026-04-09",
+     "kwh": 52632.6821999994,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "April-26",
+      "row": 15
+     }
+    },
+    {
+     "date": "2026-04-10",
+     "kwh": 52808.30640000058,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "April-26",
+      "row": 16
+     }
+    },
+    {
+     "date": "2026-04-11",
+     "kwh": 52920.910799999256,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "April-26",
+      "row": 17
+     }
+    },
+    {
+     "date": "2026-04-12",
+     "kwh": 50335.718399999896,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "April-26",
+      "row": 18
+     }
+    },
+    {
+     "date": "2026-04-13",
+     "kwh": 48564.5481000001,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "April-26",
+      "row": 19
+     }
+    },
+    {
+     "date": "2026-04-14",
+     "kwh": 49870.26990000086,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "April-26",
+      "row": 20
+     }
+    },
+    {
+     "date": "2026-04-15",
+     "kwh": 20068.240499998938,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "April-26",
+      "row": 21
+     }
+    },
+    {
+     "date": "2026-04-16",
+     "kwh": 53185.44960000101,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "April-26",
+      "row": 22
+     }
+    },
+    {
+     "date": "2026-04-17",
+     "kwh": 49123.98539999922,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "April-26",
+      "row": 23
+     }
+    },
+    {
+     "date": "2026-04-18",
+     "kwh": 47836.4075999998,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "April-26",
+      "row": 24
+     }
+    },
+    {
+     "date": "2026-04-19",
+     "kwh": 46248.268500000704,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "April-26",
+      "row": 25
+     }
+    },
+    {
+     "date": "2026-04-20",
+     "kwh": 40544.95589999948,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "April-26",
+      "row": 26
+     }
+    },
+    {
+     "date": "2026-04-21",
+     "kwh": 48719.89350000018,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "April-26",
+      "row": 27
+     }
+    },
+    {
+     "date": "2026-04-22",
+     "kwh": 46476.52289999969,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "April-26",
+      "row": 28
+     }
+    },
+    {
+     "date": "2026-04-23",
+     "kwh": 47842.226099999825,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "April-26",
+      "row": 29
+     }
+    },
+    {
+     "date": "2026-04-24",
+     "kwh": 47700.069300001196,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "April-26",
+      "row": 30
+     }
+    },
+    {
+     "date": "2026-04-25",
+     "kwh": 47341.35629999946,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "April-26",
+      "row": 31
+     }
+    },
+    {
+     "date": "2026-04-26",
+     "kwh": 46909.10340000002,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "April-26",
+      "row": 32
+     }
+    },
+    {
+     "date": "2026-04-27",
+     "kwh": 48153.27780000036,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "April-26",
+      "row": 33
+     }
+    },
+    {
+     "date": "2026-04-28",
+     "kwh": 47178.02430000011,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "April-26",
+      "row": 34
+     }
+    },
+    {
+     "date": "2026-04-29",
+     "kwh": 50765.04629999923,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "April-26",
+      "row": 35
+     }
+    },
+    {
+     "date": "2026-04-30",
+     "kwh": 52211.124000000564,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "April-26",
+      "row": 36
+     }
+    },
+    {
+     "date": "2026-05-01",
+     "kwh": 49341.31199999989,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "May-26",
+      "row": 7
+     }
+    },
+    {
+     "date": "2026-05-02",
+     "kwh": 51559.41240000029,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "May-26",
+      "row": 8
+     }
+    },
+    {
+     "date": "2026-05-03",
+     "kwh": 51960.22379999937,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "May-26",
+      "row": 9
+     }
+    },
+    {
+     "date": "2026-05-04",
+     "kwh": 51616.362600000284,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "May-26",
+      "row": 10
+     }
+    },
+    {
+     "date": "2026-05-05",
+     "kwh": 49797.76590000023,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "May-26",
+      "row": 11
+     }
+    },
+    {
+     "date": "2026-05-06",
+     "kwh": 48165.9146999997,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "May-26",
+      "row": 12
+     }
+    },
+    {
+     "date": "2026-05-07",
+     "kwh": 36858.65670000028,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "May-26",
+      "row": 13
+     }
+    },
+    {
+     "date": "2026-05-08",
+     "kwh": 50556.922199999535,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "May-26",
+      "row": 14
+     }
+    },
+    {
+     "date": "2026-05-09",
+     "kwh": 42877.8207000003,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "May-26",
+      "row": 15
+     }
+    },
+    {
+     "date": "2026-05-10",
+     "kwh": 49869.6614999992,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "May-26",
+      "row": 16
+     }
+    },
+    {
+     "date": "2026-05-11",
+     "kwh": 48432.03840000104,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "May-26",
+      "row": 17
+     }
+    },
+    {
+     "date": "2026-05-12",
+     "kwh": 44817.77069999967,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "May-26",
+      "row": 18
+     }
+    },
+    {
+     "date": "2026-05-13",
+     "kwh": 42014.7917999998,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "May-26",
+      "row": 19
+     }
+    },
+    {
+     "date": "2026-05-14",
+     "kwh": 46029.96539999949,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "May-26",
+      "row": 20
+     }
+    },
+    {
+     "date": "2026-05-15",
+     "kwh": 44017.72020000077,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "May-26",
+      "row": 21
+     }
+    },
+    {
+     "date": "2026-05-16",
+     "kwh": 48804.2045999995,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "May-26",
+      "row": 22
+     }
+    },
+    {
+     "date": "2026-05-17",
+     "kwh": 46509.79860000021,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "May-26",
+      "row": 23
+     }
+    },
+    {
+     "date": "2026-05-18",
+     "kwh": 49704.513300000544,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "May-26",
+      "row": 24
+     }
+    },
+    {
+     "date": "2026-05-19",
+     "kwh": 42802.89479999963,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "May-26",
+      "row": 25
+     }
+    },
+    {
+     "date": "2026-05-20",
+     "kwh": 47794.157999999734,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "May-26",
+      "row": 26
+     }
+    },
+    {
+     "date": "2026-05-21",
+     "kwh": 48465.35189999995,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "May-26",
+      "row": 27
+     }
+    },
+    {
+     "date": "2026-05-22",
+     "kwh": 44522.267400000565,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "May-26",
+      "row": 28
+     }
+    },
+    {
+     "date": "2026-05-23",
+     "kwh": 47371.39649999954,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "May-26",
+      "row": 29
+     }
+    },
+    {
+     "date": "2026-05-24",
+     "kwh": 44906.800499999954,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "May-26",
+      "row": 30
+     }
+    },
+    {
+     "date": "2026-05-25",
+     "kwh": 38738.48760000081,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "May-26",
+      "row": 31
+     }
+    },
+    {
+     "date": "2026-05-26",
+     "kwh": 44119.82969999968,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "May-26",
+      "row": 32
+     }
+    },
+    {
+     "date": "2026-05-27",
+     "kwh": 47879.963099999295,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "May-26",
+      "row": 33
+     }
+    },
+    {
+     "date": "2026-05-28",
+     "kwh": 44789.42790000059,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "May-26",
+      "row": 34
+     }
+    },
+    {
+     "date": "2026-05-29",
+     "kwh": 50245.82909999939,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "May-26",
+      "row": 35
+     }
+    },
+    {
+     "date": "2026-05-30",
+     "kwh": 49135.97520000083,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "May-26",
+      "row": 36
+     }
+    },
+    {
+     "date": "2026-05-31",
+     "kwh": 44511.91649999979,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "May-26",
+      "row": 37
+     }
+    },
+    {
+     "date": "2026-06-01",
+     "kwh": 34590.9014999996,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "June-26",
+      "row": 7
+     }
+    },
+    {
+     "date": "2026-06-02",
+     "kwh": 50944.68809999977,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "June-26",
+      "row": 8
+     }
+    },
+    {
+     "date": "2026-06-03",
+     "kwh": 49779.8046000005,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "June-26",
+      "row": 9
+     }
+    },
+    {
+     "date": "2026-06-04",
+     "kwh": 51344.944199999445,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "June-26",
+      "row": 10
+     }
+    },
+    {
+     "date": "2026-06-05",
+     "kwh": 45875.10780000084,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "June-26",
+      "row": 11
+     }
+    },
+    {
+     "date": "2026-06-06",
+     "kwh": 44101.525499999116,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "June-26",
+      "row": 12
+     }
+    },
+    {
+     "date": "2026-06-07",
+     "kwh": 39644.757000000245,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "June-26",
+      "row": 13
+     }
+    },
+    {
+     "date": "2026-06-08",
+     "kwh": 43915.61609999975,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "June-26",
+      "row": 14
+     }
+    },
+    {
+     "date": "2026-06-09",
+     "kwh": 46567.39320000095,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "June-26",
+      "row": 15
+     }
+    },
+    {
+     "date": "2026-06-10",
+     "kwh": 46712.126699999644,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "June-26",
+      "row": 16
+     }
+    },
+    {
+     "date": "2026-06-11",
+     "kwh": 50464.78830000007,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "June-26",
+      "row": 17
+     }
+    },
+    {
+     "date": "2026-06-12",
+     "kwh": 44931.50729999921,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "June-26",
+      "row": 18
+     }
+    },
+    {
+     "date": "2026-06-13",
+     "kwh": 43937.61030000009,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "June-26",
+      "row": 19
+     }
+    },
+    {
+     "date": "2026-06-14",
+     "kwh": 42305.76360000108,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "June-26",
+      "row": 20
+     }
+    },
+    {
+     "date": "2026-06-15",
+     "kwh": 43550.617499999644,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "June-26",
+      "row": 21
+     }
+    },
+    {
+     "date": "2026-06-16",
+     "kwh": 50236.97939999998,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "June-26",
+      "row": 22
+     }
+    },
+    {
+     "date": "2026-06-17",
+     "kwh": 45167.0,
+     "hardcoded": true,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "June-26",
+      "row": 23
+     }
+    },
+    {
+     "date": "2026-06-18",
+     "kwh": 49285.0,
+     "hardcoded": true,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "June-26",
+      "row": 24
+     }
+    },
+    {
+     "date": "2026-06-19",
+     "kwh": 47746.12590000004,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "June-26",
+      "row": 25
+     }
+    },
+    {
+     "date": "2026-06-20",
+     "kwh": 50922.0,
+     "hardcoded": true,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "June-26",
+      "row": 26
+     }
+    },
+    {
+     "date": "2026-06-21",
+     "kwh": 42809.61150000119,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "June-26",
+      "row": 27
+     }
+    },
+    {
+     "date": "2026-06-22",
+     "kwh": 36511.28999999972,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "June-26",
+      "row": 28
+     }
+    },
+    {
+     "date": "2026-06-23",
+     "kwh": 42314.0,
+     "hardcoded": true,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "June-26",
+      "row": 29
+     }
+    },
+    {
+     "date": "2026-06-24",
+     "kwh": 33425.105400000466,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "June-26",
+      "row": 30
+     }
+    },
+    {
+     "date": "2026-06-25",
+     "kwh": 42752.705399999104,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "June-26",
+      "row": 31
+     }
+    },
+    {
+     "date": "2026-06-26",
+     "kwh": 40434.997500000754,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "June-26",
+      "row": 32
+     }
+    },
+    {
+     "date": "2026-06-27",
+     "kwh": 35889.79769999991,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "June-26",
+      "row": 33
+     }
+    },
+    {
+     "date": "2026-06-28",
+     "kwh": 28371.44070000024,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "June-26",
+      "row": 34
+     }
+    },
+    {
+     "date": "2026-06-29",
+     "kwh": 37937.584800000186,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "June-26",
+      "row": 35
+     }
+    },
+    {
+     "date": "2026-06-30",
+     "kwh": 24397.89119999972,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_June-26.xlsx",
+      "sheet": "June-26",
+      "row": 36
+     }
+    },
+    {
+     "date": "2026-07-01",
+     "kwh": 34476.02279999977,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_July-26.xlsx",
+      "sheet": "July-26",
+      "row": 7
+     }
+    },
+    {
+     "date": "2026-07-02",
+     "kwh": 23657.86890000032,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_July-26.xlsx",
+      "sheet": "July-26",
+      "row": 8
+     }
+    },
+    {
+     "date": "2026-07-03",
+     "kwh": 17736.45119999943,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_July-26.xlsx",
+      "sheet": "July-26",
+      "row": 9
+     }
+    },
+    {
+     "date": "2026-07-04",
+     "kwh": 25216.120800000062,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_July-26.xlsx",
+      "sheet": "July-26",
+      "row": 10
+     }
+    },
+    {
+     "date": "2026-07-05",
+     "kwh": 18558.871199999994,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_July-26.xlsx",
+      "sheet": "July-26",
+      "row": 11
+     }
+    },
+    {
+     "date": "2026-07-06",
+     "kwh": 36049.50000000026,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_July-26.xlsx",
+      "sheet": "July-26",
+      "row": 12
+     }
+    },
+    {
+     "date": "2026-07-07",
+     "kwh": 16060.816799999593,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_July-26.xlsx",
+      "sheet": "July-26",
+      "row": 13
+     }
+    },
+    {
+     "date": "2026-07-08",
+     "kwh": 0.0,
+     "hardcoded": false,
+     "note": "Breakdown",
+     "source": {
+      "file": "Daily_Generation_July-26.xlsx",
+      "sheet": "July-26",
+      "row": 14
+     }
+    },
+    {
+     "date": "2026-07-09",
+     "kwh": 18826.20000000068,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_July-26.xlsx",
+      "sheet": "July-26",
+      "row": 15
+     }
+    },
+    {
+     "date": "2026-07-10",
+     "kwh": 44661.78899999897,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_July-26.xlsx",
+      "sheet": "July-26",
+      "row": 16
+     }
+    },
+    {
+     "date": "2026-07-11",
+     "kwh": 28624.8834000004,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_July-26.xlsx",
+      "sheet": "July-26",
+      "row": 17
+     }
+    },
+    {
+     "date": "2026-07-12",
+     "kwh": 34477.49880000047,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_July-26.xlsx",
+      "sheet": "July-26",
+      "row": 18
+     }
+    },
+    {
+     "date": "2026-07-13",
+     "kwh": 41730.0615000003,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_July-26.xlsx",
+      "sheet": "July-26",
+      "row": 19
+     }
+    },
+    {
+     "date": "2026-07-14",
+     "kwh": 46957.38839999889,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_July-26.xlsx",
+      "sheet": "July-26",
+      "row": 20
+     }
+    },
+    {
+     "date": "2026-07-15",
+     "kwh": 37395.54630000028,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_July-26.xlsx",
+      "sheet": "July-26",
+      "row": 21
+     }
+    },
+    {
+     "date": "2026-07-16",
+     "kwh": 39701.57310000068,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_July-26.xlsx",
+      "sheet": "July-26",
+      "row": 22
+     }
+    },
+    {
+     "date": "2026-07-17",
+     "kwh": 15533.261999999522,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_July-26.xlsx",
+      "sheet": "July-26",
+      "row": 23
+     }
+    },
+    {
+     "date": "2026-07-18",
+     "kwh": 12415.372199999692,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_July-26.xlsx",
+      "sheet": "July-26",
+      "row": 24
+     }
+    },
+    {
+     "date": "2026-07-19",
+     "kwh": 22586.609700000845,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_July-26.xlsx",
+      "sheet": "July-26",
+      "row": 25
+     }
+    },
+    {
+     "date": "2026-07-20",
+     "kwh": 28680.206399999588,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_July-26.xlsx",
+      "sheet": "July-26",
+      "row": 26
+     }
+    },
+    {
+     "date": "2026-07-21",
+     "kwh": 10812.626099999616,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_July-26.xlsx",
+      "sheet": "July-26",
+      "row": 27
+     }
+    },
+    {
+     "date": "2026-07-22",
+     "kwh": 5760.379800000228,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_July-26.xlsx",
+      "sheet": "July-26",
+      "row": 28
+     }
+    },
+    {
+     "date": "2026-07-23",
+     "kwh": 15865.318799999513,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_July-26.xlsx",
+      "sheet": "July-26",
+      "row": 29
+     }
+    },
+    {
+     "date": "2026-07-24",
+     "kwh": 37756.467000000266,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_July-26.xlsx",
+      "sheet": "July-26",
+      "row": 30
+     }
+    },
+    {
+     "date": "2026-07-25",
+     "kwh": 38330.39970000056,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_July-26.xlsx",
+      "sheet": "July-26",
+      "row": 31
+     }
+    },
+    {
+     "date": "2026-07-26",
+     "kwh": 40618.91789999994,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_July-26.xlsx",
+      "sheet": "July-26",
+      "row": 32
+     }
+    },
+    {
+     "date": "2026-07-27",
+     "kwh": 29553.20910000024,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_July-26.xlsx",
+      "sheet": "July-26",
+      "row": 33
+     }
+    },
+    {
+     "date": "2026-07-28",
+     "kwh": 15473.048400000116,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_July-26.xlsx",
+      "sheet": "July-26",
+      "row": 34
+     }
+    },
+    {
+     "date": "2026-07-29",
+     "kwh": 20453.36039999922,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_July-26.xlsx",
+      "sheet": "July-26",
+      "row": 35
+     }
+    },
+    {
+     "date": "2026-07-30",
+     "kwh": 9657.465300000622,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_July-26.xlsx",
+      "sheet": "July-26",
+      "row": 36
+     }
+    },
+    {
+     "date": "2026-07-31",
+     "kwh": 18674.02980000028,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_July-26.xlsx",
+      "sheet": "July-26",
+      "row": 37
+     }
+    },
+    {
+     "date": "2026-08-01",
+     "kwh": 13257.430199999217,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_Aug-26.xlsx",
+      "sheet": "Aug-26",
+      "row": 7
+     }
+    },
+    {
+     "date": "2026-08-02",
+     "kwh": 39051.14220000047,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_Aug-26.xlsx",
+      "sheet": "Aug-26",
+      "row": 8
+     }
+    },
+    {
+     "date": "2026-08-03",
+     "kwh": 34148.186099999584,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_Aug-26.xlsx",
+      "sheet": "Aug-26",
+      "row": 9
+     }
+    },
+    {
+     "date": "2026-08-04",
+     "kwh": 24628.826700000063,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_Aug-26.xlsx",
+      "sheet": "Aug-26",
+      "row": 10
+     }
+    },
+    {
+     "date": "2026-08-05",
+     "kwh": 21864.056399999536,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_Aug-26.xlsx",
+      "sheet": "Aug-26",
+      "row": 11
+     }
+    },
+    {
+     "date": "2026-08-06",
+     "kwh": 26059.012200000143,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_Aug-26.xlsx",
+      "sheet": "Aug-26",
+      "row": 12
+     }
+    },
+    {
+     "date": "2026-08-07",
+     "kwh": 17233.416000000725,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_Aug-26.xlsx",
+      "sheet": "Aug-26",
+      "row": 13
+     }
+    },
+    {
+     "date": "2026-08-08",
+     "kwh": 21117.892499999434,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_Aug-26.xlsx",
+      "sheet": "Aug-26",
+      "row": 14
+     }
+    },
+    {
+     "date": "2026-08-09",
+     "kwh": 15748.873199999653,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_Aug-26.xlsx",
+      "sheet": "Aug-26",
+      "row": 15
+     }
+    },
+    {
+     "date": "2026-08-10",
+     "kwh": 26575.697700000746,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_Aug-26.xlsx",
+      "sheet": "Aug-26",
+      "row": 16
+     }
+    },
+    {
+     "date": "2026-08-11",
+     "kwh": 23412.2868,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_Aug-26.xlsx",
+      "sheet": "Aug-26",
+      "row": 17
+     }
+    },
+    {
+     "date": "2026-08-12",
+     "kwh": 16136.706599999161,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_Aug-26.xlsx",
+      "sheet": "Aug-26",
+      "row": 18
+     }
+    },
+    {
+     "date": "2026-08-13",
+     "kwh": 24922.891800000798,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_Aug-26.xlsx",
+      "sheet": "Aug-26",
+      "row": 19
+     }
+    },
+    {
+     "date": "2026-08-14",
+     "kwh": 20743.987500000367,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_Aug-26.xlsx",
+      "sheet": "Aug-26",
+      "row": 20
+     }
+    },
+    {
+     "date": "2026-08-15",
+     "kwh": 12148.237799999333,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_Aug-26.xlsx",
+      "sheet": "Aug-26",
+      "row": 21
+     }
+    },
+    {
+     "date": "2026-08-16",
+     "kwh": 11188.323900000541,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_Aug-26.xlsx",
+      "sheet": "Aug-26",
+      "row": 22
+     }
+    },
+    {
+     "date": "2026-08-17",
+     "kwh": 21039.28380000012,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_Aug-26.xlsx",
+      "sheet": "Aug-26",
+      "row": 23
+     }
+    },
+    {
+     "date": "2026-08-18",
+     "kwh": 16116.484499998915,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_Aug-26.xlsx",
+      "sheet": "Aug-26",
+      "row": 24
+     }
+    },
+    {
+     "date": "2026-08-19",
+     "kwh": 12604.475700001203,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_Aug-26.xlsx",
+      "sheet": "Aug-26",
+      "row": 25
+     }
+    },
+    {
+     "date": "2026-08-20",
+     "kwh": 24232.44869999966,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_Aug-26.xlsx",
+      "sheet": "Aug-26",
+      "row": 26
+     }
+    },
+    {
+     "date": "2026-08-21",
+     "kwh": 23860.28519999949,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_Aug-26.xlsx",
+      "sheet": "Aug-26",
+      "row": 27
+     }
+    },
+    {
+     "date": "2026-08-22",
+     "kwh": 10201.482899999974,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_Aug-26.xlsx",
+      "sheet": "Aug-26",
+      "row": 28
+     }
+    },
+    {
+     "date": "2026-08-23",
+     "kwh": 8899.761600000638,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_Aug-26.xlsx",
+      "sheet": "Aug-26",
+      "row": 29
+     }
+    },
+    {
+     "date": "2026-08-24",
+     "kwh": 13163.607899999188,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_Aug-26.xlsx",
+      "sheet": "Aug-26",
+      "row": 30
+     }
+    },
+    {
+     "date": "2026-08-25",
+     "kwh": 14944.76640000008,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_Aug-26.xlsx",
+      "sheet": "Aug-26",
+      "row": 31
+     }
+    },
+    {
+     "date": "2026-08-26",
+     "kwh": 11490.860699999757,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_Aug-26.xlsx",
+      "sheet": "Aug-26",
+      "row": 32
+     }
+    },
+    {
+     "date": "2026-08-27",
+     "kwh": 18788.35860000123,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_Aug-26.xlsx",
+      "sheet": "Aug-26",
+      "row": 33
+     }
+    },
+    {
+     "date": "2026-08-28",
+     "kwh": 22452.871499999746,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_Aug-26.xlsx",
+      "sheet": "Aug-26",
+      "row": 34
+     }
+    },
+    {
+     "date": "2026-08-29",
+     "kwh": 5031.395099999645,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_Aug-26.xlsx",
+      "sheet": "Aug-26",
+      "row": 35
+     }
+    },
+    {
+     "date": "2026-08-30",
+     "kwh": 16345.991700000304,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_Aug-26.xlsx",
+      "sheet": "Aug-26",
+      "row": 36
+     }
+    },
+    {
+     "date": "2026-08-31",
+     "kwh": 21182.562900000194,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_Aug-26.xlsx",
+      "sheet": "Aug-26",
+      "row": 37
+     }
+    },
+    {
+     "date": "2026-09-01",
+     "kwh": 26293.76549999899,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_Sep-26.xlsx",
+      "sheet": "Sep-26",
+      "row": 7
+     }
+    },
+    {
+     "date": "2026-09-02",
+     "kwh": 22216.950899999938,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_Sep-26.xlsx",
+      "sheet": "Sep-26",
+      "row": 8
+     }
+    },
+    {
+     "date": "2026-09-03",
+     "kwh": 9729.085500000656,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_Sep-26.xlsx",
+      "sheet": "Sep-26",
+      "row": 9
+     }
+    },
+    {
+     "date": "2026-09-04",
+     "kwh": 18073.5335999995,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_Sep-26.xlsx",
+      "sheet": "Sep-26",
+      "row": 10
+     }
+    },
+    {
+     "date": "2026-09-05",
+     "kwh": 13830.026400000206,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_Sep-26.xlsx",
+      "sheet": "Sep-26",
+      "row": 11
+     }
+    },
+    {
+     "date": "2026-09-06",
+     "kwh": 32055.603300000366,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_Sep-26.xlsx",
+      "sheet": "Sep-26",
+      "row": 12
+     }
+    },
+    {
+     "date": "2026-09-07",
+     "kwh": 33119.23949999924,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_Sep-26.xlsx",
+      "sheet": "Sep-26",
+      "row": 13
+     }
+    },
+    {
+     "date": "2026-09-08",
+     "kwh": 15626.49210000076,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_Sep-26.xlsx",
+      "sheet": "Sep-26",
+      "row": 14
+     }
+    },
+    {
+     "date": "2026-09-09",
+     "kwh": 33542.267400000565,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_Sep-26.xlsx",
+      "sheet": "Sep-26",
+      "row": 15
+     }
+    },
+    {
+     "date": "2026-09-10",
+     "kwh": 31980.34529999859,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_Sep-26.xlsx",
+      "sheet": "Sep-26",
+      "row": 16
+     }
+    },
+    {
+     "date": "2026-09-11",
+     "kwh": 18171.796500000637,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_Sep-26.xlsx",
+      "sheet": "Sep-26",
+      "row": 17
+     }
+    },
+    {
+     "date": "2026-09-12",
+     "kwh": 6939.134999999078,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_Sep-26.xlsx",
+      "sheet": "Sep-26",
+      "row": 18
+     }
+    },
+    {
+     "date": "2026-09-13",
+     "kwh": 8489.739600001776,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_Sep-26.xlsx",
+      "sheet": "Sep-26",
+      "row": 19
+     }
+    },
+    {
+     "date": "2026-09-14",
+     "kwh": 12972.486599999538,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_Sep-26.xlsx",
+      "sheet": "Sep-26",
+      "row": 20
+     }
+    },
+    {
+     "date": "2026-09-15",
+     "kwh": 18538.05149999913,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_Sep-26.xlsx",
+      "sheet": "Sep-26",
+      "row": 21
+     }
+    },
+    {
+     "date": "2026-09-16",
+     "kwh": 22983.831000001228,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_Sep-26.xlsx",
+      "sheet": "Sep-26",
+      "row": 22
+     }
+    },
+    {
+     "date": "2026-09-17",
+     "kwh": 21359.387699999206,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_Sep-26.xlsx",
+      "sheet": "Sep-26",
+      "row": 23
+     }
+    },
+    {
+     "date": "2026-09-18",
+     "kwh": 20868.758099998813,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_Sep-26.xlsx",
+      "sheet": "Sep-26",
+      "row": 24
+     }
+    },
+    {
+     "date": "2026-09-19",
+     "kwh": 21026.23290000076,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_Sep-26.xlsx",
+      "sheet": "Sep-26",
+      "row": 25
+     }
+    },
+    {
+     "date": "2026-09-20",
+     "kwh": 16268.091299999796,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_Sep-26.xlsx",
+      "sheet": "Sep-26",
+      "row": 26
+     }
+    },
+    {
+     "date": "2026-09-21",
+     "kwh": 18370.483199999726,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_Sep-26.xlsx",
+      "sheet": "Sep-26",
+      "row": 27
+     }
+    },
+    {
+     "date": "2026-09-22",
+     "kwh": 18020.206800001615,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_Sep-26.xlsx",
+      "sheet": "Sep-26",
+      "row": 28
+     }
+    },
+    {
+     "date": "2026-09-23",
+     "kwh": 19546.77059999871,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_Sep-26.xlsx",
+      "sheet": "Sep-26",
+      "row": 29
+     }
+    },
+    {
+     "date": "2026-09-24",
+     "kwh": 19852.755299999553,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_Sep-26.xlsx",
+      "sheet": "Sep-26",
+      "row": 30
+     }
+    },
+    {
+     "date": "2026-09-25",
+     "kwh": 13792.806900000433,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_Sep-26.xlsx",
+      "sheet": "Sep-26",
+      "row": 31
+     }
+    },
+    {
+     "date": "2026-09-26",
+     "kwh": 10216.108800000802,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_Sep-26.xlsx",
+      "sheet": "Sep-26",
+      "row": 32
+     }
+    },
+    {
+     "date": "2026-09-27",
+     "kwh": 24320.088899999682,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_Sep-26.xlsx",
+      "sheet": "Sep-26",
+      "row": 33
+     }
+    },
+    {
+     "date": "2026-09-28",
+     "kwh": 22986.0,
+     "hardcoded": true,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_Sep-26.xlsx",
+      "sheet": "Sep-26",
+      "row": 34
+     }
+    },
+    {
+     "date": "2026-09-29",
+     "kwh": 23163.232499998994,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_Sep-26.xlsx",
+      "sheet": "Sep-26",
+      "row": 35
+     }
+    },
+    {
+     "date": "2026-09-30",
+     "kwh": 21974.257800001942,
+     "hardcoded": false,
+     "note": null,
+     "source": {
+      "file": "Daily_Generation_Sep-26.xlsx",
+      "sheet": "Sep-26",
+      "row": 36
+     }
+    }
+   ],
+   "monthlyKwh": {
+    "2025-11": 773492.3703,
+    "2025-12": 1319163.5024999997,
+    "2026-01": 1223464.9617,
+    "2026-02": 1208232.9278999998,
+    "2026-03": 1566174.9726000004,
+    "2026-04": 1413585.2042999996,
+    "2026-05": 1448219.1537,
+    "2026-06": 1286868.6812000012,
+    "2026-07": 786301.2648000002,
+    "2026-08": 588591.6047999999,
+    "2026-09": 596327.5305000001
+   },
+   "totalKwh": 12210422.174300002,
+   "nDays": 334,
+   "flatAnnualisationKwh": 13343724.831196109,
+   "zeroDays": [
+    "2025-11-08",
+    "2025-11-09",
+    "2025-11-10",
+    "2026-07-08"
+   ],
+   "issues": [
+    {
+     "type": "opening_row_excluded",
+     "file": "Daily_Generation_June-26.xlsx",
+     "sheet": "Nov-25",
+     "cell": "A7",
+     "date": "2025-10-31",
+     "kwh": 0
+    }
+   ]
+  },
+  "costSheetIllustration": {
+   "source": "Landed_Cost_Sheet_MH_2.xlsx / Maharashtra",
+   "capacityMwac": 4,
+   "cufAc": 0.25953743093587045,
+   "tariffRs": 3.5,
+   "transmissionRsPerKwh": 1.04,
+   "transmissionLossPct": 3.28,
+   "wheelingRsPerKwh": 0.62,
+   "wheelingLossPct": 7.5,
+   "bankingPct": 8,
+   "bankingDeductionEffective": "30% x 8% = 2.4% (scenario assumption)",
+   "operatingRsPerMw": 29830,
+   "note": "Illustrative 4 MW / Rs3.50 example; Summary sheet formula has a #DIV/0!; NOT used as authoritative inputs."
+  }
+ },
+ "consumers": [
+  {
+   "id": "411639023090",
+   "name": "Harrshiv Healthy Foods and More Pvt Ltd",
+   "site": "Kamptee, Nagpur Rural (33 kV)",
+   "kind": "factory",
+   "category": "HT-I(A) Industry",
+   "voltageKv": 33,
+   "connection": "HT partial open access",
+   "contractDemandKva": 3200.0,
+   "oaCdKva": 4911.0,
+   "pf": 0.995,
+   "oaEligible": true,
+   "eligibilityNote": "Existing partial-OA consumer (STOA permissions on every bill). Group-captive ownership/consumption tests: not verified from bills.",
+   "profileType": "factory24x7",
+   "todShares": {
+    "value": [
+     0.2174,
+     0.1413,
+     0.3768,
+     0.2645
+    ],
+    "tag": "synthetic_estimate",
+    "note": "Total-site drawal assumed 24x7 with daytime (06-18) load 1.3x night load; calibrated so engine band-wise offsets land within ~10% of the Apr-Jul 2026 billed offsets. Dec-Feb 2026 bills show higher offsets than any such profile under band netting (those bills put all residual units in zone D - see bill review). Bills only show the grid residual by zone."
+   },
+   "dayNightRatio": {
+    "value": 1.3,
+    "tag": "synthetic_estimate"
+   },
+   "currentAllocation": {
+    "mwp": 4.411,
+    "shareOfPlant": 0.5881,
+    "status": "confirmed",
+    "note": "Factory bill injection / plant ABT export = 58.8% on average Dec-25..Jul-26 (monthly ratios attached). Treated as the existing contractual share of the 7.5 MWp plant."
+   },
+   "monthly": [
+    {
+     "month": "2025-11",
+     "days": 30,
+     "drawal_kwh": 647432.0,
+     "grid_kwh": 299605.0,
+     "oa_offset_kwh": 347827.0,
+     "oa_injection_kwh": 667997.0,
+     "over_injected_kwh": 278509.0,
+     "rooftop_kwh": 152176.0,
+     "billed_demand_kva": 2400.0,
+     "hrd_kva": 1874.083,
+     "msedcl_hrd_kva": 1307.0,
+     "pf": 0.997,
+     "grid_zone_kwh": [
+      32.0,
+      88768.0,
+      63344.0,
+      147461.0
+     ],
+     "energy_rate": 8.68,
+     "demand_rate": 600.0,
+     "fac_rate": null,
+     "tose_rate": 0.18,
+     "oa_wheeling_rs": 258166.76,
+     "oa_transmission_rs": 198858.18,
+     "oa_operating_rs": 16500.0,
+     "oa_tose_rs": 0.0,
+     "total_current_bill_rs": 4538140.96,
+     "debit_adjustment_rs": 0.0,
+     "wheeling_loss_supplementary_rs": null,
+     "source": {
+      "file": "Electricity bill-Nov_25 (1).pdf",
+      "page": 1
+     },
+     "tag": "extracted_actual"
+    },
+    {
+     "month": "2025-12",
+     "days": 31,
+     "drawal_kwh": 442326.0,
+     "grid_kwh": 135059.0,
+     "oa_offset_kwh": 307267.0,
+     "oa_injection_kwh": 755330.0,
+     "over_injected_kwh": 399570.0,
+     "rooftop_kwh": 161920.0,
+     "billed_demand_kva": 2400.0,
+     "hrd_kva": 1367.084,
+     "msedcl_hrd_kva": 307.0,
+     "pf": 0.995,
+     "grid_zone_kwh": [
+      0.0,
+      0.0,
+      0.0,
+      135059.0
+     ],
+     "energy_rate": 8.68,
+     "demand_rate": 600.0,
+     "fac_rate": 0.1,
+     "tose_rate": 0.279,
+     "oa_wheeling_rs": 228520.14,
+     "oa_transmission_rs": 220027.84,
+     "oa_operating_rs": 16500.0,
+     "oa_tose_rs": 0.0,
+     "total_current_bill_rs": 3527005.08,
+     "debit_adjustment_rs": 0.0,
+     "wheeling_loss_supplementary_rs": null,
+     "source": {
+      "file": "Electricity Bill- Dec 25 (2).pdf",
+      "page": 1
+     },
+     "tag": "extracted_actual"
+    },
+    {
+     "month": "2026-01",
+     "days": 31,
+     "drawal_kwh": 479039.0,
+     "grid_kwh": 136189.0,
+     "oa_offset_kwh": 342849.0,
+     "oa_injection_kwh": 733372.0,
+     "over_injected_kwh": 345993.0,
+     "rooftop_kwh": 151072.0,
+     "billed_demand_kva": 2400.0,
+     "hrd_kva": 1377.985,
+     "msedcl_hrd_kva": 743.0,
+     "pf": 0.996,
+     "grid_zone_kwh": [
+      0.0,
+      0.0,
+      0.0,
+      136189.0
+     ],
+     "energy_rate": 8.68,
+     "demand_rate": 600.0,
+     "fac_rate": 0.3,
+     "tose_rate": 0.279,
+     "oa_wheeling_rs": 254727.24,
+     "oa_transmission_rs": 294313.23,
+     "oa_operating_rs": 16500.0,
+     "oa_tose_rs": 0.0,
+     "total_current_bill_rs": 3666756.74,
+     "debit_adjustment_rs": 0.0,
+     "wheeling_loss_supplementary_rs": null,
+     "source": {
+      "file": "Electricity Bill- Jan 26 (3).pdf",
+      "page": 1
+     },
+     "tag": "extracted_actual"
+    },
+    {
+     "month": "2026-02",
+     "days": 28,
+     "drawal_kwh": 536301.0,
+     "grid_kwh": 147134.0,
+     "oa_offset_kwh": 389167.0,
+     "oa_injection_kwh": 724241.0,
+     "over_injected_kwh": 294690.0,
+     "rooftop_kwh": 152288.0,
+     "billed_demand_kva": 2400.0,
+     "hrd_kva": 1532.75,
+     "msedcl_hrd_kva": 51.0,
+     "pf": 0.993,
+     "grid_zone_kwh": [
+      0.0,
+      0.0,
+      0.0,
+      147134.0
+     ],
+     "energy_rate": 8.68,
+     "demand_rate": 600.0,
+     "fac_rate": 0.4,
+     "tose_rate": 0.279,
+     "oa_wheeling_rs": 290013.4,
+     "oa_transmission_rs": 446777.4,
+     "oa_operating_rs": 16500.0,
+     "oa_tose_rs": 108577.59,
+     "total_current_bill_rs": 4116117.04,
+     "debit_adjustment_rs": 0.0,
+     "wheeling_loss_supplementary_rs": null,
+     "source": {
+      "file": "Electricity Bill- Feb-26 (2).pdf",
+      "page": 1
+     },
+     "tag": "extracted_actual"
+    },
+    {
+     "month": "2026-03",
+     "days": 31,
+     "drawal_kwh": 509369.0,
+     "grid_kwh": 257862.0,
+     "oa_offset_kwh": 251507.0,
+     "oa_injection_kwh": 937363.0,
+     "over_injected_kwh": 628171.0,
+     "rooftop_kwh": 189200.0,
+     "billed_demand_kva": 2400.0,
+     "hrd_kva": 2045.718,
+     "msedcl_hrd_kva": 47.0,
+     "pf": 0.984,
+     "grid_zone_kwh": [
+      127655.0,
+      10919.0,
+      0.0,
+      119288.0
+     ],
+     "energy_rate": 8.68,
+     "demand_rate": 600.0,
+     "fac_rate": 0.3,
+     "tose_rate": 0.279,
+     "oa_wheeling_rs": 189141.78,
+     "oa_transmission_rs": 291380.58,
+     "oa_operating_rs": 16500.0,
+     "oa_tose_rs": 70170.45,
+     "total_current_bill_rs": 6800190.0,
+     "debit_adjustment_rs": 1147780.15,
+     "wheeling_loss_supplementary_rs": null,
+     "source": {
+      "file": "Electricity Bill- Mar-26 (1).pdf",
+      "page": 1
+     },
+     "tag": "extracted_actual"
+    },
+    {
+     "month": "2026-04",
+     "days": 30,
+     "drawal_kwh": 548052.0,
+     "grid_kwh": 254030.0,
+     "oa_offset_kwh": 294022.0,
+     "oa_injection_kwh": 822186.0,
+     "over_injected_kwh": 483155.0,
+     "rooftop_kwh": 188640.0,
+     "billed_demand_kva": 2400.0,
+     "hrd_kva": 2295.0,
+     "msedcl_hrd_kva": 52.0,
+     "pf": 0.992,
+     "grid_zone_kwh": [
+      135794.0,
+      9158.0,
+      0.0,
+      109079.0
+     ],
+     "energy_rate": 8.44,
+     "demand_rate": 650.0,
+     "fac_rate": 0.5,
+     "tose_rate": 0.279,
+     "oa_wheeling_rs": 240078.33,
+     "oa_transmission_rs": 302320.86,
+     "oa_operating_rs": 16500.0,
+     "oa_tose_rs": 82032.14,
+     "total_current_bill_rs": 6667830.95,
+     "debit_adjustment_rs": 1678166.93,
+     "wheeling_loss_supplementary_rs": null,
+     "source": {
+      "file": "Electricity Bill- April 26.pdf",
+      "page": 1
+     },
+     "tag": "extracted_actual"
+    },
+    {
+     "month": "2026-05",
+     "days": 31,
+     "drawal_kwh": 587480.0,
+     "grid_kwh": 247702.0,
+     "oa_offset_kwh": 339777.0,
+     "oa_injection_kwh": 842356.0,
+     "over_injected_kwh": 459291.0,
+     "rooftop_kwh": 192256.0,
+     "billed_demand_kva": 2400.0,
+     "hrd_kva": 2142.0,
+     "msedcl_hrd_kva": 23.0,
+     "pf": 0.998,
+     "grid_zone_kwh": [
+      133444.0,
+      3614.0,
+      0.0,
+      110644.0
+     ],
+     "energy_rate": 8.44,
+     "demand_rate": 650.0,
+     "fac_rate": 0.2,
+     "tose_rate": 0.279,
+     "oa_wheeling_rs": 275770.98,
+     "oa_transmission_rs": 347267.16,
+     "oa_operating_rs": 16500.0,
+     "oa_tose_rs": 94797.78,
+     "total_current_bill_rs": 5836258.1,
+     "debit_adjustment_rs": 903788.93,
+     "wheeling_loss_supplementary_rs": 7084103.39,
+     "source": {
+      "file": "Electricity Bill-May 26.pdf",
+      "page": 1
+     },
+     "tag": "extracted_actual"
+    },
+    {
+     "month": "2026-06",
+     "days": 30,
+     "drawal_kwh": 617127.0,
+     "grid_kwh": 245839.0,
+     "oa_offset_kwh": 371289.0,
+     "oa_injection_kwh": 754033.0,
+     "over_injected_kwh": 348880.0,
+     "rooftop_kwh": 172592.0,
+     "billed_demand_kva": 2400.0,
+     "hrd_kva": 2401.2,
+     "msedcl_hrd_kva": 244.0,
+     "pf": 0.998,
+     "grid_zone_kwh": [
+      135397.0,
+      11760.0,
+      0.0,
+      98681.0
+     ],
+     "energy_rate": 8.44,
+     "demand_rate": 650.0,
+     "fac_rate": 0.3,
+     "tose_rate": 0.279,
+     "oa_wheeling_rs": 301346.73,
+     "oa_transmission_rs": 379473.66,
+     "oa_operating_rs": 16500.0,
+     "oa_tose_rs": 103589.63,
+     "total_current_bill_rs": 5884150.17,
+     "debit_adjustment_rs": 903788.93,
+     "wheeling_loss_supplementary_rs": 7883817.23,
+     "source": {
+      "file": "Electricity Bill- June 26.pdf",
+      "page": 1
+     },
+     "tag": "extracted_actual"
+    },
+    {
+     "month": "2026-07",
+     "days": 31,
+     "drawal_kwh": 690247.0,
+     "grid_kwh": 284946.0,
+     "oa_offset_kwh": 405302.0,
+     "oa_injection_kwh": 460723.0,
+     "over_injected_kwh": 42172.0,
+     "rooftop_kwh": 112128.0,
+     "billed_demand_kva": 2400.0,
+     "hrd_kva": 2408.0,
+     "msedcl_hrd_kva": 1494.0,
+     "pf": 0.999,
+     "grid_zone_kwh": [
+      129835.0,
+      60171.0,
+      0.0,
+      94940.0
+     ],
+     "energy_rate": 8.44,
+     "demand_rate": 650.0,
+     "fac_rate": 0.35,
+     "tose_rate": 0.279,
+     "oa_wheeling_rs": 328623.48,
+     "oa_transmission_rs": 413822.16,
+     "oa_operating_rs": 16500.0,
+     "oa_tose_rs": 113079.26,
+     "total_current_bill_rs": 6341088.98,
+     "debit_adjustment_rs": 903788.93,
+     "wheeling_loss_supplementary_rs": 8055084.71,
+     "source": {
+      "file": "Electricity Bill- July 26.pdf",
+      "page": 1
+     },
+     "tag": "extracted_actual"
+    }
+   ],
+   "allocationEvidence": [
+    {
+     "month": "2025-11",
+     "factory_injection_kwh": 667997.0,
+     "plant_export_kwh": 773492.3703,
+     "ratio": 0.8636116213284903
+    },
+    {
+     "month": "2025-12",
+     "factory_injection_kwh": 755330.0,
+     "plant_export_kwh": 1319163.5024999997,
+     "ratio": 0.5725825483865675
+    },
+    {
+     "month": "2026-01",
+     "factory_injection_kwh": 733372.0,
+     "plant_export_kwh": 1223464.9617,
+     "ratio": 0.5994221518048072
+    },
+    {
+     "month": "2026-02",
+     "factory_injection_kwh": 724241.0,
+     "plant_export_kwh": 1208232.9278999998,
+     "ratio": 0.5994216705042013
+    },
+    {
+     "month": "2026-03",
+     "factory_injection_kwh": 937363.0,
+     "plant_export_kwh": 1566174.9726000004,
+     "ratio": 0.5985046475643061
+    },
+    {
+     "month": "2026-04",
+     "factory_injection_kwh": 822186.0,
+     "plant_export_kwh": 1413585.2042999996,
+     "ratio": 0.5816317244259376
+    },
+    {
+     "month": "2026-05",
+     "factory_injection_kwh": 842356.0,
+     "plant_export_kwh": 1448219.1537,
+     "ratio": 0.5816495368452328
+    },
+    {
+     "month": "2026-06",
+     "factory_injection_kwh": 754033.0,
+     "plant_export_kwh": 1286868.6812000012,
+     "ratio": 0.5859440135701076
+    },
+    {
+     "month": "2026-07",
+     "factory_injection_kwh": 460723.0,
+     "plant_export_kwh": 786301.2648000002,
+     "ratio": 0.5859369946672885
+    }
+   ],
+   "tariff": {
+    "tag": "bill_derived_FY27",
+    "effectiveFrom": "2026-04-01",
+    "energyRsPerKvah": 8.44,
+    "demandRsPerKvaMonth": 650,
+    "todRsPerKvah": [
+     0,
+     0,
+     -1.5,
+     2.11
+    ],
+    "todNote": "Zones A 00-06, B 06-09, C 09-17, D 17-24. D = +2.11 derived from bills (TOD EC / zone-D units). A and B = 0 derived. C rebate assumed -1.50 (no zone-C grid units on any bill) - user assumption.",
+    "facRsPerKvah": 0.35,
+    "facNote": "FAC varies monthly (0.20-0.50 in FY27 bills); 0.35 = Jul-26 value used as default.",
+    "edPct": 0.0,
+    "tosePaisePerKwh": 27.9,
+    "bulkRebatePct": 0.5,
+    "pfBillingUnit": "kVAh"
+   },
+   "oaCharges": {
+    "tag": "bill_derived_FY27",
+    "wheelingRsPerKwhInjected": 0.81,
+    "transmissionRsPerKwhOffset": 1.022,
+    "operatingRsPerMonth": 16500,
+    "tosePaisePerKwhOffset": 27.9,
+    "cssRsPerKwh": 0,
+    "additionalSurchargeRsPerKwh": 0,
+    "inKindLossPct": {
+     "value": 0.0,
+     "tag": "user_assumption",
+     "note": "Bills show injection - offset - over-injected = 3-6% of injection; MSEDCL is also raising a Rs-denominated loss supplementary (APTEL). Default 0% in kind to avoid double counting; editable."
+    },
+    "note": "Wheeling 0.81/kWh on injected units; transmission 1.022/kWh on offset units; operating Rs16,500/month; ToSE 27.9p on offset units - all read off the FY27 bills (B section)."
+   },
+   "rooftop": {
+    "kw": 1500,
+    "note": "Behind-the-meter rooftop, 4 meters, 1.1-1.9 lakh kWh/month; self-consumed first; NOT output of the 7.5 MWp plant."
+   },
+   "ppaTariffRsPerKwh": 4.0,
+   "ppaBillingBasis": "offset"
+  },
+  {
+   "id": "413894361291",
+   "name": "Oam Industries India Pvt. Ltd.",
+   "site": "Nagpur (LT)",
+   "kind": "store",
+   "category": "LT-II(C) Commercial",
+   "voltageKv": 0.415,
+   "connection": "LT (no open access)",
+   "contractDemandKva": 122.0,
+   "sanctionedLoadKw": 97.3,
+   "pf": 0.996,
+   "oaEligible": false,
+   "eligibilityNote": "LT-II(C) connection well below the 1 MW open-access threshold; no OA permission on the bills. Allocation to this site is NOT currently feasible; toggle eligibility only if a verified route exists (e.g. HT conversion, aggregation rule, virtual net metering).",
+   "profileType": "store",
+   "todShares": {
+    "value": [
+     0.10834806198364093,
+     0.11796621316124789,
+     0.4174442023922068,
+     0.35624152246290436
+    ],
+    "tag": "derived_from_actual",
+    "note": "ToD kVAh split from 2026-05 bill; ToD registers implausible in ['2026-06'] (bands empty) - meter check recommended"
+   },
+   "currentAllocation": {
+    "mwp": 0,
+    "shareOfPlant": 0,
+    "status": "unknown",
+    "note": "No captive-plant allocation evidenced on the store bills (grid + rooftop only)."
+   },
+   "monthly": [
+    {
+     "month": "2025-03",
+     "kvah": 17550.0,
+     "kwh_est": 17479.8,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2025-04",
+     "kvah": 24093.0,
+     "kwh_est": 23996.6,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2025-05",
+     "kvah": 26370.0,
+     "kwh_est": 26264.5,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2025-06",
+     "kvah": 27334.0,
+     "kwh_est": 27224.7,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2025-07",
+     "kvah": 25304.0,
+     "kwh_est": 25202.8,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2025-08",
+     "kvah": 22894.0,
+     "kwh_est": 22802.4,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2025-09",
+     "kvah": 25247.0,
+     "kwh_est": 25146.0,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2025-10",
+     "kvah": 22400.0,
+     "kwh_est": 22310.4,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2025-11",
+     "kvah": 22185.0,
+     "kwh_est": 22096.3,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2025-12",
+     "kvah": 17618.0,
+     "kwh_est": 17547.5,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2026-01",
+     "kvah": 16487.0,
+     "kwh_est": 16421.1,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2026-02",
+     "kvah": 16892.0,
+     "kwh_est": 16824.4,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2026-03",
+     "kvah": 17073.0,
+     "kwh_est": 17004.7,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2026-04",
+     "kvah": 21353.0,
+     "kwh_est": 21267.6,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2026-05",
+     "kwh": 24249.0,
+     "kvah": 24329.0,
+     "tag": "extracted_actual"
+    },
+    {
+     "month": "2026-06",
+     "kwh": 11664.0,
+     "kvah": 11703.0,
+     "tag": "extracted_actual"
+    }
+   ],
+   "bills": [
+    {
+     "month": "2026-04",
+     "kwh": 21245.0,
+     "kvah": 21353.0,
+     "md_kva": 50.0,
+     "billed_demand_kva": 49.0,
+     "pf": 0.994,
+     "tod_kvah": [
+      2375.0,
+      2510.0,
+      8867.0,
+      7601.0
+     ],
+     "tod_rates": [
+      0.0,
+      0.0,
+      -3.805,
+      3.805
+     ],
+     "energy_rate": 15.22,
+     "demand_rate": 525.0,
+     "wheeling_rate": 1.39,
+     "fac_paise": 55.0,
+     "ed_pct": 21.0,
+     "tose_paise": 28.94,
+     "total_current_bill_rs": 474806.19,
+     "solar_gen_kwh": null,
+     "solar_export_kwh": null,
+     "grid_support_rs": null,
+     "source": {
+      "file": "413894361291/413894361291_APR-26.pdf"
+     },
+     "tag": "extracted_actual"
+    },
+    {
+     "month": "2026-05",
+     "kwh": 24249.0,
+     "kvah": 24329.0,
+     "md_kva": 65.0,
+     "billed_demand_kva": 49.0,
+     "pf": 0.996,
+     "tod_kvah": [
+      2636.0,
+      2870.0,
+      10156.0,
+      8667.0
+     ],
+     "tod_rates": [
+      0.0,
+      0.0,
+      -2.2335,
+      3.7225
+     ],
+     "energy_rate": 14.89,
+     "demand_rate": 550.0,
+     "wheeling_rate": 1.52,
+     "fac_paise": 90.0,
+     "ed_pct": 21.0,
+     "tose_paise": 28.94,
+     "total_current_bill_rs": 569221.25,
+     "solar_gen_kwh": null,
+     "solar_export_kwh": null,
+     "grid_support_rs": null,
+     "source": {
+      "file": "413894361291/413894361291_MAY-26.pdf"
+     },
+     "tag": "extracted_actual"
+    },
+    {
+     "month": "2026-06",
+     "kwh": 11664.0,
+     "kvah": 11703.0,
+     "md_kva": 68.0,
+     "billed_demand_kva": 49.0,
+     "pf": 0.998,
+     "tod_kvah": [
+      3134.0,
+      8569.0,
+      0.0,
+      0.0
+     ],
+     "tod_rates": [
+      0.0,
+      0.0,
+      -2.2335,
+      3.7225
+     ],
+     "energy_rate": 14.89,
+     "demand_rate": 550.0,
+     "wheeling_rate": 1.52,
+     "fac_paise": 35.0,
+     "ed_pct": 21.0,
+     "tose_paise": 28.94,
+     "total_current_bill_rs": 273321.85,
+     "solar_gen_kwh": null,
+     "solar_export_kwh": null,
+     "grid_support_rs": null,
+     "source": {
+      "file": "413894361291/413894361291_JUN-26.pdf"
+     },
+     "tag": "extracted_actual"
+    }
+   ],
+   "tariff": {
+    "tag": "bill_derived_FY27",
+    "effectiveFrom": "2026-04-01",
+    "energyRsPerKvah": 14.89,
+    "demandRsPerKvaMonth": 550.0,
+    "todRsPerKvah": [
+     0.0,
+     0.0,
+     -2.2335,
+     3.7225
+    ],
+    "wheelingRsPerKvah": 1.52,
+    "facRsPerKvah": 0.9,
+    "edPct": 21.0,
+    "tosePaisePerKwh": 28.94,
+    "pfBillingUnit": "kVAh"
+   },
+   "rooftop": null,
+   "ppaTariffRsPerKwh": 4.0,
+   "ppaBillingBasis": "offset"
+  },
+  {
+   "id": "419990016713",
+   "name": "OAM INDUSTRIES INDIA PVT LTD",
+   "site": "Nagpur (LT)",
+   "kind": "store",
+   "category": "LT-II(C) Commercial",
+   "voltageKv": 0.415,
+   "connection": "LT (no open access)",
+   "contractDemandKva": 169.0,
+   "sanctionedLoadKw": 134.84,
+   "pf": 0.984,
+   "oaEligible": false,
+   "eligibilityNote": "LT-II(C) connection well below the 1 MW open-access threshold; no OA permission on the bills. Allocation to this site is NOT currently feasible; toggle eligibility only if a verified route exists (e.g. HT conversion, aggregation rule, virtual net metering).",
+   "profileType": "store",
+   "todShares": {
+    "value": [
+     0.09086488786239591,
+     0.10238254421686015,
+     0.40825381389412263,
+     0.39849875402662127
+    ],
+    "tag": "derived_from_actual",
+    "note": "ToD kVAh split from 2026-05 bill"
+   },
+   "currentAllocation": {
+    "mwp": 0,
+    "shareOfPlant": 0,
+    "status": "unknown",
+    "note": "No captive-plant allocation evidenced on the store bills (grid + rooftop only)."
+   },
+   "monthly": [
+    {
+     "month": "2025-02",
+     "kvah": 17927.0,
+     "kwh_est": 17640.2,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2025-03",
+     "kvah": 21112.0,
+     "kwh_est": 20774.2,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2025-04",
+     "kvah": 23963.0,
+     "kwh_est": 23579.6,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2025-05",
+     "kvah": 25734.0,
+     "kwh_est": 25322.3,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2025-06",
+     "kvah": 28285.0,
+     "kwh_est": 27832.4,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2025-07",
+     "kvah": 28285.0,
+     "kwh_est": 27832.4,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2025-08",
+     "kvah": 18088.0,
+     "kwh_est": 17798.6,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2025-09",
+     "kvah": 33017.0,
+     "kwh_est": 32488.7,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2025-10",
+     "kvah": 31968.0,
+     "kwh_est": 31456.5,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2025-11",
+     "kvah": 11625.0,
+     "kwh_est": 11439.0,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2025-12",
+     "kvah": 18412.0,
+     "kwh_est": 18117.4,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2026-01",
+     "kvah": 19245.0,
+     "kwh_est": 18937.1,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2026-02",
+     "kvah": 20026.0,
+     "kwh_est": 19705.6,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2026-03",
+     "kvah": 25320.0,
+     "kwh_est": 24914.9,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2026-04",
+     "kwh": 26567.0,
+     "kvah": 27054.0,
+     "tag": "extracted_actual"
+    },
+    {
+     "month": "2026-05",
+     "kwh": 32445.0,
+     "kvah": 32906.0,
+     "tag": "extracted_actual"
+    }
+   ],
+   "bills": [
+    {
+     "month": "2026-03",
+     "kwh": 24864.0,
+     "kvah": 25320.0,
+     "md_kva": 68.0,
+     "billed_demand_kva": 68.0,
+     "pf": 0.982,
+     "tod_kvah": [
+      2803.0,
+      2508.0,
+      9596.0,
+      10413.0
+     ],
+     "tod_rates": [
+      0.0,
+      0.0,
+      -3.805,
+      3.805
+     ],
+     "energy_rate": 15.22,
+     "demand_rate": 525.0,
+     "wheeling_rate": 1.39,
+     "fac_paise": 55.0,
+     "ed_pct": 21.0,
+     "tose_paise": 28.94,
+     "total_current_bill_rs": 586001.13,
+     "solar_gen_kwh": 3791.0,
+     "solar_export_kwh": 0.0,
+     "grid_support_rs": 7430.36,
+     "source": {
+      "file": "419990016713/419990016713 APR-JUN 26.pdf"
+     },
+     "tag": "extracted_actual"
+    },
+    {
+     "month": "2026-04",
+     "kwh": 26567.0,
+     "kvah": 27054.0,
+     "md_kva": 78.0,
+     "billed_demand_kva": 68.0,
+     "pf": 0.982,
+     "tod_kvah": [
+      2735.0,
+      2518.0,
+      10369.0,
+      11432.0
+     ],
+     "tod_rates": [
+      0.0,
+      0.0,
+      -2.2335,
+      3.7225
+     ],
+     "energy_rate": 14.89,
+     "demand_rate": 550.0,
+     "wheeling_rate": 1.52,
+     "fac_paise": 90.0,
+     "ed_pct": 21.0,
+     "tose_paise": 28.94,
+     "total_current_bill_rs": 656496.8,
+     "solar_gen_kwh": 3666.0,
+     "solar_export_kwh": 0.0,
+     "grid_support_rs": 7185.36,
+     "source": {
+      "file": "419990016713/419990016713 APR-JUN 26.pdf"
+     },
+     "tag": "extracted_actual"
+    },
+    {
+     "month": "2026-05",
+     "kwh": 32445.0,
+     "kvah": 32906.0,
+     "md_kva": 87.0,
+     "billed_demand_kva": 68.0,
+     "pf": 0.986,
+     "tod_kvah": [
+      2990.0,
+      3369.0,
+      13434.0,
+      13113.0
+     ],
+     "tod_rates": [
+      0.0,
+      0.0,
+      -2.2335,
+      3.7225
+     ],
+     "energy_rate": 14.89,
+     "demand_rate": 550.0,
+     "wheeling_rate": 1.52,
+     "fac_paise": 35.0,
+     "ed_pct": 21.0,
+     "tose_paise": 28.94,
+     "total_current_bill_rs": 745089.69,
+     "solar_gen_kwh": 3799.0,
+     "solar_export_kwh": 1.0,
+     "grid_support_rs": 7446.04,
+     "source": {
+      "file": "419990016713/419990016713 APR-JUN 26.pdf"
+     },
+     "tag": "extracted_actual"
+    }
+   ],
+   "tariff": {
+    "tag": "bill_derived_FY27",
+    "effectiveFrom": "2026-04-01",
+    "energyRsPerKvah": 14.89,
+    "demandRsPerKvaMonth": 550.0,
+    "todRsPerKvah": [
+     0.0,
+     0.0,
+     -2.2335,
+     3.7225
+    ],
+    "wheelingRsPerKvah": 1.52,
+    "facRsPerKvah": 0.35,
+    "edPct": 21.0,
+    "tosePaisePerKwh": 28.94,
+    "pfBillingUnit": "kVAh"
+   },
+   "rooftop": {
+    "kw": 35.0,
+    "note": "Rooftop net metering on the store bill; self-consumed first."
+   },
+   "ppaTariffRsPerKwh": 4.0,
+   "ppaBillingBasis": "offset"
+  },
+  {
+   "id": "419990017035",
+   "name": "OAM INDUSTRIES INDIA PVT LTD",
+   "site": "Nagpur (LT)",
+   "kind": "store",
+   "category": "LT-II(C) Commercial",
+   "voltageKv": 0.415,
+   "connection": "LT (no open access)",
+   "contractDemandKva": 186.0,
+   "sanctionedLoadKw": 148.5,
+   "pf": 0.998,
+   "oaEligible": false,
+   "eligibilityNote": "LT-II(C) connection well below the 1 MW open-access threshold; no OA permission on the bills. Allocation to this site is NOT currently feasible; toggle eligibility only if a verified route exists (e.g. HT conversion, aggregation rule, virtual net metering).",
+   "profileType": "store",
+   "todShares": {
+    "value": [
+     0.081546264126832,
+     0.09063136456211812,
+     0.47791621740345835,
+     0.34990615390759156
+    ],
+    "tag": "derived_from_actual",
+    "note": "ToD kVAh split from 2026-05 bill"
+   },
+   "currentAllocation": {
+    "mwp": 0,
+    "shareOfPlant": 0,
+    "status": "unknown",
+    "note": "No captive-plant allocation evidenced on the store bills (grid + rooftop only)."
+   },
+   "monthly": [
+    {
+     "month": "2025-02",
+     "kvah": 29181.0,
+     "kwh_est": 29108.0,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2025-03",
+     "kvah": 32696.0,
+     "kwh_est": 32614.3,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2025-04",
+     "kvah": 37821.0,
+     "kwh_est": 37726.4,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2025-05",
+     "kvah": 38407.0,
+     "kwh_est": 38311.0,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2025-06",
+     "kvah": 37831.0,
+     "kwh_est": 37736.4,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2025-07",
+     "kvah": 35239.0,
+     "kwh_est": 35150.9,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2025-08",
+     "kvah": 37334.0,
+     "kwh_est": 37240.7,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2025-09",
+     "kvah": 33456.0,
+     "kwh_est": 33372.4,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2025-10",
+     "kvah": 34565.0,
+     "kwh_est": 34478.6,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2025-11",
+     "kvah": 26758.0,
+     "kwh_est": 26691.1,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2025-12",
+     "kvah": 23358.0,
+     "kwh_est": 23299.6,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2026-01",
+     "kvah": 24208.0,
+     "kwh_est": 24147.5,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2026-02",
+     "kvah": 25356.0,
+     "kwh_est": 25292.6,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2026-03",
+     "kvah": 34639.0,
+     "kwh_est": 34552.4,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2026-04",
+     "kwh": 39358.0,
+     "kvah": 39516.0,
+     "tag": "extracted_actual"
+    },
+    {
+     "month": "2026-05",
+     "kwh": 50032.0,
+     "kvah": 50082.0,
+     "tag": "extracted_actual"
+    }
+   ],
+   "bills": [
+    {
+     "month": "2026-03",
+     "kwh": 34466.0,
+     "kvah": 34639.0,
+     "md_kva": 90.0,
+     "billed_demand_kva": 74.0,
+     "pf": 0.995,
+     "tod_kvah": [
+      2812.0,
+      2982.0,
+      16499.0,
+      12346.0
+     ],
+     "tod_rates": [
+      0.0,
+      0.0,
+      -3.805,
+      3.805
+     ],
+     "energy_rate": 15.22,
+     "demand_rate": 525.0,
+     "wheeling_rate": 1.39,
+     "fac_paise": 55.0,
+     "ed_pct": 21.0,
+     "tose_paise": 28.94,
+     "total_current_bill_rs": 757092.67,
+     "solar_gen_kwh": null,
+     "solar_export_kwh": null,
+     "grid_support_rs": null,
+     "source": {
+      "file": "419990017035/419990017035_APR-JUN 26.pdf"
+     },
+     "tag": "extracted_actual"
+    },
+    {
+     "month": "2026-04",
+     "kwh": 39358.0,
+     "kvah": 39516.0,
+     "md_kva": 113.0,
+     "billed_demand_kva": 74.0,
+     "pf": 0.996,
+     "tod_kvah": [
+      2908.0,
+      3072.0,
+      18626.0,
+      14910.0
+     ],
+     "tod_rates": [
+      0.0,
+      0.0,
+      -2.2335,
+      3.7225
+     ],
+     "energy_rate": 14.89,
+     "demand_rate": 550.0,
+     "wheeling_rate": 1.52,
+     "fac_paise": 90.0,
+     "ed_pct": 21.0,
+     "tose_paise": 28.94,
+     "total_current_bill_rs": 909077.61,
+     "solar_gen_kwh": null,
+     "solar_export_kwh": null,
+     "grid_support_rs": null,
+     "source": {
+      "file": "419990017035/419990017035_APR-JUN 26.pdf"
+     },
+     "tag": "extracted_actual"
+    },
+    {
+     "month": "2026-05",
+     "kwh": 50032.0,
+     "kvah": 50082.0,
+     "md_kva": 122.0,
+     "billed_demand_kva": 79.0,
+     "pf": 0.999,
+     "tod_kvah": [
+      4084.0,
+      4539.0,
+      23935.0,
+      17524.0
+     ],
+     "tod_rates": [
+      0.0,
+      0.0,
+      -2.2335,
+      3.7225
+     ],
+     "energy_rate": 14.89,
+     "demand_rate": 550.0,
+     "wheeling_rate": 1.52,
+     "fac_paise": 35.0,
+     "ed_pct": 21.0,
+     "tose_paise": 28.94,
+     "total_current_bill_rs": 1086846.3,
+     "solar_gen_kwh": null,
+     "solar_export_kwh": null,
+     "grid_support_rs": null,
+     "source": {
+      "file": "419990017035/419990017035_APR-JUN 26.pdf"
+     },
+     "tag": "extracted_actual"
+    }
+   ],
+   "tariff": {
+    "tag": "bill_derived_FY27",
+    "effectiveFrom": "2026-04-01",
+    "energyRsPerKvah": 14.89,
+    "demandRsPerKvaMonth": 550.0,
+    "todRsPerKvah": [
+     0.0,
+     0.0,
+     -2.2335,
+     3.7225
+    ],
+    "wheelingRsPerKvah": 1.52,
+    "facRsPerKvah": 0.35,
+    "edPct": 21.0,
+    "tosePaisePerKwh": 28.94,
+    "pfBillingUnit": "kVAh"
+   },
+   "rooftop": null,
+   "ppaTariffRsPerKwh": 4.0,
+   "ppaBillingBasis": "offset"
+  },
+  {
+   "id": "419993650847",
+   "name": "M/S THAT BAAT RESTARENT",
+   "site": "Nagpur (LT)",
+   "kind": "store",
+   "category": "LT-II(C) Commercial",
+   "voltageKv": 0.415,
+   "connection": "LT (no open access)",
+   "contractDemandKva": 104.0,
+   "sanctionedLoadKw": 140.0,
+   "pf": 0.957,
+   "oaEligible": false,
+   "eligibilityNote": "LT-II(C) connection well below the 1 MW open-access threshold; no OA permission on the bills. Allocation to this site is NOT currently feasible; toggle eligibility only if a verified route exists (e.g. HT conversion, aggregation rule, virtual net metering).",
+   "profileType": "store",
+   "todShares": {
+    "value": [
+     0.07742814667988107,
+     0.11285926660059464,
+     0.4671704658077304,
+     0.34254212091179387
+    ],
+    "tag": "derived_from_actual",
+    "note": "ToD kVAh split from 2026-05 bill"
+   },
+   "currentAllocation": {
+    "mwp": 0,
+    "shareOfPlant": 0,
+    "status": "unknown",
+    "note": "No captive-plant allocation evidenced on the store bills (grid + rooftop only)."
+   },
+   "monthly": [
+    {
+     "month": "2025-02",
+     "kvah": 10282.0,
+     "kwh_est": 9839.9,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2025-03",
+     "kvah": 11947.0,
+     "kwh_est": 11433.3,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2025-04",
+     "kvah": 13143.0,
+     "kwh_est": 12577.9,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2025-05",
+     "kvah": 15150.0,
+     "kwh_est": 14498.5,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2025-06",
+     "kvah": 14253.0,
+     "kwh_est": 13640.1,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2025-07",
+     "kvah": 13540.0,
+     "kwh_est": 12957.8,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2025-08",
+     "kvah": 14068.0,
+     "kwh_est": 13463.1,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2025-09",
+     "kvah": 12654.0,
+     "kwh_est": 12109.9,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2025-10",
+     "kvah": 13494.0,
+     "kwh_est": 12913.8,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2025-11",
+     "kvah": 10721.0,
+     "kwh_est": 10260.0,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2025-12",
+     "kvah": 10252.0,
+     "kwh_est": 9811.2,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2026-01",
+     "kvah": 10501.0,
+     "kwh_est": 10049.5,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2026-02",
+     "kvah": 10606.0,
+     "kwh_est": 10149.9,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2026-03",
+     "kvah": 14299.0,
+     "kwh_est": 13684.1,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2026-04",
+     "kwh": 16243.0,
+     "kvah": 17192.0,
+     "tag": "extracted_actual"
+    },
+    {
+     "month": "2026-05",
+     "kwh": 7831.0,
+     "kvah": 8072.0,
+     "tag": "extracted_actual"
+    }
+   ],
+   "bills": [
+    {
+     "month": "2026-03",
+     "kwh": 13919.0,
+     "kvah": 14299.0,
+     "md_kva": 63.0,
+     "billed_demand_kva": 42.0,
+     "pf": 0.973,
+     "tod_kvah": [
+      1256.0,
+      1339.0,
+      6472.0,
+      5232.0
+     ],
+     "tod_rates": [
+      0.0,
+      0.0,
+      -3.805,
+      3.805
+     ],
+     "energy_rate": 15.22,
+     "demand_rate": 525.0,
+     "wheeling_rate": 1.39,
+     "fac_paise": 55.0,
+     "ed_pct": 21.0,
+     "tose_paise": 28.94,
+     "total_current_bill_rs": 320386.87,
+     "solar_gen_kwh": null,
+     "solar_export_kwh": null,
+     "grid_support_rs": null,
+     "source": {
+      "file": "419993650847/419993650847_APR-JUN 26.pdf"
+     },
+     "tag": "extracted_actual"
+    },
+    {
+     "month": "2026-04",
+     "kwh": 16243.0,
+     "kvah": 17192.0,
+     "md_kva": 79.0,
+     "billed_demand_kva": 51.0,
+     "pf": 0.944,
+     "tod_kvah": [
+      1542.0,
+      1823.0,
+      7799.0,
+      6028.0
+     ],
+     "tod_rates": [
+      0.0,
+      0.0,
+      -2.2335,
+      3.7225
+     ],
+     "energy_rate": 14.89,
+     "demand_rate": 550.0,
+     "wheeling_rate": 1.52,
+     "fac_paise": 90.0,
+     "ed_pct": 21.0,
+     "tose_paise": 28.94,
+     "total_current_bill_rs": 401396.97,
+     "solar_gen_kwh": null,
+     "solar_export_kwh": null,
+     "grid_support_rs": null,
+     "source": {
+      "file": "419993650847/419993650847_APR-JUN 26.pdf"
+     },
+     "tag": "extracted_actual"
+    },
+    {
+     "month": "2026-05",
+     "kwh": 7831.0,
+     "kvah": 8072.0,
+     "md_kva": 73.0,
+     "billed_demand_kva": 47.0,
+     "pf": 0.97,
+     "tod_kvah": [
+      625.0,
+      911.0,
+      3771.0,
+      2765.0
+     ],
+     "tod_rates": [
+      0.0,
+      0.0,
+      -2.2335,
+      3.7225
+     ],
+     "energy_rate": 14.89,
+     "demand_rate": 550.0,
+     "wheeling_rate": 1.52,
+     "fac_paise": 35.0,
+     "ed_pct": 21.0,
+     "tose_paise": 28.94,
+     "total_current_bill_rs": 199504.35,
+     "solar_gen_kwh": null,
+     "solar_export_kwh": null,
+     "grid_support_rs": null,
+     "source": {
+      "file": "419993650847/419993650847_APR-JUN 26.pdf"
+     },
+     "tag": "extracted_actual"
+    }
+   ],
+   "tariff": {
+    "tag": "bill_derived_FY27",
+    "effectiveFrom": "2026-04-01",
+    "energyRsPerKvah": 14.89,
+    "demandRsPerKvaMonth": 550.0,
+    "todRsPerKvah": [
+     0.0,
+     0.0,
+     -2.2335,
+     3.7225
+    ],
+    "wheelingRsPerKvah": 1.52,
+    "facRsPerKvah": 0.35,
+    "edPct": 21.0,
+    "tosePaisePerKwh": 28.94,
+    "pfBillingUnit": "kVAh"
+   },
+   "rooftop": null,
+   "ppaTariffRsPerKwh": 4.0,
+   "ppaBillingBasis": "offset"
+  },
+  {
+   "id": "419995561329",
+   "name": "THE. DIRECTOR SUSHILKUMAR S AGRAWAL",
+   "site": "Nagpur (LT)",
+   "kind": "store",
+   "category": "LT-II(C) Commercial",
+   "voltageKv": 0.415,
+   "connection": "LT (no open access)",
+   "contractDemandKva": 188.0,
+   "sanctionedLoadKw": 150.0,
+   "pf": 0.988,
+   "oaEligible": false,
+   "eligibilityNote": "LT-II(C) connection well below the 1 MW open-access threshold; no OA permission on the bills. Allocation to this site is NOT currently feasible; toggle eligibility only if a verified route exists (e.g. HT conversion, aggregation rule, virtual net metering).",
+   "profileType": "store",
+   "todShares": {
+    "value": [
+     0.00017768301350390902,
+     0.0708955223880597,
+     0.48347547974413646,
+     0.44545131485429995
+    ],
+    "tag": "derived_from_actual",
+    "note": "ToD kVAh split from 2026-05 bill"
+   },
+   "currentAllocation": {
+    "mwp": 0,
+    "shareOfPlant": 0,
+    "status": "unknown",
+    "note": "No captive-plant allocation evidenced on the store bills (grid + rooftop only)."
+   },
+   "monthly": [
+    {
+     "month": "2025-02",
+     "kvah": 8364.0,
+     "kwh_est": 8263.6,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2025-03",
+     "kvah": 10971.0,
+     "kwh_est": 10839.3,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2025-04",
+     "kvah": 14187.0,
+     "kwh_est": 14016.8,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2025-05",
+     "kvah": 11988.0,
+     "kwh_est": 11844.1,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2025-06",
+     "kvah": 14195.0,
+     "kwh_est": 14024.7,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2025-07",
+     "kvah": 10655.0,
+     "kwh_est": 10527.1,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2025-08",
+     "kvah": 11275.0,
+     "kwh_est": 11139.7,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2025-09",
+     "kvah": 10146.0,
+     "kwh_est": 10024.2,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2025-10",
+     "kvah": 9565.0,
+     "kwh_est": 9450.2,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2025-11",
+     "kvah": 2168.0,
+     "kwh_est": 2142.0,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2025-12",
+     "kvah": 1457.0,
+     "kwh_est": 1439.5,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2026-01",
+     "kvah": 1985.0,
+     "kwh_est": 1961.2,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2026-02",
+     "kvah": 2795.0,
+     "kwh_est": 2761.5,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2026-03",
+     "kvah": 6371.0,
+     "kwh_est": 6294.5,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2026-04",
+     "kwh": 5896.0,
+     "kvah": 5938.0,
+     "tag": "extracted_actual"
+    },
+    {
+     "month": "2026-05",
+     "kwh": 22129.0,
+     "kvah": 22512.0,
+     "tag": "extracted_actual"
+    }
+   ],
+   "bills": [
+    {
+     "month": "2026-03",
+     "kwh": 6301.0,
+     "kvah": 6371.0,
+     "md_kva": 55.0,
+     "billed_demand_kva": 75.0,
+     "pf": 0.989,
+     "tod_kvah": [
+      761.0,
+      0.0,
+      0.0,
+      5610.0
+     ],
+     "tod_rates": [
+      0.0,
+      0.0,
+      -3.805,
+      3.805
+     ],
+     "energy_rate": 15.22,
+     "demand_rate": 525.0,
+     "wheeling_rate": 1.39,
+     "fac_paise": 55.0,
+     "ed_pct": 21.0,
+     "tose_paise": 28.94,
+     "total_current_bill_rs": 220950.02,
+     "solar_gen_kwh": 4768.0,
+     "solar_export_kwh": 678.0,
+     "grid_support_rs": 9345.28,
+     "source": {
+      "file": "419995561329/419995561329_APR-JUN 26.pdf"
+     },
+     "tag": "extracted_actual"
+    },
+    {
+     "month": "2026-04",
+     "kwh": 5896.0,
+     "kvah": 5938.0,
+     "md_kva": 64.0,
+     "billed_demand_kva": 75.0,
+     "pf": 0.993,
+     "tod_kvah": [
+      611.0,
+      0.0,
+      1087.0,
+      4240.0
+     ],
+     "tod_rates": [
+      0.0,
+      0.0,
+      -2.2335,
+      3.7225
+     ],
+     "energy_rate": 14.89,
+     "demand_rate": 550.0,
+     "wheeling_rate": 1.52,
+     "fac_paise": 90.0,
+     "ed_pct": 21.0,
+     "tose_paise": 28.94,
+     "total_current_bill_rs": 214382.62,
+     "solar_gen_kwh": 3564.0,
+     "solar_export_kwh": 441.0,
+     "grid_support_rs": 6985.44,
+     "source": {
+      "file": "419995561329/419995561329_APR-JUN 26.pdf"
+     },
+     "tag": "extracted_actual"
+    },
+    {
+     "month": "2026-05",
+     "kwh": 22129.0,
+     "kvah": 22512.0,
+     "md_kva": 96.0,
+     "billed_demand_kva": 75.0,
+     "pf": 0.983,
+     "tod_kvah": [
+      4.0,
+      1596.0,
+      10884.0,
+      10028.0
+     ],
+     "tod_rates": [
+      0.0,
+      0.0,
+      -2.2335,
+      3.7225
+     ],
+     "energy_rate": 14.89,
+     "demand_rate": 550.0,
+     "wheeling_rate": 1.52,
+     "fac_paise": 35.0,
+     "ed_pct": 21.0,
+     "tose_paise": 28.94,
+     "total_current_bill_rs": 527919.95,
+     "solar_gen_kwh": 3097.0,
+     "solar_export_kwh": 55.0,
+     "grid_support_rs": 6070.12,
+     "source": {
+      "file": "419995561329/419995561329_APR-JUN 26.pdf"
+     },
+     "tag": "extracted_actual"
+    }
+   ],
+   "tariff": {
+    "tag": "bill_derived_FY27",
+    "effectiveFrom": "2026-04-01",
+    "energyRsPerKvah": 14.89,
+    "demandRsPerKvaMonth": 550.0,
+    "todRsPerKvah": [
+     0.0,
+     0.0,
+     -2.2335,
+     3.7225
+    ],
+    "wheelingRsPerKvah": 1.52,
+    "facRsPerKvah": 0.35,
+    "edPct": 21.0,
+    "tosePaisePerKwh": 28.94,
+    "pfBillingUnit": "kVAh"
+   },
+   "rooftop": {
+    "kw": 42.0,
+    "note": "Rooftop net metering on the store bill; self-consumed first."
+   },
+   "ppaTariffRsPerKwh": 4.0,
+   "ppaBillingBasis": "offset"
+  },
+  {
+   "id": "419996042694",
+   "name": "M/S HALDIRAM HOTELS PVT LTD",
+   "site": "Nagpur (LT)",
+   "kind": "store",
+   "category": "LT-II(C) Commercial",
+   "voltageKv": 0.415,
+   "connection": "LT (no open access)",
+   "contractDemandKva": 100.0,
+   "sanctionedLoadKw": 100.0,
+   "pf": 0.984,
+   "oaEligible": false,
+   "eligibilityNote": "LT-II(C) connection well below the 1 MW open-access threshold; no OA permission on the bills. Allocation to this site is NOT currently feasible; toggle eligibility only if a verified route exists (e.g. HT conversion, aggregation rule, virtual net metering).",
+   "profileType": "store",
+   "todShares": {
+    "value": [
+     0.0692607701618326,
+     0.14632178240014346,
+     0.45362442282691534,
+     0.3307930246111086
+    ],
+    "tag": "derived_from_actual",
+    "note": "ToD kVAh split from 2026-05 bill"
+   },
+   "currentAllocation": {
+    "mwp": 0,
+    "shareOfPlant": 0,
+    "status": "unknown",
+    "note": "No captive-plant allocation evidenced on the store bills (grid + rooftop only)."
+   },
+   "monthly": [
+    {
+     "month": "2025-02",
+     "kvah": 22571.0,
+     "kwh_est": 22198.6,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2025-03",
+     "kvah": 28288.0,
+     "kwh_est": 27821.2,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2025-04",
+     "kvah": 30404.0,
+     "kwh_est": 29902.3,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2025-05",
+     "kvah": 33968.0,
+     "kwh_est": 33407.5,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2025-06",
+     "kvah": 33211.0,
+     "kwh_est": 32663.0,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2025-07",
+     "kvah": 32493.0,
+     "kwh_est": 31956.9,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2025-08",
+     "kvah": 34478.0,
+     "kwh_est": 33909.1,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2025-09",
+     "kvah": 31581.0,
+     "kwh_est": 31059.9,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2025-10",
+     "kvah": 29210.0,
+     "kwh_est": 28728.0,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2025-11",
+     "kvah": 23023.0,
+     "kwh_est": 22643.1,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2025-12",
+     "kvah": 19346.0,
+     "kwh_est": 19026.8,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2026-01",
+     "kvah": 21315.0,
+     "kwh_est": 20963.3,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2026-02",
+     "kvah": 22368.0,
+     "kwh_est": 21998.9,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2026-03",
+     "kvah": 28639.0,
+     "kwh_est": 28166.5,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2026-04",
+     "kwh": 33558.0,
+     "kvah": 34069.0,
+     "tag": "extracted_actual"
+    },
+    {
+     "month": "2026-05",
+     "kwh": 21905.0,
+     "kvah": 22307.0,
+     "tag": "extracted_actual"
+    }
+   ],
+   "bills": [
+    {
+     "month": "2026-03",
+     "kwh": 28238.0,
+     "kvah": 28639.0,
+     "md_kva": 79.0,
+     "billed_demand_kva": 51.0,
+     "pf": 0.986,
+     "tod_kvah": [
+      2574.0,
+      3766.0,
+      11886.0,
+      10413.0
+     ],
+     "tod_rates": [
+      0.0,
+      0.0,
+      -3.805,
+      3.805
+     ],
+     "energy_rate": 15.22,
+     "demand_rate": 525.0,
+     "wheeling_rate": 1.39,
+     "fac_paise": 55.0,
+     "ed_pct": 21.0,
+     "tose_paise": 28.94,
+     "total_current_bill_rs": 634046.91,
+     "solar_gen_kwh": 2824.0,
+     "solar_export_kwh": 0.0,
+     "grid_support_rs": 5535.04,
+     "source": {
+      "file": "419996042694/419996042694_APR-JUN 26.pdf"
+     },
+     "tag": "extracted_actual"
+    },
+    {
+     "month": "2026-04",
+     "kwh": 33558.0,
+     "kvah": 34069.0,
+     "md_kva": 97.0,
+     "billed_demand_kva": 63.0,
+     "pf": 0.985,
+     "tod_kvah": [
+      2750.0,
+      4624.0,
+      14474.0,
+      12221.0
+     ],
+     "tod_rates": [
+      0.0,
+      0.0,
+      -2.2335,
+      3.7225
+     ],
+     "energy_rate": 14.89,
+     "demand_rate": 550.0,
+     "wheeling_rate": 1.52,
+     "fac_paise": 90.0,
+     "ed_pct": 21.0,
+     "tose_paise": 28.94,
+     "total_current_bill_rs": 782658.67,
+     "solar_gen_kwh": 3183.0,
+     "solar_export_kwh": 1.0,
+     "grid_support_rs": 6238.68,
+     "source": {
+      "file": "419996042694/419996042694_APR-JUN 26.pdf"
+     },
+     "tag": "extracted_actual"
+    },
+    {
+     "month": "2026-05",
+     "kwh": 21905.0,
+     "kvah": 22307.0,
+     "md_kva": 101.0,
+     "billed_demand_kva": 66.0,
+     "pf": 0.982,
+     "tod_kvah": [
+      1545.0,
+      3264.0,
+      10119.0,
+      7379.0
+     ],
+     "tod_rates": [
+      0.0,
+      0.0,
+      -2.2335,
+      3.7225
+     ],
+     "energy_rate": 14.89,
+     "demand_rate": 550.0,
+     "wheeling_rate": 1.52,
+     "fac_paise": 35.0,
+     "ed_pct": 21.0,
+     "tose_paise": 28.94,
+     "total_current_bill_rs": 515628.86,
+     "solar_gen_kwh": null,
+     "solar_export_kwh": 1.0,
+     "grid_support_rs": 6101.48,
+     "source": {
+      "file": "419996042694/419996042694_APR-JUN 26.pdf"
+     },
+     "tag": "extracted_actual"
+    }
+   ],
+   "tariff": {
+    "tag": "bill_derived_FY27",
+    "effectiveFrom": "2026-04-01",
+    "energyRsPerKvah": 14.89,
+    "demandRsPerKvaMonth": 550.0,
+    "todRsPerKvah": [
+     0.0,
+     0.0,
+     -2.2335,
+     3.7225
+    ],
+    "wheelingRsPerKvah": 1.52,
+    "facRsPerKvah": 0.35,
+    "edPct": 21.0,
+    "tosePaisePerKwh": 28.94,
+    "pfBillingUnit": "kVAh"
+   },
+   "rooftop": {
+    "kw": 25.0,
+    "note": "Rooftop net metering on the store bill; self-consumed first."
+   },
+   "ppaTariffRsPerKwh": 4.0,
+   "ppaBillingBasis": "offset"
+  },
+  {
+   "id": "420810329423",
+   "name": "OM INDUSTRIES PRIVATE LIMITED",
+   "site": "Nagpur (LT)",
+   "kind": "store",
+   "category": "LT-II(C) Commercial",
+   "voltageKv": 0.415,
+   "connection": "LT (no open access)",
+   "contractDemandKva": 125.0,
+   "sanctionedLoadKw": 100.0,
+   "pf": 0.994,
+   "oaEligible": false,
+   "eligibilityNote": "LT-II(C) connection well below the 1 MW open-access threshold; no OA permission on the bills. Allocation to this site is NOT currently feasible; toggle eligibility only if a verified route exists (e.g. HT conversion, aggregation rule, virtual net metering).",
+   "profileType": "store",
+   "todShares": {
+    "value": [
+     0.05385168097417086,
+     0.09870287032484967,
+     0.47437885262640395,
+     0.3730665960745755
+    ],
+    "tag": "derived_from_actual",
+    "note": "ToD kVAh split from 2026-05 bill"
+   },
+   "currentAllocation": {
+    "mwp": 0,
+    "shareOfPlant": 0,
+    "status": "unknown",
+    "note": "No captive-plant allocation evidenced on the store bills (grid + rooftop only)."
+   },
+   "monthly": [
+    {
+     "month": "2025-02",
+     "kvah": 16038.0,
+     "kwh_est": 15949.8,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2025-03",
+     "kvah": 19769.0,
+     "kwh_est": 19660.3,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2025-04",
+     "kvah": 20399.0,
+     "kwh_est": 20286.8,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2025-05",
+     "kvah": 22519.0,
+     "kwh_est": 22395.1,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2025-06",
+     "kvah": 22567.0,
+     "kwh_est": 22442.9,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2025-07",
+     "kvah": 21750.0,
+     "kwh_est": 21630.4,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2025-08",
+     "kvah": 22789.0,
+     "kwh_est": 22663.7,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2025-09",
+     "kvah": 20718.0,
+     "kwh_est": 20604.1,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2025-10",
+     "kvah": 20290.0,
+     "kwh_est": 20178.4,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2025-11",
+     "kvah": 16654.0,
+     "kwh_est": 16562.4,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2025-12",
+     "kvah": 16239.0,
+     "kwh_est": 16149.7,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2026-01",
+     "kvah": 16191.0,
+     "kwh_est": 16101.9,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2026-02",
+     "kvah": 14205.0,
+     "kwh_est": 14126.9,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2026-03",
+     "kvah": 18251.0,
+     "kwh_est": 18150.6,
+     "tag": "extracted_actual(history)"
+    },
+    {
+     "month": "2026-04",
+     "kwh": 22428.0,
+     "kvah": 22543.0,
+     "tag": "extracted_actual"
+    },
+    {
+     "month": "2026-05",
+     "kwh": 26328.0,
+     "kvah": 26443.0,
+     "tag": "extracted_actual"
+    }
+   ],
+   "bills": [
+    {
+     "month": "2026-03",
+     "kwh": 18112.0,
+     "kvah": 18251.0,
+     "md_kva": 59.0,
+     "billed_demand_kva": 50.0,
+     "pf": 0.992,
+     "tod_kvah": [
+      1165.0,
+      1890.0,
+      8402.0,
+      6794.0
+     ],
+     "tod_rates": [
+      0.0,
+      0.0,
+      -3.805,
+      3.805
+     ],
+     "energy_rate": 15.22,
+     "demand_rate": 525.0,
+     "wheeling_rate": 1.39,
+     "fac_paise": 55.0,
+     "ed_pct": 21.0,
+     "tose_paise": 27.9,
+     "total_current_bill_rs": 408366.95,
+     "solar_gen_kwh": null,
+     "solar_export_kwh": null,
+     "grid_support_rs": null,
+     "source": {
+      "file": "420810329423/420810329423_APR-JUN 26.pdf"
+     },
+     "tag": "extracted_actual"
+    },
+    {
+     "month": "2026-04",
+     "kwh": 22428.0,
+     "kvah": 22543.0,
+     "md_kva": 67.0,
+     "billed_demand_kva": 50.0,
+     "pf": 0.994,
+     "tod_kvah": [
+      1384.0,
+      2240.0,
+      10628.0,
+      8291.0
+     ],
+     "tod_rates": [
+      0.0,
+      0.0,
+      -2.2335,
+      3.7225
+     ],
+     "energy_rate": 14.89,
+     "demand_rate": 550.0,
+     "wheeling_rate": 1.52,
+     "fac_paise": 90.0,
+     "ed_pct": 21.0,
+     "tose_paise": 27.9,
+     "total_current_bill_rs": 516691.71,
+     "solar_gen_kwh": null,
+     "solar_export_kwh": null,
+     "grid_support_rs": null,
+     "source": {
+      "file": "420810329423/420810329423_APR-JUN 26.pdf"
+     },
+     "tag": "extracted_actual"
+    },
+    {
+     "month": "2026-05",
+     "kwh": 26328.0,
+     "kvah": 26443.0,
+     "md_kva": 69.0,
+     "billed_demand_kva": 50.0,
+     "pf": 0.995,
+     "tod_kvah": [
+      1424.0,
+      2610.0,
+      12544.0,
+      9865.0
+     ],
+     "tod_rates": [
+      0.0,
+      0.0,
+      -2.2335,
+      3.7225
+     ],
+     "energy_rate": 14.89,
+     "demand_rate": 550.0,
+     "wheeling_rate": 1.52,
+     "fac_paise": 35.0,
+     "ed_pct": 21.0,
+     "tose_paise": 27.9,
+     "total_current_bill_rs": 580844.07,
+     "solar_gen_kwh": null,
+     "solar_export_kwh": null,
+     "grid_support_rs": null,
+     "source": {
+      "file": "420810329423/420810329423_APR-JUN 26.pdf"
+     },
+     "tag": "extracted_actual"
+    }
+   ],
+   "tariff": {
+    "tag": "bill_derived_FY27",
+    "effectiveFrom": "2026-04-01",
+    "energyRsPerKvah": 14.89,
+    "demandRsPerKvaMonth": 550.0,
+    "todRsPerKvah": [
+     0.0,
+     0.0,
+     -2.2335,
+     3.7225
+    ],
+    "wheelingRsPerKvah": 1.52,
+    "facRsPerKvah": 0.35,
+    "edPct": 21.0,
+    "tosePaisePerKwh": 27.9,
+    "pfBillingUnit": "kVAh"
+   },
+   "rooftop": null,
+   "ppaTariffRsPerKwh": 4.0,
+   "ppaBillingBasis": "offset"
+  }
+ ],
+ "newCustomerDefaults": {
+  "name": "New 132 kV group-captive consumer",
+  "category": "HT (132 kV) - category not confirmed",
+  "voltageKv": 132,
+  "ppaTariffRsPerKwh": 2.5,
+  "avgLoadMw": 4.0,
+  "profile": "factory24x7",
+  "allocationMwp": 3.0,
+  "contractDemandKva": 6000,
+  "avoidedGridTariff": {
+   "energyRsPerKvah": 8.44,
+   "todRsPerKvah": [
+    0,
+    0,
+    -1.5,
+    2.11
+   ],
+   "facRsPerKvah": 0.35,
+   "tag": "illustrative",
+   "note": "HT-I(A) FY27 rates copied from the factory bill as an illustration; the new customer category/tariff is unknown."
+  },
+  "oaCharges": {
+   "wheelingRsPerKwhInjected": 0.81,
+   "transmissionRsPerKwhOffset": 1.022,
+   "operatingRsPerMonth": 16500,
+   "tosePaisePerKwhOffset": 27.9,
+   "applyWheeling": true,
+   "note": "Plant injects at 33 kV into the MSEDCL network; a 132 kV drawal point does not by itself remove the 33 kV wheeling leg. Wheeling kept ON by default, editable."
+  }
+ },
+ "rulePack": {
+  "id": "MH-bill-calibrated-FY27",
+  "label": "Bill-calibrated ToD block settlement / regulatory verification pending",
+  "effectiveFrom": "2026-04-01",
+  "todBands": [
+   {
+    "id": "A",
+    "label": "00-06",
+    "startHour": 0,
+    "endHour": 6
+   },
+   {
+    "id": "B",
+    "label": "06-09",
+    "startHour": 6,
+    "endHour": 9
+   },
+   {
+    "id": "C",
+    "label": "09-17",
+    "startHour": 9,
+    "endHour": 17
+   },
+   {
+    "id": "D",
+    "label": "17-24",
+    "startHour": 17,
+    "endHour": 24
+   }
+  ],
+  "adjustmentPeriod": "month",
+  "bankingAllowed": true,
+  "bankingChargePct": 0.0,
+  "withdrawalMatrix": {
+   "A": [
+    "A"
+   ],
+   "B": [
+    "B"
+   ],
+   "C": [
+    "C"
+   ],
+   "D": [
+    "D"
+   ]
+  },
+  "bankCapPctOfConsumption": 100,
+  "expiredCompensationRsPerKwh": 0.0,
+  "notes": [
+   "Bills show \"Units offset against drawal - last month banked = 0\" every month: no carry-over between months (adjustment period = month).",
+   "Default withdrawal matrix = same band only. Factory bills Mar-Jul 2026 reconcile best to band-wise netting; Dec-Feb bills placed all residual units in zone D (flagged in bill review).",
+   "Over-injected units carry no compensation line on any bill: expiredCompensation default 0 (unverified).",
+   "MERC Distribution Open Access Regulations 2026 and BESS Regulations 2026 were DRAFTS on the MERC site on 8 Oct 2026; nothing here asserts their applicability."
+  ],
+  "sources": [
+   {
+    "title": "MERC draft regulations page",
+    "url": "https://new.merc.gov.in/regulation_type/draft-regulations/",
+    "inspected": "2026-10-08",
+    "status": "draft - not applied"
+   },
+   {
+    "title": "MSEDCL Distribution Open Access regulation page",
+    "url": "https://www.mahadiscom.in/en/distribution-open-access-regulation-2/",
+    "inspected": "2026-10-08",
+    "status": "lists 2016 regs + 2019/2023 amendments"
+   },
+   {
+    "title": "MSEDCL tariff details (MYT Case 217 of 2024, addendum 75 of 2025)",
+    "url": "https://www.mahadiscom.in/consumer/en/tariff-details/",
+    "inspected": "2026-10-08",
+    "status": "rates on bills consistent across 8 consumers; not independently re-verified"
+   }
+  ]
+ },
+ "finance": {
+  "tag": "modelling_assumption",
+  "lifeYears": 25,
+  "solarDegradationPct": 0.5,
+  "omPctOfCapexYear1": 1.5,
+  "omEscalationPct": 5.0,
+  "ppaEscalationPct": 0.0,
+  "discountRatePct": 10.0,
+  "receivableDays": 30,
+  "bess": {
+   "capexRsCrPerMwh": 1.0,
+   "includesPcs": true,
+   "includesInstallation": false,
+   "includesConnection": false,
+   "otherAddersRsCr": 0.0,
+   "lifeYears": 12,
+   "omPctOfCapex": 2.0,
+   "usableSocMin": 0.1,
+   "usableSocMax": 0.9,
+   "etaCharge": 0.95,
+   "etaDischarge": 0.95,
+   "auxPctOfThroughput": 1.0,
+   "degradationPctPerYear": 2.0,
+   "maxCyclesPerDay": 1.5
+  }
+ }
+}

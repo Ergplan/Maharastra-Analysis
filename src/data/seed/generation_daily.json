@@ -1,0 +1,5181 @@
+{
+ "plant": "7.5 MWp Deoli Maharastra Site",
+ "series_type": "daily ABT meter EXPORT (kWh), reported = (FMR - IMR) x 90",
+ "meter_factor": {
+  "value": 90,
+  "status": "unverified",
+  "note": "Column headers say MWh but the daily difference formula multiplies by 90. Consistent with a secondary-kWh ABT meter with MF 90; the Harrshiv OA bill (Jul-2026, Open Access Permissions table) lists Ortusun meter 100-Q0827721 with MF 90. Treat as provisional until the metering certificate is documented."
+ },
+ "capacity_dc_mwp": 7.5,
+ "days": [
+  {
+   "date": "2025-11-01",
+   "kwh_reported": 7.471799999999789,
+   "imr": 52.20233,
+   "fmr": 52.28535,
+   "kwh_recomputed_x90": 7.471799999999789,
+   "formula": "=(C8-B8)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Nov-25",
+    "row": 8
+   }
+  },
+  {
+   "date": "2025-11-02",
+   "kwh_reported": 25467.1938,
+   "imr": 52.28535,
+   "fmr": 335.25417,
+   "kwh_recomputed_x90": 25467.1938,
+   "formula": "=(C9-B9)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Nov-25",
+    "row": 9
+   }
+  },
+  {
+   "date": "2025-11-03",
+   "kwh_reported": 38952.8973,
+   "imr": 335.25417,
+   "fmr": 768.06414,
+   "kwh_recomputed_x90": 38952.8973,
+   "formula": "=(C10-B10)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Nov-25",
+    "row": 10
+   }
+  },
+  {
+   "date": "2025-11-04",
+   "kwh_reported": 39608.49870000001,
+   "imr": 768.06414,
+   "fmr": 1208.15857,
+   "kwh_recomputed_x90": 39608.49870000001,
+   "formula": "=(C11-B11)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Nov-25",
+    "row": 11
+   }
+  },
+  {
+   "date": "2025-11-05",
+   "kwh_reported": 42352.98659999999,
+   "imr": 1208.15857,
+   "fmr": 1678.74731,
+   "kwh_recomputed_x90": 42352.98659999999,
+   "formula": "=(C12-B12)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Nov-25",
+    "row": 12
+   }
+  },
+  {
+   "date": "2025-11-06",
+   "kwh_reported": 46512.53550000001,
+   "imr": 1678.74731,
+   "fmr": 2195.55326,
+   "kwh_recomputed_x90": 46512.53550000001,
+   "formula": "=(C13-B13)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Nov-25",
+    "row": 13
+   }
+  },
+  {
+   "date": "2025-11-07",
+   "kwh_reported": 47898.404999999984,
+   "imr": 2195.55326,
+   "fmr": 2727.75776,
+   "kwh_recomputed_x90": 47898.404999999984,
+   "formula": "=(C14-B14)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Nov-25",
+    "row": 14
+   }
+  },
+  {
+   "date": "2025-11-08",
+   "kwh_reported": 0.0,
+   "imr": 2727.75776,
+   "fmr": 2727.75776,
+   "kwh_recomputed_x90": 0.0,
+   "formula": "=(C15-B15)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Nov-25",
+    "row": 15
+   }
+  },
+  {
+   "date": "2025-11-09",
+   "kwh_reported": 0.0,
+   "imr": 2727.75776,
+   "fmr": 2727.75776,
+   "kwh_recomputed_x90": 0.0,
+   "formula": "=(C16-B16)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Nov-25",
+    "row": 16
+   }
+  },
+  {
+   "date": "2025-11-10",
+   "kwh_reported": 0.0,
+   "imr": 2727.75776,
+   "fmr": 2727.75776,
+   "kwh_recomputed_x90": 0.0,
+   "formula": "=(C17-B17)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Nov-25",
+    "row": 17
+   }
+  },
+  {
+   "date": "2025-11-11",
+   "kwh_reported": 7237.576799999997,
+   "imr": 2727.75776,
+   "fmr": 2808.17528,
+   "kwh_recomputed_x90": 7237.576799999997,
+   "formula": "=(C18-B18)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Nov-25",
+    "row": 18
+   }
+  },
+  {
+   "date": "2025-11-12",
+   "kwh_reported": 29849.708700000007,
+   "imr": 2808.17528,
+   "fmr": 3139.83871,
+   "kwh_recomputed_x90": 29849.708700000007,
+   "formula": "=(C19-B19)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Nov-25",
+    "row": 19
+   }
+  },
+  {
+   "date": "2025-11-13",
+   "kwh_reported": 29452.95810000001,
+   "imr": 3139.83871,
+   "fmr": 3467.0938,
+   "kwh_recomputed_x90": 29452.95810000001,
+   "formula": "=(C20-B20)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Nov-25",
+    "row": 20
+   }
+  },
+  {
+   "date": "2025-11-14",
+   "kwh_reported": 29894.94269999999,
+   "imr": 3467.0938,
+   "fmr": 3799.25983,
+   "kwh_recomputed_x90": 29894.94269999999,
+   "formula": "=(C21-B21)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Nov-25",
+    "row": 21
+   }
+  },
+  {
+   "date": "2025-11-15",
+   "kwh_reported": 30328.308899999993,
+   "imr": 3799.25983,
+   "fmr": 4136.24104,
+   "kwh_recomputed_x90": 30328.308899999993,
+   "formula": "=(C22-B22)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Nov-25",
+    "row": 22
+   }
+  },
+  {
+   "date": "2025-11-16",
+   "kwh_reported": 29386.42289999999,
+   "imr": 4136.24104,
+   "fmr": 4462.75685,
+   "kwh_recomputed_x90": 29386.42289999999,
+   "formula": "=(C23-B23)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Nov-25",
+    "row": 23
+   }
+  },
+  {
+   "date": "2025-11-17",
+   "kwh_reported": 27076.217400000052,
+   "imr": 4462.75685,
+   "fmr": 4763.60371,
+   "kwh_recomputed_x90": 27076.217400000052,
+   "formula": "=(C24-B24)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Nov-25",
+    "row": 24
+   }
+  },
+  {
+   "date": "2025-11-18",
+   "kwh_reported": 29187.91529999998,
+   "imr": 4763.60371,
+   "fmr": 5087.91388,
+   "kwh_recomputed_x90": 29187.91529999998,
+   "formula": "=(C25-B25)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Nov-25",
+    "row": 25
+   }
+  },
+  {
+   "date": "2025-11-19",
+   "kwh_reported": 27893.679299999974,
+   "imr": 5087.91388,
+   "fmr": 5397.84365,
+   "kwh_recomputed_x90": 27893.679299999974,
+   "formula": "=(C26-B26)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Nov-25",
+    "row": 26
+   }
+  },
+  {
+   "date": "2025-11-20",
+   "kwh_reported": 27682.017300000025,
+   "imr": 5397.84365,
+   "fmr": 5705.42162,
+   "kwh_recomputed_x90": 27682.017300000025,
+   "formula": "=(C27-B27)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Nov-25",
+    "row": 27
+   }
+  },
+  {
+   "date": "2025-11-21",
+   "kwh_reported": 29689.11900000001,
+   "imr": 5705.42162,
+   "fmr": 6035.30072,
+   "kwh_recomputed_x90": 29689.11900000001,
+   "formula": "=(C28-B28)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Nov-25",
+    "row": 28
+   }
+  },
+  {
+   "date": "2025-11-22",
+   "kwh_reported": 31073.27489999999,
+   "imr": 6035.30072,
+   "fmr": 6380.55933,
+   "kwh_recomputed_x90": 31073.27489999999,
+   "formula": "=(C29-B29)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Nov-25",
+    "row": 29
+   }
+  },
+  {
+   "date": "2025-11-23",
+   "kwh_reported": 26876.4444,
+   "imr": 6380.55933,
+   "fmr": 6679.18649,
+   "kwh_recomputed_x90": 26876.4444,
+   "formula": "=(C30-B30)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Nov-25",
+    "row": 30
+   }
+  },
+  {
+   "date": "2025-11-24",
+   "kwh_reported": 26081.50770000001,
+   "imr": 6679.18649,
+   "fmr": 6968.98102,
+   "kwh_recomputed_x90": 26081.50770000001,
+   "formula": "=(C31-B31)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Nov-25",
+    "row": 31
+   }
+  },
+  {
+   "date": "2025-11-25",
+   "kwh_reported": 24575.189399999952,
+   "imr": 6968.98102,
+   "fmr": 7242.03868,
+   "kwh_recomputed_x90": 24575.189399999952,
+   "formula": "=(C32-B32)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Nov-25",
+    "row": 32
+   }
+  },
+  {
+   "date": "2025-11-26",
+   "kwh_reported": 22427.57610000005,
+   "imr": 7242.03868,
+   "fmr": 7491.23397,
+   "kwh_recomputed_x90": 22427.57610000005,
+   "formula": "=(C33-B33)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Nov-25",
+    "row": 33
+   }
+  },
+  {
+   "date": "2025-11-27",
+   "kwh_reported": 20200.094100000006,
+   "imr": 7491.23397,
+   "fmr": 7715.67946,
+   "kwh_recomputed_x90": 20200.094100000006,
+   "formula": "=(C34-B34)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Nov-25",
+    "row": 34
+   }
+  },
+  {
+   "date": "2025-11-28",
+   "kwh_reported": 28993.418099999988,
+   "imr": 7715.67946,
+   "fmr": 8037.82855,
+   "kwh_recomputed_x90": 28993.418099999988,
+   "formula": "=(C35-B35)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Nov-25",
+    "row": 35
+   }
+  },
+  {
+   "date": "2025-11-29",
+   "kwh_reported": 28073.934899999986,
+   "imr": 8037.82855,
+   "fmr": 8349.76116,
+   "kwh_recomputed_x90": 28073.934899999986,
+   "formula": "=(C36-B36)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Nov-25",
+    "row": 36
+   }
+  },
+  {
+   "date": "2025-11-30",
+   "kwh_reported": 26712.07559999999,
+   "imr": 8349.76116,
+   "fmr": 8646.562,
+   "kwh_recomputed_x90": 26712.07559999999,
+   "formula": "=(C37-B37)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Nov-25",
+    "row": 37
+   }
+  },
+  {
+   "date": "2025-12-01",
+   "kwh_reported": 26534.01690000006,
+   "imr": 8646.562,
+   "fmr": 8941.38441,
+   "kwh_recomputed_x90": 26534.01690000006,
+   "formula": "=(C7-B7)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Dec-25",
+    "row": 7
+   }
+  },
+  {
+   "date": "2025-12-02",
+   "kwh_reported": 31147.52940000002,
+   "imr": 8941.38441,
+   "fmr": 9287.46807,
+   "kwh_recomputed_x90": 31147.52940000002,
+   "formula": "=(C8-B8)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Dec-25",
+    "row": 8
+   }
+  },
+  {
+   "date": "2025-12-03",
+   "kwh_reported": 32165.48879999995,
+   "imr": 9287.46807,
+   "fmr": 9644.86239,
+   "kwh_recomputed_x90": 32165.48879999995,
+   "formula": "=(C9-B9)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Dec-25",
+    "row": 9
+   }
+  },
+  {
+   "date": "2025-12-04",
+   "kwh_reported": 34516.87200000002,
+   "imr": 9644.86239,
+   "fmr": 10028.38319,
+   "kwh_recomputed_x90": 34516.87200000002,
+   "formula": "=(C10-B10)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Dec-25",
+    "row": 10
+   }
+  },
+  {
+   "date": "2025-12-05",
+   "kwh_reported": 42394.962600000035,
+   "imr": 10028.38319,
+   "fmr": 10499.43833,
+   "kwh_recomputed_x90": 42394.962600000035,
+   "formula": "=(C11-B11)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Dec-25",
+    "row": 11
+   }
+  },
+  {
+   "date": "2025-12-06",
+   "kwh_reported": 43084.634399999864,
+   "imr": 10499.43833,
+   "fmr": 10978.15649,
+   "kwh_recomputed_x90": 43084.634399999864,
+   "formula": "=(C12-B12)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Dec-25",
+    "row": 12
+   }
+  },
+  {
+   "date": "2025-12-07",
+   "kwh_reported": 43897.67010000012,
+   "imr": 10978.15649,
+   "fmr": 11465.90838,
+   "kwh_recomputed_x90": 43897.67010000012,
+   "formula": "=(C13-B13)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Dec-25",
+    "row": 13
+   }
+  },
+  {
+   "date": "2025-12-08",
+   "kwh_reported": 46553.21729999989,
+   "imr": 11465.90838,
+   "fmr": 11983.16635,
+   "kwh_recomputed_x90": 46553.21729999989,
+   "formula": "=(C14-B14)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Dec-25",
+    "row": 14
+   }
+  },
+  {
+   "date": "2025-12-09",
+   "kwh_reported": 47798.65350000011,
+   "imr": 11983.16635,
+   "fmr": 12514.2625,
+   "kwh_recomputed_x90": 47798.65350000011,
+   "formula": "=(C15-B15)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Dec-25",
+    "row": 15
+   }
+  },
+  {
+   "date": "2025-12-10",
+   "kwh_reported": 47611.37429999999,
+   "imr": 12514.2625,
+   "fmr": 13043.27777,
+   "kwh_recomputed_x90": 47611.37429999999,
+   "formula": "=(C16-B16)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Dec-25",
+    "row": 16
+   }
+  },
+  {
+   "date": "2025-12-11",
+   "kwh_reported": 45916.1531999999,
+   "imr": 13043.27777,
+   "fmr": 13553.45725,
+   "kwh_recomputed_x90": 45916.1531999999,
+   "formula": "=(C17-B17)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Dec-25",
+    "row": 17
+   }
+  },
+  {
+   "date": "2025-12-12",
+   "kwh_reported": 43676.894699999975,
+   "imr": 13553.45725,
+   "fmr": 14038.75608,
+   "kwh_recomputed_x90": 43676.894699999975,
+   "formula": "=(C18-B18)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Dec-25",
+    "row": 18
+   }
+  },
+  {
+   "date": "2025-12-13",
+   "kwh_reported": 43748.920800000065,
+   "imr": 14038.75608,
+   "fmr": 14524.8552,
+   "kwh_recomputed_x90": 43748.920800000065,
+   "formula": "=(C19-B19)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Dec-25",
+    "row": 19
+   }
+  },
+  {
+   "date": "2025-12-14",
+   "kwh_reported": 45138.24269999994,
+   "imr": 14524.8552,
+   "fmr": 15026.39123,
+   "kwh_recomputed_x90": 45138.24269999994,
+   "formula": "=(C20-B20)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Dec-25",
+    "row": 20
+   }
+  },
+  {
+   "date": "2025-12-15",
+   "kwh_reported": 40287.74400000008,
+   "imr": 15026.39123,
+   "fmr": 15474.03283,
+   "kwh_recomputed_x90": 40287.74400000008,
+   "formula": "=(C21-B21)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Dec-25",
+    "row": 21
+   }
+  },
+  {
+   "date": "2025-12-16",
+   "kwh_reported": 39281.183099999995,
+   "imr": 15474.03283,
+   "fmr": 15910.49042,
+   "kwh_recomputed_x90": 39281.183099999995,
+   "formula": "=(C22-B22)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Dec-25",
+    "row": 22
+   }
+  },
+  {
+   "date": "2025-12-17",
+   "kwh_reported": 43017.767099999925,
+   "imr": 15910.49042,
+   "fmr": 16388.46561,
+   "kwh_recomputed_x90": 43017.767099999925,
+   "formula": "=(C23-B23)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Dec-25",
+    "row": 23
+   }
+  },
+  {
+   "date": "2025-12-18",
+   "kwh_reported": 47113.02720000007,
+   "imr": 16388.46561,
+   "fmr": 16911.94369,
+   "kwh_recomputed_x90": 47113.02720000007,
+   "formula": "=(C24-B24)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Dec-25",
+    "row": 24
+   }
+  },
+  {
+   "date": "2025-12-19",
+   "kwh_reported": 46517.01749999989,
+   "imr": 16911.94369,
+   "fmr": 17428.79944,
+   "kwh_recomputed_x90": 46517.01749999989,
+   "formula": "=(C25-B25)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Dec-25",
+    "row": 25
+   }
+  },
+  {
+   "date": "2025-12-20",
+   "kwh_reported": 45764.77500000012,
+   "imr": 17428.79944,
+   "fmr": 17937.29694,
+   "kwh_recomputed_x90": 45764.77500000012,
+   "formula": "=(C26-B26)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Dec-25",
+    "row": 26
+   }
+  },
+  {
+   "date": "2025-12-21",
+   "kwh_reported": 42081.78780000009,
+   "imr": 17937.29694,
+   "fmr": 18404.87236,
+   "kwh_recomputed_x90": 42081.78780000009,
+   "formula": "=(C27-B27)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Dec-25",
+    "row": 27
+   }
+  },
+  {
+   "date": "2025-12-22",
+   "kwh_reported": 42372.246599999926,
+   "imr": 18404.87236,
+   "fmr": 18875.6751,
+   "kwh_recomputed_x90": 42372.246599999926,
+   "formula": "=(C28-B28)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Dec-25",
+    "row": 28
+   }
+  },
+  {
+   "date": "2025-12-23",
+   "kwh_reported": 46190.519999999924,
+   "imr": 18875.6751,
+   "fmr": 19388.9031,
+   "kwh_recomputed_x90": 46190.519999999924,
+   "formula": "=(C29-B29)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Dec-25",
+    "row": 29
+   }
+  },
+  {
+   "date": "2025-12-24",
+   "kwh_reported": 41786.169299999965,
+   "imr": 19388.9031,
+   "fmr": 19853.19387,
+   "kwh_recomputed_x90": 41786.169299999965,
+   "formula": "=(C30-B30)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Dec-25",
+    "row": 30
+   }
+  },
+  {
+   "date": "2025-12-25",
+   "kwh_reported": 43648.27110000013,
+   "imr": 19853.19387,
+   "fmr": 20338.17466,
+   "kwh_recomputed_x90": 43648.27110000013,
+   "formula": "=(C31-B31)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Dec-25",
+    "row": 31
+   }
+  },
+  {
+   "date": "2025-12-26",
+   "kwh_reported": 43391.98169999985,
+   "imr": 20338.17466,
+   "fmr": 20820.30779,
+   "kwh_recomputed_x90": 43391.98169999985,
+   "formula": "=(C32-B32)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Dec-25",
+    "row": 32
+   }
+  },
+  {
+   "date": "2025-12-27",
+   "kwh_reported": 43842.74400000024,
+   "imr": 20820.30779,
+   "fmr": 21307.44939,
+   "kwh_recomputed_x90": 43842.74400000024,
+   "formula": "=(C33-B33)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Dec-25",
+    "row": 33
+   }
+  },
+  {
+   "date": "2025-12-28",
+   "kwh_reported": 44557.17209999988,
+   "imr": 21307.44939,
+   "fmr": 21802.52908,
+   "kwh_recomputed_x90": 44557.17209999988,
+   "formula": "=(C34-B34)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Dec-25",
+    "row": 34
+   }
+  },
+  {
+   "date": "2025-12-29",
+   "kwh_reported": 45447.21270000002,
+   "imr": 21802.52908,
+   "fmr": 22307.49811,
+   "kwh_recomputed_x90": 45447.21270000002,
+   "formula": "=(C35-B35)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Dec-25",
+    "row": 35
+   }
+  },
+  {
+   "date": "2025-12-30",
+   "kwh_reported": 46261.9791000001,
+   "imr": 22307.49811,
+   "fmr": 22821.5201,
+   "kwh_recomputed_x90": 46261.9791000001,
+   "formula": "=(C36-B36)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Dec-25",
+    "row": 36
+   }
+  },
+  {
+   "date": "2025-12-31",
+   "kwh_reported": 43417.27349999972,
+   "imr": 22821.5201,
+   "fmr": 23303.93425,
+   "kwh_recomputed_x90": 43417.27349999972,
+   "formula": "=(C37-B37)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Dec-25",
+    "row": 37
+   }
+  },
+  {
+   "date": "2026-01-01",
+   "kwh_reported": 36917.154000000155,
+   "imr": 23303.93425,
+   "fmr": 23714.12485,
+   "kwh_recomputed_x90": 36917.154000000155,
+   "formula": "=(C7-B7)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Jan-26",
+    "row": 7
+   }
+  },
+  {
+   "date": "2026-01-02",
+   "kwh_reported": 29860.67969999989,
+   "imr": 23714.12485,
+   "fmr": 24045.91018,
+   "kwh_recomputed_x90": 29860.67969999989,
+   "formula": "=(C8-B8)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Jan-26",
+    "row": 8
+   }
+  },
+  {
+   "date": "2026-01-03",
+   "kwh_reported": 31653.69660000015,
+   "imr": 24045.91018,
+   "fmr": 24397.61792,
+   "kwh_recomputed_x90": 31653.69660000015,
+   "formula": "=(C9-B9)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Jan-26",
+    "row": 9
+   }
+  },
+  {
+   "date": "2026-01-04",
+   "kwh_reported": 32700.229199999885,
+   "imr": 24397.61792,
+   "fmr": 24760.9538,
+   "kwh_recomputed_x90": 32700.229199999885,
+   "formula": "=(C10-B10)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Jan-26",
+    "row": 10
+   }
+  },
+  {
+   "date": "2026-01-05",
+   "kwh_reported": 33514.82729999996,
+   "imr": 24760.9538,
+   "fmr": 25133.34077,
+   "kwh_recomputed_x90": 33514.82729999996,
+   "formula": "=(C11-B11)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Jan-26",
+    "row": 11
+   }
+  },
+  {
+   "date": "2026-01-06",
+   "kwh_reported": 47249.42310000017,
+   "imr": 25133.34077,
+   "fmr": 25658.33436,
+   "kwh_recomputed_x90": 47249.42310000017,
+   "formula": "=(C12-B12)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Jan-26",
+    "row": 12
+   }
+  },
+  {
+   "date": "2026-01-07",
+   "kwh_reported": 44465.18310000003,
+   "imr": 25658.33436,
+   "fmr": 26152.39195,
+   "kwh_recomputed_x90": 44465.18310000003,
+   "formula": "=(C13-B13)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Jan-26",
+    "row": 13
+   }
+  },
+  {
+   "date": "2026-01-08",
+   "kwh_reported": 41758.699499999784,
+   "imr": 26152.39195,
+   "fmr": 26616.3775,
+   "kwh_recomputed_x90": 41758.699499999784,
+   "formula": "=(C14-B14)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Jan-26",
+    "row": 14
+   }
+  },
+  {
+   "date": "2026-01-09",
+   "kwh_reported": 41757.61860000024,
+   "imr": 26616.3775,
+   "fmr": 27080.35104,
+   "kwh_recomputed_x90": 41757.61860000024,
+   "formula": "=(C15-B15)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Jan-26",
+    "row": 15
+   }
+  },
+  {
+   "date": "2026-01-10",
+   "kwh_reported": 44628.86969999992,
+   "imr": 27080.35104,
+   "fmr": 27576.22737,
+   "kwh_recomputed_x90": 44628.86969999992,
+   "formula": "=(C16-B16)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Jan-26",
+    "row": 16
+   }
+  },
+  {
+   "date": "2026-01-11",
+   "kwh_reported": 42947.157600000064,
+   "imr": 27576.22737,
+   "fmr": 28053.41801,
+   "kwh_recomputed_x90": 42947.157600000064,
+   "formula": "=(C17-B17)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Jan-26",
+    "row": 17
+   }
+  },
+  {
+   "date": "2026-01-12",
+   "kwh_reported": 43803.19889999995,
+   "imr": 28053.41801,
+   "fmr": 28540.12022,
+   "kwh_recomputed_x90": 43803.19889999995,
+   "formula": "=(C18-B18)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Jan-26",
+    "row": 18
+   }
+  },
+  {
+   "date": "2026-01-13",
+   "kwh_reported": 42715.198800000035,
+   "imr": 28540.12022,
+   "fmr": 29014.73354,
+   "kwh_recomputed_x90": 42715.198800000035,
+   "formula": "=(C19-B19)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Jan-26",
+    "row": 19
+   }
+  },
+  {
+   "date": "2026-01-14",
+   "kwh_reported": 35645.27310000005,
+   "imr": 29014.73354,
+   "fmr": 29410.79213,
+   "kwh_recomputed_x90": 35645.27310000005,
+   "formula": "=(C20-B20)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Jan-26",
+    "row": 20
+   }
+  },
+  {
+   "date": "2026-01-15",
+   "kwh_reported": 43552.07639999979,
+   "imr": 29410.79213,
+   "fmr": 29894.70409,
+   "kwh_recomputed_x90": 43552.07639999979,
+   "formula": "=(C21-B21)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Jan-26",
+    "row": 21
+   }
+  },
+  {
+   "date": "2026-01-16",
+   "kwh_reported": 46000.84320000013,
+   "imr": 29894.70409,
+   "fmr": 30405.82457,
+   "kwh_recomputed_x90": 46000.84320000013,
+   "formula": "=(C22-B22)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Jan-26",
+    "row": 22
+   }
+  },
+  {
+   "date": "2026-01-17",
+   "kwh_reported": 46425.39659999991,
+   "imr": 30405.82457,
+   "fmr": 30921.66231,
+   "kwh_recomputed_x90": 46425.39659999991,
+   "formula": "=(C23-B23)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Jan-26",
+    "row": 23
+   }
+  },
+  {
+   "date": "2026-01-18",
+   "kwh_reported": 43454.07359999994,
+   "imr": 30921.66231,
+   "fmr": 31404.48535,
+   "kwh_recomputed_x90": 43454.07359999994,
+   "formula": "=(C24-B24)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Jan-26",
+    "row": 24
+   }
+  },
+  {
+   "date": "2026-01-19",
+   "kwh_reported": 39864.520800000246,
+   "imr": 31404.48535,
+   "fmr": 31847.42447,
+   "kwh_recomputed_x90": 39864.520800000246,
+   "formula": "=(C25-B25)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Jan-26",
+    "row": 25
+   }
+  },
+  {
+   "date": "2026-01-20",
+   "kwh_reported": 39230.63639999982,
+   "imr": 31847.42447,
+   "fmr": 32283.32043,
+   "kwh_recomputed_x90": 39230.63639999982,
+   "formula": "=(C26-B26)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Jan-26",
+    "row": 26
+   }
+  },
+  {
+   "date": "2026-01-21",
+   "kwh_reported": 37427.38560000009,
+   "imr": 32283.32043,
+   "fmr": 32699.18027,
+   "kwh_recomputed_x90": 37427.38560000009,
+   "formula": "=(C27-B27)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Jan-26",
+    "row": 27
+   }
+  },
+  {
+   "date": "2026-01-22",
+   "kwh_reported": 37997.689499999724,
+   "imr": 32699.18027,
+   "fmr": 33121.37682,
+   "kwh_recomputed_x90": 37997.689499999724,
+   "formula": "=(C28-B28)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Jan-26",
+    "row": 28
+   }
+  },
+  {
+   "date": "2026-01-23",
+   "kwh_reported": 36697.40370000014,
+   "imr": 33121.37682,
+   "fmr": 33529.12575,
+   "kwh_recomputed_x90": 36697.40370000014,
+   "formula": "=(C29-B29)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Jan-26",
+    "row": 29
+   }
+  },
+  {
+   "date": "2026-01-24",
+   "kwh_reported": 37743.68070000011,
+   "imr": 33529.12575,
+   "fmr": 33948.49998,
+   "kwh_recomputed_x90": 37743.68070000011,
+   "formula": "=(C30-B30)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Jan-26",
+    "row": 30
+   }
+  },
+  {
+   "date": "2026-01-25",
+   "kwh_reported": 39849.80669999968,
+   "imr": 33948.49998,
+   "fmr": 34391.27561,
+   "kwh_recomputed_x90": 39849.80669999968,
+   "formula": "=(C31-B31)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Jan-26",
+    "row": 31
+   }
+  },
+  {
+   "date": "2026-01-26",
+   "kwh_reported": 37050.71670000012,
+   "imr": 34391.27561,
+   "fmr": 34802.95024,
+   "kwh_recomputed_x90": 37050.71670000012,
+   "formula": "=(C32-B32)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Jan-26",
+    "row": 32
+   }
+  },
+  {
+   "date": "2026-01-27",
+   "kwh_reported": 37693.01069999994,
+   "imr": 34802.95024,
+   "fmr": 35221.76147,
+   "kwh_recomputed_x90": 37693.01069999994,
+   "formula": "=(C33-B33)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Jan-26",
+    "row": 33
+   }
+  },
+  {
+   "date": "2026-01-28",
+   "kwh_reported": 31602.13830000015,
+   "imr": 35221.76147,
+   "fmr": 35572.89634,
+   "kwh_recomputed_x90": 31602.13830000015,
+   "formula": "=(C34-B34)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Jan-26",
+    "row": 34
+   }
+  },
+  {
+   "date": "2026-01-29",
+   "kwh_reported": 38739.6522000002,
+   "imr": 35572.89634,
+   "fmr": 36003.33692,
+   "kwh_recomputed_x90": 38739.6522000002,
+   "formula": "=(C35-B35)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Jan-26",
+    "row": 35
+   }
+  },
+  {
+   "date": "2026-01-30",
+   "kwh_reported": 40258.51829999956,
+   "imr": 36003.33692,
+   "fmr": 36450.65379,
+   "kwh_recomputed_x90": 40258.51829999956,
+   "formula": "=(C36-B36)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Jan-26",
+    "row": 36
+   }
+  },
+  {
+   "date": "2026-01-31",
+   "kwh_reported": 40260.20310000022,
+   "imr": 36450.65379,
+   "fmr": 36897.98938,
+   "kwh_recomputed_x90": 40260.20310000022,
+   "formula": "=(C37-B37)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Jan-26",
+    "row": 37
+   }
+  },
+  {
+   "date": "2026-02-01",
+   "kwh_reported": 44386.4681999998,
+   "imr": 36897.98938,
+   "fmr": 37391.17236,
+   "kwh_recomputed_x90": 44386.4681999998,
+   "formula": "=(C7-B7)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Feb-26",
+    "row": 7
+   }
+  },
+  {
+   "date": "2026-02-02",
+   "kwh_reported": 43038.75509999998,
+   "imr": 37391.17236,
+   "fmr": 37869.38075,
+   "kwh_recomputed_x90": 43038.75509999998,
+   "formula": "=(C8-B8)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Feb-26",
+    "row": 8
+   }
+  },
+  {
+   "date": "2026-02-03",
+   "kwh_reported": 42009.80400000008,
+   "imr": 37869.38075,
+   "fmr": 38336.15635,
+   "kwh_recomputed_x90": 42009.80400000008,
+   "formula": "=(C9-B9)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Feb-26",
+    "row": 9
+   }
+  },
+  {
+   "date": "2026-02-04",
+   "kwh_reported": 40707.662400000554,
+   "imr": 38336.15635,
+   "fmr": 38788.46371,
+   "kwh_recomputed_x90": 40707.662400000554,
+   "formula": "=(C10-B10)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Feb-26",
+    "row": 10
+   }
+  },
+  {
+   "date": "2026-02-05",
+   "kwh_reported": 42376.33889999968,
+   "imr": 38788.46371,
+   "fmr": 39259.31192,
+   "kwh_recomputed_x90": 42376.33889999968,
+   "formula": "=(C11-B11)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Feb-26",
+    "row": 11
+   }
+  },
+  {
+   "date": "2026-02-06",
+   "kwh_reported": 42069.07619999969,
+   "imr": 39259.31192,
+   "fmr": 39726.7461,
+   "kwh_recomputed_x90": 42069.07619999969,
+   "formula": "=(C12-B12)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Feb-26",
+    "row": 12
+   }
+  },
+  {
+   "date": "2026-02-07",
+   "kwh_reported": 46511.00730000013,
+   "imr": 39726.7461,
+   "fmr": 40243.53507,
+   "kwh_recomputed_x90": 46511.00730000013,
+   "formula": "=(C13-B13)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Feb-26",
+    "row": 13
+   }
+  },
+  {
+   "date": "2026-02-08",
+   "kwh_reported": 46324.0575000002,
+   "imr": 40243.53507,
+   "fmr": 40758.24682,
+   "kwh_recomputed_x90": 46324.0575000002,
+   "formula": "=(C14-B14)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Feb-26",
+    "row": 14
+   }
+  },
+  {
+   "date": "2026-02-09",
+   "kwh_reported": 46722.539699999834,
+   "imr": 40758.24682,
+   "fmr": 41277.38615,
+   "kwh_recomputed_x90": 46722.539699999834,
+   "formula": "=(C15-B15)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Feb-26",
+    "row": 15
+   }
+  },
+  {
+   "date": "2026-02-10",
+   "kwh_reported": 47919.32819999987,
+   "imr": 41277.38615,
+   "fmr": 41809.82313,
+   "kwh_recomputed_x90": 47919.32819999987,
+   "formula": "=(C16-B16)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Feb-26",
+    "row": 16
+   }
+  },
+  {
+   "date": "2026-02-11",
+   "kwh_reported": 46313.3439000004,
+   "imr": 41809.82313,
+   "fmr": 42324.41584,
+   "kwh_recomputed_x90": 46313.3439000004,
+   "formula": "=(C17-B17)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Feb-26",
+    "row": 17
+   }
+  },
+  {
+   "date": "2026-02-12",
+   "kwh_reported": 44307.39689999973,
+   "imr": 42324.41584,
+   "fmr": 42816.72025,
+   "kwh_recomputed_x90": 44307.39689999973,
+   "formula": "=(C18-B18)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Feb-26",
+    "row": 18
+   }
+  },
+  {
+   "date": "2026-02-13",
+   "kwh_reported": 41223.41820000009,
+   "imr": 42816.72025,
+   "fmr": 43274.75823,
+   "kwh_recomputed_x90": 41223.41820000009,
+   "formula": "=(C19-B19)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Feb-26",
+    "row": 19
+   }
+  },
+  {
+   "date": "2026-02-14",
+   "kwh_reported": 43136.9208000003,
+   "imr": 43274.75823,
+   "fmr": 43754.05735,
+   "kwh_recomputed_x90": 43136.9208000003,
+   "formula": "=(C20-B20)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Feb-26",
+    "row": 20
+   }
+  },
+  {
+   "date": "2026-02-15",
+   "kwh_reported": 42047.195399999764,
+   "imr": 43754.05735,
+   "fmr": 44221.24841,
+   "kwh_recomputed_x90": 42047.195399999764,
+   "formula": "=(C21-B21)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Feb-26",
+    "row": 21
+   }
+  },
+  {
+   "date": "2026-02-16",
+   "kwh_reported": 47396.02139999988,
+   "imr": 44221.24841,
+   "fmr": 44747.87087,
+   "kwh_recomputed_x90": 47396.02139999988,
+   "formula": "=(C22-B22)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Feb-26",
+    "row": 22
+   }
+  },
+  {
+   "date": "2026-02-17",
+   "kwh_reported": 49255.477200000096,
+   "imr": 44747.87087,
+   "fmr": 45295.15395,
+   "kwh_recomputed_x90": 49255.477200000096,
+   "formula": "=(C23-B23)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Feb-26",
+    "row": 23
+   }
+  },
+  {
+   "date": "2026-02-18",
+   "kwh_reported": 46933.98930000032,
+   "imr": 45295.15395,
+   "fmr": 45816.64272,
+   "kwh_recomputed_x90": 46933.98930000032,
+   "formula": "=(C24-B24)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Feb-26",
+    "row": 24
+   }
+  },
+  {
+   "date": "2026-02-19",
+   "kwh_reported": 45055.190699999584,
+   "imr": 45816.64272,
+   "fmr": 46317.25595,
+   "kwh_recomputed_x90": 45055.190699999584,
+   "formula": "=(C25-B25)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Feb-26",
+    "row": 25
+   }
+  },
+  {
+   "date": "2026-02-20",
+   "kwh_reported": 44962.21890000001,
+   "imr": 46317.25595,
+   "fmr": 46816.83616,
+   "kwh_recomputed_x90": 44962.21890000001,
+   "formula": "=(C26-B26)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Feb-26",
+    "row": 26
+   }
+  },
+  {
+   "date": "2026-02-21",
+   "kwh_reported": 38228.7779999998,
+   "imr": 46816.83616,
+   "fmr": 47241.60036,
+   "kwh_recomputed_x90": 38228.7779999998,
+   "formula": "=(C27-B27)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Feb-26",
+    "row": 27
+   }
+  },
+  {
+   "date": "2026-02-22",
+   "kwh_reported": 39823.22610000061,
+   "imr": 47241.60036,
+   "fmr": 47684.08065,
+   "kwh_recomputed_x90": 39823.22610000061,
+   "formula": "=(C28-B28)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Feb-26",
+    "row": 28
+   }
+  },
+  {
+   "date": "2026-02-23",
+   "kwh_reported": 38350.88639999936,
+   "imr": 47684.08065,
+   "fmr": 48110.20161,
+   "kwh_recomputed_x90": 38350.88639999936,
+   "formula": "=(C29-B29)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Feb-26",
+    "row": 29
+   }
+  },
+  {
+   "date": "2026-02-24",
+   "kwh_reported": 39802.08150000042,
+   "imr": 48110.20161,
+   "fmr": 48552.44696,
+   "kwh_recomputed_x90": 39802.08150000042,
+   "formula": "=(C30-B30)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Feb-26",
+    "row": 30
+   }
+  },
+  {
+   "date": "2026-02-25",
+   "kwh_reported": 40617.47879999995,
+   "imr": 48552.44696,
+   "fmr": 49003.75228,
+   "kwh_recomputed_x90": 40617.47879999995,
+   "formula": "=(C31-B31)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Feb-26",
+    "row": 31
+   }
+  },
+  {
+   "date": "2026-02-26",
+   "kwh_reported": 43300.79099999981,
+   "imr": 49003.75228,
+   "fmr": 49484.87218,
+   "kwh_recomputed_x90": 43300.79099999981,
+   "formula": "=(C32-B32)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Feb-26",
+    "row": 32
+   }
+  },
+  {
+   "date": "2026-02-27",
+   "kwh_reported": 33887.96640000037,
+   "imr": 49484.87218,
+   "fmr": 49861.40514,
+   "kwh_recomputed_x90": 33887.96640000037,
+   "formula": "=(C33-B33)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Feb-26",
+    "row": 33
+   }
+  },
+  {
+   "date": "2026-02-28",
+   "kwh_reported": 41525.50949999975,
+   "imr": 49861.40514,
+   "fmr": 50322.79969,
+   "kwh_recomputed_x90": 41525.50949999975,
+   "formula": "=(C34-B34)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "Feb-26",
+    "row": 34
+   }
+  },
+  {
+   "date": "2026-03-01",
+   "kwh_reported": 51788.54610000031,
+   "imr": 50322.79969,
+   "fmr": 50898.22798,
+   "kwh_recomputed_x90": 51788.54610000031,
+   "formula": "=(C7-B7)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "March-26",
+    "row": 7
+   }
+  },
+  {
+   "date": "2026-03-02",
+   "kwh_reported": 52224.13619999992,
+   "imr": 50898.22798,
+   "fmr": 51478.49616,
+   "kwh_recomputed_x90": 52224.13619999992,
+   "formula": "=(C8-B8)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "March-26",
+    "row": 8
+   }
+  },
+  {
+   "date": "2026-03-03",
+   "kwh_reported": 52476.67259999973,
+   "imr": 51478.49616,
+   "fmr": 52061.5703,
+   "kwh_recomputed_x90": 52476.67259999973,
+   "formula": "=(C9-B9)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "March-26",
+    "row": 9
+   }
+  },
+  {
+   "date": "2026-03-04",
+   "kwh_reported": 53228.350800000335,
+   "imr": 52061.5703,
+   "fmr": 52652.99642,
+   "kwh_recomputed_x90": 53228.350800000335,
+   "formula": "=(C10-B10)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "March-26",
+    "row": 10
+   }
+  },
+  {
+   "date": "2026-03-05",
+   "kwh_reported": 54976.09589999993,
+   "imr": 52652.99642,
+   "fmr": 53263.84193,
+   "kwh_recomputed_x90": 54976.09589999993,
+   "formula": "=(C11-B11)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "March-26",
+    "row": 11
+   }
+  },
+  {
+   "date": "2026-03-06",
+   "kwh_reported": 54299.49660000006,
+   "imr": 53263.84193,
+   "fmr": 53867.16967,
+   "kwh_recomputed_x90": 54299.49660000006,
+   "formula": "=(C12-B12)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "March-26",
+    "row": 12
+   }
+  },
+  {
+   "date": "2026-03-07",
+   "kwh_reported": 53576.55359999975,
+   "imr": 53867.16967,
+   "fmr": 54462.46471,
+   "kwh_recomputed_x90": 53576.55359999975,
+   "formula": "=(C13-B13)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "March-26",
+    "row": 13
+   }
+  },
+  {
+   "date": "2026-03-08",
+   "kwh_reported": 53711.00910000008,
+   "imr": 54462.46471,
+   "fmr": 55059.2537,
+   "kwh_recomputed_x90": 53711.00910000008,
+   "formula": "=(C14-B14)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "March-26",
+    "row": 14
+   }
+  },
+  {
+   "date": "2026-03-09",
+   "kwh_reported": 54285.43679999966,
+   "imr": 55059.2537,
+   "fmr": 55662.42522,
+   "kwh_recomputed_x90": 54285.43679999966,
+   "formula": "=(C15-B15)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "March-26",
+    "row": 15
+   }
+  },
+  {
+   "date": "2026-03-10",
+   "kwh_reported": 51939.69840000056,
+   "imr": 55662.42522,
+   "fmr": 56239.53298,
+   "kwh_recomputed_x90": 51939.69840000056,
+   "formula": "=(C16-B16)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "March-26",
+    "row": 16
+   }
+  },
+  {
+   "date": "2026-03-11",
+   "kwh_reported": 48144.56399999981,
+   "imr": 56239.53298,
+   "fmr": 56774.47258,
+   "kwh_recomputed_x90": 48144.56399999981,
+   "formula": "=(C17-B17)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "March-26",
+    "row": 17
+   }
+  },
+  {
+   "date": "2026-03-12",
+   "kwh_reported": 50806.70640000011,
+   "imr": 56774.47258,
+   "fmr": 57338.99154,
+   "kwh_recomputed_x90": 50806.70640000011,
+   "formula": "=(C18-B18)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "March-26",
+    "row": 18
+   }
+  },
+  {
+   "date": "2026-03-13",
+   "kwh_reported": 50069.23019999958,
+   "imr": 57338.99154,
+   "fmr": 57895.31632,
+   "kwh_recomputed_x90": 50069.23019999958,
+   "formula": "=(C19-B19)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "March-26",
+    "row": 19
+   }
+  },
+  {
+   "date": "2026-03-14",
+   "kwh_reported": 47523.58650000009,
+   "imr": 57895.31632,
+   "fmr": 58423.35617,
+   "kwh_recomputed_x90": 47523.58650000009,
+   "formula": "=(C20-B20)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "March-26",
+    "row": 20
+   }
+  },
+  {
+   "date": "2026-03-15",
+   "kwh_reported": 44756.431200000225,
+   "imr": 58423.35617,
+   "fmr": 58920.64985,
+   "kwh_recomputed_x90": 44756.431200000225,
+   "formula": "=(C21-B21)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "March-26",
+    "row": 21
+   }
+  },
+  {
+   "date": "2026-03-16",
+   "kwh_reported": 47409.903899999845,
+   "imr": 58920.64985,
+   "fmr": 59447.42656,
+   "kwh_recomputed_x90": 47409.903899999845,
+   "formula": "=(C22-B22)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "March-26",
+    "row": 22
+   }
+  },
+  {
+   "date": "2026-03-17",
+   "kwh_reported": 48774.62609999988,
+   "imr": 59447.42656,
+   "fmr": 59989.36685,
+   "kwh_recomputed_x90": 48774.62609999988,
+   "formula": "=(C23-B23)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "March-26",
+    "row": 23
+   }
+  },
+  {
+   "date": "2026-03-18",
+   "kwh_reported": 40120.606800000096,
+   "imr": 59989.36685,
+   "fmr": 60435.15137,
+   "kwh_recomputed_x90": 40120.606800000096,
+   "formula": "=(C24-B24)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "March-26",
+    "row": 24
+   }
+  },
+  {
+   "date": "2026-03-19",
+   "kwh_reported": 48433.338899999944,
+   "imr": 60435.15137,
+   "fmr": 60973.29958,
+   "kwh_recomputed_x90": 48433.338899999944,
+   "formula": "=(C25-B25)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "March-26",
+    "row": 25
+   }
+  },
+  {
+   "date": "2026-03-20",
+   "kwh_reported": 45561.6485999999,
+   "imr": 60973.29958,
+   "fmr": 61479.54012,
+   "kwh_recomputed_x90": 45561.6485999999,
+   "formula": "=(C26-B26)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "March-26",
+    "row": 26
+   }
+  },
+  {
+   "date": "2026-03-21",
+   "kwh_reported": 54503.287200000195,
+   "imr": 61479.54012,
+   "fmr": 62085.1322,
+   "kwh_recomputed_x90": 54503.287200000195,
+   "formula": "=(C27-B27)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "March-26",
+    "row": 27
+   }
+  },
+  {
+   "date": "2026-03-22",
+   "kwh_reported": 54304.20809999989,
+   "imr": 62085.1322,
+   "fmr": 62688.51229,
+   "kwh_recomputed_x90": 54304.20809999989,
+   "formula": "=(C28-B28)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "March-26",
+    "row": 28
+   }
+  },
+  {
+   "date": "2026-03-23",
+   "kwh_reported": 52110.30509999982,
+   "imr": 62688.51229,
+   "fmr": 63267.51568,
+   "kwh_recomputed_x90": 52110.30509999982,
+   "formula": "=(C29-B29)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "March-26",
+    "row": 29
+   }
+  },
+  {
+   "date": "2026-03-24",
+   "kwh_reported": 46754.52120000031,
+   "imr": 63267.51568,
+   "fmr": 63787.01036,
+   "kwh_recomputed_x90": 46754.52120000031,
+   "formula": "=(C30-B30)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "March-26",
+    "row": 30
+   }
+  },
+  {
+   "date": "2026-03-25",
+   "kwh_reported": 52643.26710000016,
+   "imr": 63787.01036,
+   "fmr": 64371.93555,
+   "kwh_recomputed_x90": 52643.26710000016,
+   "formula": "=(C31-B31)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "March-26",
+    "row": 31
+   }
+  },
+  {
+   "date": "2026-03-26",
+   "kwh_reported": 49526.613899999866,
+   "imr": 64371.93555,
+   "fmr": 64922.23126,
+   "kwh_recomputed_x90": 49526.613899999866,
+   "formula": "=(C32-B32)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "March-26",
+    "row": 32
+   }
+  },
+  {
+   "date": "2026-03-27",
+   "kwh_reported": 44542.8585,
+   "imr": 64922.23126,
+   "fmr": 65417.15191,
+   "kwh_recomputed_x90": 44542.8585,
+   "formula": "=(C33-B33)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "March-26",
+    "row": 33
+   }
+  },
+  {
+   "date": "2026-03-28",
+   "kwh_reported": 54417.86460000047,
+   "imr": 65417.15191,
+   "fmr": 66021.79485,
+   "kwh_recomputed_x90": 54417.86460000047,
+   "formula": "=(C34-B34)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "March-26",
+    "row": 34
+   }
+  },
+  {
+   "date": "2026-03-29",
+   "kwh_reported": 52674.70949999886,
+   "imr": 66021.79485,
+   "fmr": 66607.0694,
+   "kwh_recomputed_x90": 52674.70949999886,
+   "formula": "=(C35-B35)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "March-26",
+    "row": 35
+   }
+  },
+  {
+   "date": "2026-03-30",
+   "kwh_reported": 48053.169000000344,
+   "imr": 66607.0694,
+   "fmr": 67140.9935,
+   "kwh_recomputed_x90": 48053.169000000344,
+   "formula": "=(C36-B36)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "March-26",
+    "row": 36
+   }
+  },
+  {
+   "date": "2026-03-31",
+   "kwh_reported": 52537.52970000089,
+   "imr": 67140.9935,
+   "fmr": 67724.74383,
+   "kwh_recomputed_x90": 52537.52970000089,
+   "formula": "=(C37-B37)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "March-26",
+    "row": 37
+   }
+  },
+  {
+   "date": "2026-04-01",
+   "kwh_reported": 43662.28499999939,
+   "imr": 67724.74383,
+   "fmr": 68209.88033,
+   "kwh_recomputed_x90": 43662.28499999939,
+   "formula": "=(C7-B7)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "April-26",
+    "row": 7
+   }
+  },
+  {
+   "date": "2026-04-02",
+   "kwh_reported": 42047.26469999965,
+   "imr": 68209.88033,
+   "fmr": 68677.07216,
+   "kwh_recomputed_x90": 42047.26469999965,
+   "formula": "=(C8-B8)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "April-26",
+    "row": 8
+   }
+  },
+  {
+   "date": "2026-04-03",
+   "kwh_reported": 48306.34800000029,
+   "imr": 68677.07216,
+   "fmr": 69213.80936,
+   "kwh_recomputed_x90": 48306.34800000029,
+   "formula": "=(C9-B9)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "April-26",
+    "row": 9
+   }
+  },
+  {
+   "date": "2026-04-04",
+   "kwh_reported": 31448.7089999998,
+   "imr": 69213.80936,
+   "fmr": 69563.23946,
+   "kwh_recomputed_x90": 31448.7089999998,
+   "formula": "=(C10-B10)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "April-26",
+    "row": 10
+   }
+  },
+  {
+   "date": "2026-04-05",
+   "kwh_reported": 44419.63140000022,
+   "imr": 69563.23946,
+   "fmr": 70056.79092,
+   "kwh_recomputed_x90": 44419.63140000022,
+   "formula": "=(C11-B11)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "April-26",
+    "row": 11
+   }
+  },
+  {
+   "date": "2026-04-06",
+   "kwh_reported": 53050.694400000066,
+   "imr": 70056.79092,
+   "fmr": 70646.24308,
+   "kwh_recomputed_x90": 53050.694400000066,
+   "formula": "=(C12-B12)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "April-26",
+    "row": 12
+   }
+  },
+  {
+   "date": "2026-04-07",
+   "kwh_reported": 53261.992800000444,
+   "imr": 70646.24308,
+   "fmr": 71238.043,
+   "kwh_recomputed_x90": 53261.992800000444,
+   "formula": "=(C13-B13)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "April-26",
+    "row": 13
+   }
+  },
+  {
+   "date": "2026-04-08",
+   "kwh_reported": 49951.89180000001,
+   "imr": 71238.043,
+   "fmr": 71793.06402,
+   "kwh_recomputed_x90": 49951.89180000001,
+   "formula": "=(C14-B14)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "April-26",
+    "row": 14
+   }
+  },
+  {
+   "date": "2026-04-09",
+   "kwh_reported": 52632.6821999994,
+   "imr": 71793.06402,
+   "fmr": 72377.8716,
+   "kwh_recomputed_x90": 52632.6821999994,
+   "formula": "=(C15-B15)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "April-26",
+    "row": 15
+   }
+  },
+  {
+   "date": "2026-04-10",
+   "kwh_reported": 52808.30640000058,
+   "imr": 72377.8716,
+   "fmr": 72964.63056,
+   "kwh_recomputed_x90": 52808.30640000058,
+   "formula": "=(C16-B16)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "April-26",
+    "row": 16
+   }
+  },
+  {
+   "date": "2026-04-11",
+   "kwh_reported": 52920.910799999256,
+   "imr": 72964.63056,
+   "fmr": 73552.64068,
+   "kwh_recomputed_x90": 52920.910799999256,
+   "formula": "=(C17-B17)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "April-26",
+    "row": 17
+   }
+  },
+  {
+   "date": "2026-04-12",
+   "kwh_reported": 50335.718399999896,
+   "imr": 73552.64068,
+   "fmr": 74111.92644,
+   "kwh_recomputed_x90": 50335.718399999896,
+   "formula": "=(C18-B18)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "April-26",
+    "row": 18
+   }
+  },
+  {
+   "date": "2026-04-13",
+   "kwh_reported": 48564.5481000001,
+   "imr": 74111.92644,
+   "fmr": 74651.53253,
+   "kwh_recomputed_x90": 48564.5481000001,
+   "formula": "=(C19-B19)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "April-26",
+    "row": 19
+   }
+  },
+  {
+   "date": "2026-04-14",
+   "kwh_reported": 49870.26990000086,
+   "imr": 74651.53253,
+   "fmr": 75205.64664,
+   "kwh_recomputed_x90": 49870.26990000086,
+   "formula": "=(C20-B20)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "April-26",
+    "row": 20
+   }
+  },
+  {
+   "date": "2026-04-15",
+   "kwh_reported": 20068.240499998938,
+   "imr": 75205.64664,
+   "fmr": 75428.62709,
+   "kwh_recomputed_x90": 20068.240499998938,
+   "formula": "=(C21-B21)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "April-26",
+    "row": 21
+   }
+  },
+  {
+   "date": "2026-04-16",
+   "kwh_reported": 53185.44960000101,
+   "imr": 75428.62709,
+   "fmr": 76019.57653,
+   "kwh_recomputed_x90": 53185.44960000101,
+   "formula": "=(C22-B22)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "April-26",
+    "row": 22
+   }
+  },
+  {
+   "date": "2026-04-17",
+   "kwh_reported": 49123.98539999922,
+   "imr": 76019.57653,
+   "fmr": 76565.39859,
+   "kwh_recomputed_x90": 49123.98539999922,
+   "formula": "=(C23-B23)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "April-26",
+    "row": 23
+   }
+  },
+  {
+   "date": "2026-04-18",
+   "kwh_reported": 47836.4075999998,
+   "imr": 76565.39859,
+   "fmr": 77096.91423,
+   "kwh_recomputed_x90": 47836.4075999998,
+   "formula": "=(C24-B24)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "April-26",
+    "row": 24
+   }
+  },
+  {
+   "date": "2026-04-19",
+   "kwh_reported": 46248.268500000704,
+   "imr": 77096.91423,
+   "fmr": 77610.78388,
+   "kwh_recomputed_x90": 46248.268500000704,
+   "formula": "=(C25-B25)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "April-26",
+    "row": 25
+   }
+  },
+  {
+   "date": "2026-04-20",
+   "kwh_reported": 40544.95589999948,
+   "imr": 77610.78388,
+   "fmr": 78061.28339,
+   "kwh_recomputed_x90": 40544.95589999948,
+   "formula": "=(C26-B26)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "April-26",
+    "row": 26
+   }
+  },
+  {
+   "date": "2026-04-21",
+   "kwh_reported": 48719.89350000018,
+   "imr": 78061.28339,
+   "fmr": 78602.61554,
+   "kwh_recomputed_x90": 48719.89350000018,
+   "formula": "=(C27-B27)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "April-26",
+    "row": 27
+   }
+  },
+  {
+   "date": "2026-04-22",
+   "kwh_reported": 46476.52289999969,
+   "imr": 78602.61554,
+   "fmr": 79119.02135,
+   "kwh_recomputed_x90": 46476.52289999969,
+   "formula": "=(C28-B28)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "April-26",
+    "row": 28
+   }
+  },
+  {
+   "date": "2026-04-23",
+   "kwh_reported": 47842.226099999825,
+   "imr": 79119.02135,
+   "fmr": 79650.60164,
+   "kwh_recomputed_x90": 47842.226099999825,
+   "formula": "=(C29-B29)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "April-26",
+    "row": 29
+   }
+  },
+  {
+   "date": "2026-04-24",
+   "kwh_reported": 47700.069300001196,
+   "imr": 79650.60164,
+   "fmr": 80180.60241,
+   "kwh_recomputed_x90": 47700.069300001196,
+   "formula": "=(C30-B30)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "April-26",
+    "row": 30
+   }
+  },
+  {
+   "date": "2026-04-25",
+   "kwh_reported": 47341.35629999946,
+   "imr": 80180.60241,
+   "fmr": 80706.61748,
+   "kwh_recomputed_x90": 47341.35629999946,
+   "formula": "=(C31-B31)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "April-26",
+    "row": 31
+   }
+  },
+  {
+   "date": "2026-04-26",
+   "kwh_reported": 46909.10340000002,
+   "imr": 80706.61748,
+   "fmr": 81227.82974,
+   "kwh_recomputed_x90": 46909.10340000002,
+   "formula": "=(C32-B32)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "April-26",
+    "row": 32
+   }
+  },
+  {
+   "date": "2026-04-27",
+   "kwh_reported": 48153.27780000036,
+   "imr": 81227.82974,
+   "fmr": 81762.86616,
+   "kwh_recomputed_x90": 48153.27780000036,
+   "formula": "=(C33-B33)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "April-26",
+    "row": 33
+   }
+  },
+  {
+   "date": "2026-04-28",
+   "kwh_reported": 47178.02430000011,
+   "imr": 81762.86616,
+   "fmr": 82287.06643,
+   "kwh_recomputed_x90": 47178.02430000011,
+   "formula": "=(C34-B34)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "April-26",
+    "row": 34
+   }
+  },
+  {
+   "date": "2026-04-29",
+   "kwh_reported": 50765.04629999923,
+   "imr": 82287.06643,
+   "fmr": 82851.1225,
+   "kwh_recomputed_x90": 50765.04629999923,
+   "formula": "=(C35-B35)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "April-26",
+    "row": 35
+   }
+  },
+  {
+   "date": "2026-04-30",
+   "kwh_reported": 52211.124000000564,
+   "imr": 82851.1225,
+   "fmr": 83431.2461,
+   "kwh_recomputed_x90": 52211.124000000564,
+   "formula": "=(C36-B36)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "April-26",
+    "row": 36
+   }
+  },
+  {
+   "date": "2026-05-01",
+   "kwh_reported": 49341.31199999989,
+   "imr": 83431.2461,
+   "fmr": 83979.4829,
+   "kwh_recomputed_x90": 49341.31199999989,
+   "formula": "=(C7-B7)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "May-26",
+    "row": 7
+   }
+  },
+  {
+   "date": "2026-05-02",
+   "kwh_reported": 51559.41240000029,
+   "imr": 83979.4829,
+   "fmr": 84552.36526,
+   "kwh_recomputed_x90": 51559.41240000029,
+   "formula": "=(C8-B8)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "May-26",
+    "row": 8
+   }
+  },
+  {
+   "date": "2026-05-03",
+   "kwh_reported": 51960.22379999937,
+   "imr": 84552.36526,
+   "fmr": 85129.70108,
+   "kwh_recomputed_x90": 51960.22379999937,
+   "formula": "=(C9-B9)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "May-26",
+    "row": 9
+   }
+  },
+  {
+   "date": "2026-05-04",
+   "kwh_reported": 51616.362600000284,
+   "imr": 85129.70108,
+   "fmr": 85703.21622,
+   "kwh_recomputed_x90": 51616.362600000284,
+   "formula": "=(C10-B10)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "May-26",
+    "row": 10
+   }
+  },
+  {
+   "date": "2026-05-05",
+   "kwh_reported": 49797.76590000023,
+   "imr": 85703.21622,
+   "fmr": 86256.52473,
+   "kwh_recomputed_x90": 49797.76590000023,
+   "formula": "=(C11-B11)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "May-26",
+    "row": 11
+   }
+  },
+  {
+   "date": "2026-05-06",
+   "kwh_reported": 48165.9146999997,
+   "imr": 86256.52473,
+   "fmr": 86791.70156,
+   "kwh_recomputed_x90": 48165.9146999997,
+   "formula": "=(C12-B12)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "May-26",
+    "row": 12
+   }
+  },
+  {
+   "date": "2026-05-07",
+   "kwh_reported": 36858.65670000028,
+   "imr": 86791.70156,
+   "fmr": 87201.24219,
+   "kwh_recomputed_x90": 36858.65670000028,
+   "formula": "=(C13-B13)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "May-26",
+    "row": 13
+   }
+  },
+  {
+   "date": "2026-05-08",
+   "kwh_reported": 50556.922199999535,
+   "imr": 87201.24219,
+   "fmr": 87762.98577,
+   "kwh_recomputed_x90": 50556.922199999535,
+   "formula": "=(C14-B14)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "May-26",
+    "row": 14
+   }
+  },
+  {
+   "date": "2026-05-09",
+   "kwh_reported": 42877.8207000003,
+   "imr": 87762.98577,
+   "fmr": 88239.406,
+   "kwh_recomputed_x90": 42877.8207000003,
+   "formula": "=(C15-B15)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "May-26",
+    "row": 15
+   }
+  },
+  {
+   "date": "2026-05-10",
+   "kwh_reported": 49869.6614999992,
+   "imr": 88239.406,
+   "fmr": 88793.51335,
+   "kwh_recomputed_x90": 49869.6614999992,
+   "formula": "=(C16-B16)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "May-26",
+    "row": 16
+   }
+  },
+  {
+   "date": "2026-05-11",
+   "kwh_reported": 48432.03840000104,
+   "imr": 88793.51335,
+   "fmr": 89331.64711,
+   "kwh_recomputed_x90": 48432.03840000104,
+   "formula": "=(C17-B17)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "May-26",
+    "row": 17
+   }
+  },
+  {
+   "date": "2026-05-12",
+   "kwh_reported": 44817.77069999967,
+   "imr": 89331.64711,
+   "fmr": 89829.62234,
+   "kwh_recomputed_x90": 44817.77069999967,
+   "formula": "=(C18-B18)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "May-26",
+    "row": 18
+   }
+  },
+  {
+   "date": "2026-05-13",
+   "kwh_reported": 42014.7917999998,
+   "imr": 89829.62234,
+   "fmr": 90296.45336,
+   "kwh_recomputed_x90": 42014.7917999998,
+   "formula": "=(C19-B19)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "May-26",
+    "row": 19
+   }
+  },
+  {
+   "date": "2026-05-14",
+   "kwh_reported": 46029.96539999949,
+   "imr": 90296.45336,
+   "fmr": 90807.89742,
+   "kwh_recomputed_x90": 46029.96539999949,
+   "formula": "=(C20-B20)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "May-26",
+    "row": 20
+   }
+  },
+  {
+   "date": "2026-05-15",
+   "kwh_reported": 44017.72020000077,
+   "imr": 90807.89742,
+   "fmr": 91296.9832,
+   "kwh_recomputed_x90": 44017.72020000077,
+   "formula": "=(C21-B21)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "May-26",
+    "row": 21
+   }
+  },
+  {
+   "date": "2026-05-16",
+   "kwh_reported": 48804.2045999995,
+   "imr": 91296.9832,
+   "fmr": 91839.25214,
+   "kwh_recomputed_x90": 48804.2045999995,
+   "formula": "=(C22-B22)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "May-26",
+    "row": 22
+   }
+  },
+  {
+   "date": "2026-05-17",
+   "kwh_reported": 46509.79860000021,
+   "imr": 91839.25214,
+   "fmr": 92356.02768,
+   "kwh_recomputed_x90": 46509.79860000021,
+   "formula": "=(C23-B23)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "May-26",
+    "row": 23
+   }
+  },
+  {
+   "date": "2026-05-18",
+   "kwh_reported": 49704.513300000544,
+   "imr": 92356.02768,
+   "fmr": 92908.30005,
+   "kwh_recomputed_x90": 49704.513300000544,
+   "formula": "=(C24-B24)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "May-26",
+    "row": 24
+   }
+  },
+  {
+   "date": "2026-05-19",
+   "kwh_reported": 42802.89479999963,
+   "imr": 92908.30005,
+   "fmr": 93383.88777,
+   "kwh_recomputed_x90": 42802.89479999963,
+   "formula": "=(C25-B25)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "May-26",
+    "row": 25
+   }
+  },
+  {
+   "date": "2026-05-20",
+   "kwh_reported": 47794.157999999734,
+   "imr": 93383.88777,
+   "fmr": 93914.93397,
+   "kwh_recomputed_x90": 47794.157999999734,
+   "formula": "=(C26-B26)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "May-26",
+    "row": 26
+   }
+  },
+  {
+   "date": "2026-05-21",
+   "kwh_reported": 48465.35189999995,
+   "imr": 93914.93397,
+   "fmr": 94453.43788,
+   "kwh_recomputed_x90": 48465.35189999995,
+   "formula": "=(C27-B27)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "May-26",
+    "row": 27
+   }
+  },
+  {
+   "date": "2026-05-22",
+   "kwh_reported": 44522.267400000565,
+   "imr": 94453.43788,
+   "fmr": 94948.12974,
+   "kwh_recomputed_x90": 44522.267400000565,
+   "formula": "=(C28-B28)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "May-26",
+    "row": 28
+   }
+  },
+  {
+   "date": "2026-05-23",
+   "kwh_reported": 47371.39649999954,
+   "imr": 94948.12974,
+   "fmr": 95474.47859,
+   "kwh_recomputed_x90": 47371.39649999954,
+   "formula": "=(C29-B29)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "May-26",
+    "row": 29
+   }
+  },
+  {
+   "date": "2026-05-24",
+   "kwh_reported": 44906.800499999954,
+   "imr": 95474.47859,
+   "fmr": 95973.44304,
+   "kwh_recomputed_x90": 44906.800499999954,
+   "formula": "=(C30-B30)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "May-26",
+    "row": 30
+   }
+  },
+  {
+   "date": "2026-05-25",
+   "kwh_reported": 38738.48760000081,
+   "imr": 95973.44304,
+   "fmr": 96403.87068,
+   "kwh_recomputed_x90": 38738.48760000081,
+   "formula": "=(C31-B31)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "May-26",
+    "row": 31
+   }
+  },
+  {
+   "date": "2026-05-26",
+   "kwh_reported": 44119.82969999968,
+   "imr": 96403.87068,
+   "fmr": 96894.09101,
+   "kwh_recomputed_x90": 44119.82969999968,
+   "formula": "=(C32-B32)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "May-26",
+    "row": 32
+   }
+  },
+  {
+   "date": "2026-05-27",
+   "kwh_reported": 47879.963099999295,
+   "imr": 96894.09101,
+   "fmr": 97426.0906,
+   "kwh_recomputed_x90": 47879.963099999295,
+   "formula": "=(C33-B33)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "May-26",
+    "row": 33
+   }
+  },
+  {
+   "date": "2026-05-28",
+   "kwh_reported": 44789.42790000059,
+   "imr": 97426.0906,
+   "fmr": 97923.75091,
+   "kwh_recomputed_x90": 44789.42790000059,
+   "formula": "=(C34-B34)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "May-26",
+    "row": 34
+   }
+  },
+  {
+   "date": "2026-05-29",
+   "kwh_reported": 50245.82909999939,
+   "imr": 97923.75091,
+   "fmr": 98482.0379,
+   "kwh_recomputed_x90": 50245.82909999939,
+   "formula": "=(C35-B35)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "May-26",
+    "row": 35
+   }
+  },
+  {
+   "date": "2026-05-30",
+   "kwh_reported": 49135.97520000083,
+   "imr": 98482.0379,
+   "fmr": 99027.99318,
+   "kwh_recomputed_x90": 49135.97520000083,
+   "formula": "=(C36-B36)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "May-26",
+    "row": 36
+   }
+  },
+  {
+   "date": "2026-05-31",
+   "kwh_reported": 44511.91649999979,
+   "imr": 99027.99318,
+   "fmr": 99522.57003,
+   "kwh_recomputed_x90": 44511.91649999979,
+   "formula": "=(C37-B37)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "May-26",
+    "row": 37
+   }
+  },
+  {
+   "date": "2026-06-01",
+   "kwh_reported": 34590.9014999996,
+   "imr": 99522.57003,
+   "fmr": 99906.91338,
+   "kwh_recomputed_x90": 34590.9014999996,
+   "formula": "=(C7-B7)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "June-26",
+    "row": 7
+   }
+  },
+  {
+   "date": "2026-06-02",
+   "kwh_reported": 50944.68809999977,
+   "imr": 99906.91338,
+   "fmr": 100472.96547,
+   "kwh_recomputed_x90": 50944.68809999977,
+   "formula": "=(C8-B8)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "June-26",
+    "row": 8
+   }
+  },
+  {
+   "date": "2026-06-03",
+   "kwh_reported": 49779.8046000005,
+   "imr": 100472.96547,
+   "fmr": 101026.07441,
+   "kwh_recomputed_x90": 49779.8046000005,
+   "formula": "=(C9-B9)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "June-26",
+    "row": 9
+   }
+  },
+  {
+   "date": "2026-06-04",
+   "kwh_reported": 51344.944199999445,
+   "imr": 101026.07441,
+   "fmr": 101596.57379,
+   "kwh_recomputed_x90": 51344.944199999445,
+   "formula": "=(C10-B10)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "June-26",
+    "row": 10
+   }
+  },
+  {
+   "date": "2026-06-05",
+   "kwh_reported": 45875.10780000084,
+   "imr": 101596.57379,
+   "fmr": 102106.29721,
+   "kwh_recomputed_x90": 45875.10780000084,
+   "formula": "=(C11-B11)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "June-26",
+    "row": 11
+   }
+  },
+  {
+   "date": "2026-06-06",
+   "kwh_reported": 44101.525499999116,
+   "imr": 102106.29721,
+   "fmr": 102596.31416,
+   "kwh_recomputed_x90": 44101.525499999116,
+   "formula": "=(C12-B12)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "June-26",
+    "row": 12
+   }
+  },
+  {
+   "date": "2026-06-07",
+   "kwh_reported": 39644.757000000245,
+   "imr": 102596.31416,
+   "fmr": 103036.81146,
+   "kwh_recomputed_x90": 39644.757000000245,
+   "formula": "=(C13-B13)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "June-26",
+    "row": 13
+   }
+  },
+  {
+   "date": "2026-06-08",
+   "kwh_reported": 43915.61609999975,
+   "imr": 103036.81146,
+   "fmr": 103524.76275,
+   "kwh_recomputed_x90": 43915.61609999975,
+   "formula": "=(C14-B14)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "June-26",
+    "row": 14
+   }
+  },
+  {
+   "date": "2026-06-09",
+   "kwh_reported": 46567.39320000095,
+   "imr": 103524.76275,
+   "fmr": 104042.17823,
+   "kwh_recomputed_x90": 46567.39320000095,
+   "formula": "=(C15-B15)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "June-26",
+    "row": 15
+   }
+  },
+  {
+   "date": "2026-06-10",
+   "kwh_reported": 46712.126699999644,
+   "imr": 104042.17823,
+   "fmr": 104561.20186,
+   "kwh_recomputed_x90": 46712.126699999644,
+   "formula": "=(C16-B16)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "June-26",
+    "row": 16
+   }
+  },
+  {
+   "date": "2026-06-11",
+   "kwh_reported": 50464.78830000007,
+   "imr": 104561.20186,
+   "fmr": 105121.92173,
+   "kwh_recomputed_x90": 50464.78830000007,
+   "formula": "=(C17-B17)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "June-26",
+    "row": 17
+   }
+  },
+  {
+   "date": "2026-06-12",
+   "kwh_reported": 44931.50729999921,
+   "imr": 105121.92173,
+   "fmr": 105621.1607,
+   "kwh_recomputed_x90": 44931.50729999921,
+   "formula": "=(C18-B18)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "June-26",
+    "row": 18
+   }
+  },
+  {
+   "date": "2026-06-13",
+   "kwh_reported": 43937.61030000009,
+   "imr": 105621.1607,
+   "fmr": 106109.35637,
+   "kwh_recomputed_x90": 43937.61030000009,
+   "formula": "=(C19-B19)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "June-26",
+    "row": 19
+   }
+  },
+  {
+   "date": "2026-06-14",
+   "kwh_reported": 42305.76360000108,
+   "imr": 106109.35637,
+   "fmr": 106579.42041,
+   "kwh_recomputed_x90": 42305.76360000108,
+   "formula": "=(C20-B20)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "June-26",
+    "row": 20
+   }
+  },
+  {
+   "date": "2026-06-15",
+   "kwh_reported": 43550.617499999644,
+   "imr": 106579.42041,
+   "fmr": 107063.31616,
+   "kwh_recomputed_x90": 43550.617499999644,
+   "formula": "=(C21-B21)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "June-26",
+    "row": 21
+   }
+  },
+  {
+   "date": "2026-06-16",
+   "kwh_reported": 50236.97939999998,
+   "imr": 107063.31616,
+   "fmr": 107621.50482,
+   "kwh_recomputed_x90": 50236.97939999998,
+   "formula": "=(C22-B22)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "June-26",
+    "row": 22
+   }
+  },
+  {
+   "date": "2026-06-17",
+   "kwh_reported": 45167.0,
+   "imr": 107621.5,
+   "fmr": 108123.36,
+   "kwh_recomputed_x90": 45167.40000000005,
+   "formula": null,
+   "hardcoded": true,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "June-26",
+    "row": 23
+   }
+  },
+  {
+   "date": "2026-06-18",
+   "kwh_reported": 49285.0,
+   "imr": 108123.36,
+   "fmr": 108670.97,
+   "kwh_recomputed_x90": 49284.90000000005,
+   "formula": null,
+   "hardcoded": true,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "June-26",
+    "row": 24
+   }
+  },
+  {
+   "date": "2026-06-19",
+   "kwh_reported": 47746.12590000004,
+   "imr": 108670.97,
+   "fmr": 109201.48251,
+   "kwh_recomputed_x90": 47746.12590000004,
+   "formula": "=(C25-B25)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "June-26",
+    "row": 25
+   }
+  },
+  {
+   "date": "2026-06-20",
+   "kwh_reported": 50922.0,
+   "imr": 109201.48,
+   "fmr": 109767.29,
+   "kwh_recomputed_x90": 50922.89999999979,
+   "formula": null,
+   "hardcoded": true,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "June-26",
+    "row": 26
+   }
+  },
+  {
+   "date": "2026-06-21",
+   "kwh_reported": 42809.61150000119,
+   "imr": 109767.29,
+   "fmr": 110242.95235,
+   "kwh_recomputed_x90": 42809.61150000119,
+   "formula": "=(C27-B27)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "June-26",
+    "row": 27
+   }
+  },
+  {
+   "date": "2026-06-22",
+   "kwh_reported": 36511.28999999972,
+   "imr": 110242.95235,
+   "fmr": 110648.63335,
+   "kwh_recomputed_x90": 36511.28999999972,
+   "formula": "=(C28-B28)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "June-26",
+    "row": 28
+   }
+  },
+  {
+   "date": "2026-06-23",
+   "kwh_reported": 42314.0,
+   "imr": 110648.63,
+   "fmr": 111118.78,
+   "kwh_recomputed_x90": 42313.499999999476,
+   "formula": null,
+   "hardcoded": true,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "June-26",
+    "row": 29
+   }
+  },
+  {
+   "date": "2026-06-24",
+   "kwh_reported": 33425.105400000466,
+   "imr": 111118.78,
+   "fmr": 111490.17006,
+   "kwh_recomputed_x90": 33425.105400000466,
+   "formula": "=(C30-B30)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "June-26",
+    "row": 30
+   }
+  },
+  {
+   "date": "2026-06-25",
+   "kwh_reported": 42752.705399999104,
+   "imr": 111490.17006,
+   "fmr": 111965.20012,
+   "kwh_recomputed_x90": 42752.705399999104,
+   "formula": "=(C31-B31)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "June-26",
+    "row": 31
+   }
+  },
+  {
+   "date": "2026-06-26",
+   "kwh_reported": 40434.997500000754,
+   "imr": 111965.20012,
+   "fmr": 112414.47787,
+   "kwh_recomputed_x90": 40434.997500000754,
+   "formula": "=(C32-B32)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "June-26",
+    "row": 32
+   }
+  },
+  {
+   "date": "2026-06-27",
+   "kwh_reported": 35889.79769999991,
+   "imr": 112414.47787,
+   "fmr": 112813.2534,
+   "kwh_recomputed_x90": 35889.79769999991,
+   "formula": "=(C33-B33)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "June-26",
+    "row": 33
+   }
+  },
+  {
+   "date": "2026-06-28",
+   "kwh_reported": 28371.44070000024,
+   "imr": 112813.2534,
+   "fmr": 113128.49163,
+   "kwh_recomputed_x90": 28371.44070000024,
+   "formula": "=(C34-B34)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "June-26",
+    "row": 34
+   }
+  },
+  {
+   "date": "2026-06-29",
+   "kwh_reported": 37937.584800000186,
+   "imr": 113128.49163,
+   "fmr": 113550.02035,
+   "kwh_recomputed_x90": 37937.584800000186,
+   "formula": "=(C35-B35)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "June-26",
+    "row": 35
+   }
+  },
+  {
+   "date": "2026-06-30",
+   "kwh_reported": 24397.89119999972,
+   "imr": 113550.02035,
+   "fmr": 113821.10803,
+   "kwh_recomputed_x90": 24397.89119999972,
+   "formula": "=(C36-B36)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_June-26.xlsx",
+    "sheet": "June-26",
+    "row": 36
+   }
+  },
+  {
+   "date": "2026-07-01",
+   "kwh_reported": 34476.02279999977,
+   "imr": 113821.10803,
+   "fmr": 114204.17495,
+   "kwh_recomputed_x90": 34476.02279999977,
+   "formula": "=(C7-B7)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_July-26.xlsx",
+    "sheet": "July-26",
+    "row": 7
+   }
+  },
+  {
+   "date": "2026-07-02",
+   "kwh_reported": 23657.86890000032,
+   "imr": 114204.17495,
+   "fmr": 114467.04016,
+   "kwh_recomputed_x90": 23657.86890000032,
+   "formula": "=(C8-B8)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_July-26.xlsx",
+    "sheet": "July-26",
+    "row": 8
+   }
+  },
+  {
+   "date": "2026-07-03",
+   "kwh_reported": 17736.45119999943,
+   "imr": 114467.04016,
+   "fmr": 114664.11184,
+   "kwh_recomputed_x90": 17736.45119999943,
+   "formula": "=(C9-B9)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_July-26.xlsx",
+    "sheet": "July-26",
+    "row": 9
+   }
+  },
+  {
+   "date": "2026-07-04",
+   "kwh_reported": 25216.120800000062,
+   "imr": 114664.11184,
+   "fmr": 114944.29096,
+   "kwh_recomputed_x90": 25216.120800000062,
+   "formula": "=(C10-B10)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_July-26.xlsx",
+    "sheet": "July-26",
+    "row": 10
+   }
+  },
+  {
+   "date": "2026-07-05",
+   "kwh_reported": 18558.871199999994,
+   "imr": 114944.29096,
+   "fmr": 115150.50064,
+   "kwh_recomputed_x90": 18558.871199999994,
+   "formula": "=(C11-B11)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_July-26.xlsx",
+    "sheet": "July-26",
+    "row": 11
+   }
+  },
+  {
+   "date": "2026-07-06",
+   "kwh_reported": 36049.50000000026,
+   "imr": 115150.50064,
+   "fmr": 115551.05064,
+   "kwh_recomputed_x90": 36049.50000000026,
+   "formula": "=(C12-B12)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_July-26.xlsx",
+    "sheet": "July-26",
+    "row": 12
+   }
+  },
+  {
+   "date": "2026-07-07",
+   "kwh_reported": 16060.816799999593,
+   "imr": 115551.05064,
+   "fmr": 115729.50416,
+   "kwh_recomputed_x90": 16060.816799999593,
+   "formula": "=(C13-B13)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_July-26.xlsx",
+    "sheet": "July-26",
+    "row": 13
+   }
+  },
+  {
+   "date": "2026-07-08",
+   "kwh_reported": 0.0,
+   "imr": 115729.50416,
+   "fmr": 115729.50416,
+   "kwh_recomputed_x90": 0.0,
+   "formula": "=(C14-B14)*90",
+   "hardcoded": false,
+   "note": "Breakdown",
+   "source": {
+    "file": "Daily_Generation_July-26.xlsx",
+    "sheet": "July-26",
+    "row": 14
+   }
+  },
+  {
+   "date": "2026-07-09",
+   "kwh_reported": 18826.20000000068,
+   "imr": 115729.50416,
+   "fmr": 115938.68416,
+   "kwh_recomputed_x90": 18826.20000000068,
+   "formula": "=(C15-B15)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_July-26.xlsx",
+    "sheet": "July-26",
+    "row": 15
+   }
+  },
+  {
+   "date": "2026-07-10",
+   "kwh_reported": 44661.78899999897,
+   "imr": 115938.68416,
+   "fmr": 116434.92626,
+   "kwh_recomputed_x90": 44661.78899999897,
+   "formula": "=(C16-B16)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_July-26.xlsx",
+    "sheet": "July-26",
+    "row": 16
+   }
+  },
+  {
+   "date": "2026-07-11",
+   "kwh_reported": 28624.8834000004,
+   "imr": 116434.92626,
+   "fmr": 116752.98052,
+   "kwh_recomputed_x90": 28624.8834000004,
+   "formula": "=(C17-B17)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_July-26.xlsx",
+    "sheet": "July-26",
+    "row": 17
+   }
+  },
+  {
+   "date": "2026-07-12",
+   "kwh_reported": 34477.49880000047,
+   "imr": 116752.98052,
+   "fmr": 117136.06384,
+   "kwh_recomputed_x90": 34477.49880000047,
+   "formula": "=(C18-B18)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_July-26.xlsx",
+    "sheet": "July-26",
+    "row": 18
+   }
+  },
+  {
+   "date": "2026-07-13",
+   "kwh_reported": 41730.0615000003,
+   "imr": 117136.06384,
+   "fmr": 117599.73119,
+   "kwh_recomputed_x90": 41730.0615000003,
+   "formula": "=(C19-B19)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_July-26.xlsx",
+    "sheet": "July-26",
+    "row": 19
+   }
+  },
+  {
+   "date": "2026-07-14",
+   "kwh_reported": 46957.38839999889,
+   "imr": 117599.73119,
+   "fmr": 118121.47995,
+   "kwh_recomputed_x90": 46957.38839999889,
+   "formula": "=(C20-B20)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_July-26.xlsx",
+    "sheet": "July-26",
+    "row": 20
+   }
+  },
+  {
+   "date": "2026-07-15",
+   "kwh_reported": 37395.54630000028,
+   "imr": 118121.47995,
+   "fmr": 118536.98602,
+   "kwh_recomputed_x90": 37395.54630000028,
+   "formula": "=(C21-B21)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_July-26.xlsx",
+    "sheet": "July-26",
+    "row": 21
+   }
+  },
+  {
+   "date": "2026-07-16",
+   "kwh_reported": 39701.57310000068,
+   "imr": 118536.98602,
+   "fmr": 118978.11461,
+   "kwh_recomputed_x90": 39701.57310000068,
+   "formula": "=(C22-B22)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_July-26.xlsx",
+    "sheet": "July-26",
+    "row": 22
+   }
+  },
+  {
+   "date": "2026-07-17",
+   "kwh_reported": 15533.261999999522,
+   "imr": 118978.11461,
+   "fmr": 119150.70641,
+   "kwh_recomputed_x90": 15533.261999999522,
+   "formula": "=(C23-B23)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_July-26.xlsx",
+    "sheet": "July-26",
+    "row": 23
+   }
+  },
+  {
+   "date": "2026-07-18",
+   "kwh_reported": 12415.372199999692,
+   "imr": 119150.70641,
+   "fmr": 119288.65499,
+   "kwh_recomputed_x90": 12415.372199999692,
+   "formula": "=(C24-B24)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_July-26.xlsx",
+    "sheet": "July-26",
+    "row": 24
+   }
+  },
+  {
+   "date": "2026-07-19",
+   "kwh_reported": 22586.609700000845,
+   "imr": 119288.65499,
+   "fmr": 119539.61732,
+   "kwh_recomputed_x90": 22586.609700000845,
+   "formula": "=(C25-B25)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_July-26.xlsx",
+    "sheet": "July-26",
+    "row": 25
+   }
+  },
+  {
+   "date": "2026-07-20",
+   "kwh_reported": 28680.206399999588,
+   "imr": 119539.61732,
+   "fmr": 119858.28628,
+   "kwh_recomputed_x90": 28680.206399999588,
+   "formula": "=(C26-B26)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_July-26.xlsx",
+    "sheet": "July-26",
+    "row": 26
+   }
+  },
+  {
+   "date": "2026-07-21",
+   "kwh_reported": 10812.626099999616,
+   "imr": 119858.28628,
+   "fmr": 119978.42657,
+   "kwh_recomputed_x90": 10812.626099999616,
+   "formula": "=(C27-B27)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_July-26.xlsx",
+    "sheet": "July-26",
+    "row": 27
+   }
+  },
+  {
+   "date": "2026-07-22",
+   "kwh_reported": 5760.379800000228,
+   "imr": 119978.42657,
+   "fmr": 120042.43079,
+   "kwh_recomputed_x90": 5760.379800000228,
+   "formula": "=(C28-B28)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_July-26.xlsx",
+    "sheet": "July-26",
+    "row": 28
+   }
+  },
+  {
+   "date": "2026-07-23",
+   "kwh_reported": 15865.318799999513,
+   "imr": 120042.43079,
+   "fmr": 120218.71211,
+   "kwh_recomputed_x90": 15865.318799999513,
+   "formula": "=(C29-B29)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_July-26.xlsx",
+    "sheet": "July-26",
+    "row": 29
+   }
+  },
+  {
+   "date": "2026-07-24",
+   "kwh_reported": 37756.467000000266,
+   "imr": 120218.71211,
+   "fmr": 120638.22841,
+   "kwh_recomputed_x90": 37756.467000000266,
+   "formula": "=(C30-B30)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_July-26.xlsx",
+    "sheet": "July-26",
+    "row": 30
+   }
+  },
+  {
+   "date": "2026-07-25",
+   "kwh_reported": 38330.39970000056,
+   "imr": 120638.22841,
+   "fmr": 121064.12174,
+   "kwh_recomputed_x90": 38330.39970000056,
+   "formula": "=(C31-B31)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_July-26.xlsx",
+    "sheet": "July-26",
+    "row": 31
+   }
+  },
+  {
+   "date": "2026-07-26",
+   "kwh_reported": 40618.91789999994,
+   "imr": 121064.12174,
+   "fmr": 121515.44305,
+   "kwh_recomputed_x90": 40618.91789999994,
+   "formula": "=(C32-B32)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_July-26.xlsx",
+    "sheet": "July-26",
+    "row": 32
+   }
+  },
+  {
+   "date": "2026-07-27",
+   "kwh_reported": 29553.20910000024,
+   "imr": 121515.44305,
+   "fmr": 121843.81204,
+   "kwh_recomputed_x90": 29553.20910000024,
+   "formula": "=(C33-B33)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_July-26.xlsx",
+    "sheet": "July-26",
+    "row": 33
+   }
+  },
+  {
+   "date": "2026-07-28",
+   "kwh_reported": 15473.048400000116,
+   "imr": 121843.81204,
+   "fmr": 122015.7348,
+   "kwh_recomputed_x90": 15473.048400000116,
+   "formula": "=(C34-B34)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_July-26.xlsx",
+    "sheet": "July-26",
+    "row": 34
+   }
+  },
+  {
+   "date": "2026-07-29",
+   "kwh_reported": 20453.36039999922,
+   "imr": 122015.7348,
+   "fmr": 122242.99436,
+   "kwh_recomputed_x90": 20453.36039999922,
+   "formula": "=(C35-B35)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_July-26.xlsx",
+    "sheet": "July-26",
+    "row": 35
+   }
+  },
+  {
+   "date": "2026-07-30",
+   "kwh_reported": 9657.465300000622,
+   "imr": 122242.99436,
+   "fmr": 122350.29953,
+   "kwh_recomputed_x90": 9657.465300000622,
+   "formula": "=(C36-B36)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_July-26.xlsx",
+    "sheet": "July-26",
+    "row": 36
+   }
+  },
+  {
+   "date": "2026-07-31",
+   "kwh_reported": 18674.02980000028,
+   "imr": 122350.29953,
+   "fmr": 122557.78875,
+   "kwh_recomputed_x90": 18674.02980000028,
+   "formula": "=(C37-B37)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_July-26.xlsx",
+    "sheet": "July-26",
+    "row": 37
+   }
+  },
+  {
+   "date": "2026-08-01",
+   "kwh_reported": 13257.430199999217,
+   "imr": 122557.78875,
+   "fmr": 122705.09353,
+   "kwh_recomputed_x90": 13257.430199999217,
+   "formula": "=(C7-B7)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_Aug-26.xlsx",
+    "sheet": "Aug-26",
+    "row": 7
+   }
+  },
+  {
+   "date": "2026-08-02",
+   "kwh_reported": 39051.14220000047,
+   "imr": 122705.09353,
+   "fmr": 123138.99511,
+   "kwh_recomputed_x90": 39051.14220000047,
+   "formula": "=(C8-B8)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_Aug-26.xlsx",
+    "sheet": "Aug-26",
+    "row": 8
+   }
+  },
+  {
+   "date": "2026-08-03",
+   "kwh_reported": 34148.186099999584,
+   "imr": 123138.99511,
+   "fmr": 123518.4194,
+   "kwh_recomputed_x90": 34148.186099999584,
+   "formula": "=(C9-B9)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_Aug-26.xlsx",
+    "sheet": "Aug-26",
+    "row": 9
+   }
+  },
+  {
+   "date": "2026-08-04",
+   "kwh_reported": 24628.826700000063,
+   "imr": 123518.4194,
+   "fmr": 123792.07303,
+   "kwh_recomputed_x90": 24628.826700000063,
+   "formula": "=(C10-B10)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_Aug-26.xlsx",
+    "sheet": "Aug-26",
+    "row": 10
+   }
+  },
+  {
+   "date": "2026-08-05",
+   "kwh_reported": 21864.056399999536,
+   "imr": 123792.07303,
+   "fmr": 124035.00699,
+   "kwh_recomputed_x90": 21864.056399999536,
+   "formula": "=(C11-B11)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_Aug-26.xlsx",
+    "sheet": "Aug-26",
+    "row": 11
+   }
+  },
+  {
+   "date": "2026-08-06",
+   "kwh_reported": 26059.012200000143,
+   "imr": 124035.00699,
+   "fmr": 124324.55157,
+   "kwh_recomputed_x90": 26059.012200000143,
+   "formula": "=(C12-B12)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_Aug-26.xlsx",
+    "sheet": "Aug-26",
+    "row": 12
+   }
+  },
+  {
+   "date": "2026-08-07",
+   "kwh_reported": 17233.416000000725,
+   "imr": 124324.55157,
+   "fmr": 124516.03397,
+   "kwh_recomputed_x90": 17233.416000000725,
+   "formula": "=(C13-B13)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_Aug-26.xlsx",
+    "sheet": "Aug-26",
+    "row": 13
+   }
+  },
+  {
+   "date": "2026-08-08",
+   "kwh_reported": 21117.892499999434,
+   "imr": 124516.03397,
+   "fmr": 124750.67722,
+   "kwh_recomputed_x90": 21117.892499999434,
+   "formula": "=(C14-B14)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_Aug-26.xlsx",
+    "sheet": "Aug-26",
+    "row": 14
+   }
+  },
+  {
+   "date": "2026-08-09",
+   "kwh_reported": 15748.873199999653,
+   "imr": 124750.67722,
+   "fmr": 124925.6647,
+   "kwh_recomputed_x90": 15748.873199999653,
+   "formula": "=(C15-B15)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_Aug-26.xlsx",
+    "sheet": "Aug-26",
+    "row": 15
+   }
+  },
+  {
+   "date": "2026-08-10",
+   "kwh_reported": 26575.697700000746,
+   "imr": 124925.6647,
+   "fmr": 125220.95023,
+   "kwh_recomputed_x90": 26575.697700000746,
+   "formula": "=(C16-B16)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_Aug-26.xlsx",
+    "sheet": "Aug-26",
+    "row": 16
+   }
+  },
+  {
+   "date": "2026-08-11",
+   "kwh_reported": 23412.2868,
+   "imr": 125220.95023,
+   "fmr": 125481.08675,
+   "kwh_recomputed_x90": 23412.2868,
+   "formula": "=(C17-B17)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_Aug-26.xlsx",
+    "sheet": "Aug-26",
+    "row": 17
+   }
+  },
+  {
+   "date": "2026-08-12",
+   "kwh_reported": 16136.706599999161,
+   "imr": 125481.08675,
+   "fmr": 125660.38349,
+   "kwh_recomputed_x90": 16136.706599999161,
+   "formula": "=(C18-B18)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_Aug-26.xlsx",
+    "sheet": "Aug-26",
+    "row": 18
+   }
+  },
+  {
+   "date": "2026-08-13",
+   "kwh_reported": 24922.891800000798,
+   "imr": 125660.38349,
+   "fmr": 125937.30451,
+   "kwh_recomputed_x90": 24922.891800000798,
+   "formula": "=(C19-B19)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_Aug-26.xlsx",
+    "sheet": "Aug-26",
+    "row": 19
+   }
+  },
+  {
+   "date": "2026-08-14",
+   "kwh_reported": 20743.987500000367,
+   "imr": 125937.30451,
+   "fmr": 126167.79326,
+   "kwh_recomputed_x90": 20743.987500000367,
+   "formula": "=(C20-B20)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_Aug-26.xlsx",
+    "sheet": "Aug-26",
+    "row": 20
+   }
+  },
+  {
+   "date": "2026-08-15",
+   "kwh_reported": 12148.237799999333,
+   "imr": 126167.79326,
+   "fmr": 126302.77368,
+   "kwh_recomputed_x90": 12148.237799999333,
+   "formula": "=(C21-B21)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_Aug-26.xlsx",
+    "sheet": "Aug-26",
+    "row": 21
+   }
+  },
+  {
+   "date": "2026-08-16",
+   "kwh_reported": 11188.323900000541,
+   "imr": 126302.77368,
+   "fmr": 126427.08839,
+   "kwh_recomputed_x90": 11188.323900000541,
+   "formula": "=(C22-B22)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_Aug-26.xlsx",
+    "sheet": "Aug-26",
+    "row": 22
+   }
+  },
+  {
+   "date": "2026-08-17",
+   "kwh_reported": 21039.28380000012,
+   "imr": 126427.08839,
+   "fmr": 126660.85821,
+   "kwh_recomputed_x90": 21039.28380000012,
+   "formula": "=(C23-B23)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_Aug-26.xlsx",
+    "sheet": "Aug-26",
+    "row": 23
+   }
+  },
+  {
+   "date": "2026-08-18",
+   "kwh_reported": 16116.484499998915,
+   "imr": 126660.85821,
+   "fmr": 126839.93026,
+   "kwh_recomputed_x90": 16116.484499998915,
+   "formula": "=(C24-B24)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_Aug-26.xlsx",
+    "sheet": "Aug-26",
+    "row": 24
+   }
+  },
+  {
+   "date": "2026-08-19",
+   "kwh_reported": 12604.475700001203,
+   "imr": 126839.93026,
+   "fmr": 126979.97999,
+   "kwh_recomputed_x90": 12604.475700001203,
+   "formula": "=(C25-B25)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_Aug-26.xlsx",
+    "sheet": "Aug-26",
+    "row": 25
+   }
+  },
+  {
+   "date": "2026-08-20",
+   "kwh_reported": 24232.44869999966,
+   "imr": 126979.97999,
+   "fmr": 127249.22942,
+   "kwh_recomputed_x90": 24232.44869999966,
+   "formula": "=(C26-B26)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_Aug-26.xlsx",
+    "sheet": "Aug-26",
+    "row": 26
+   }
+  },
+  {
+   "date": "2026-08-21",
+   "kwh_reported": 23860.28519999949,
+   "imr": 127249.22942,
+   "fmr": 127514.3437,
+   "kwh_recomputed_x90": 23860.28519999949,
+   "formula": "=(C27-B27)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_Aug-26.xlsx",
+    "sheet": "Aug-26",
+    "row": 27
+   }
+  },
+  {
+   "date": "2026-08-22",
+   "kwh_reported": 10201.482899999974,
+   "imr": 127514.3437,
+   "fmr": 127627.69351,
+   "kwh_recomputed_x90": 10201.482899999974,
+   "formula": "=(C28-B28)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_Aug-26.xlsx",
+    "sheet": "Aug-26",
+    "row": 28
+   }
+  },
+  {
+   "date": "2026-08-23",
+   "kwh_reported": 8899.761600000638,
+   "imr": 127627.69351,
+   "fmr": 127726.57975,
+   "kwh_recomputed_x90": 8899.761600000638,
+   "formula": "=(C29-B29)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_Aug-26.xlsx",
+    "sheet": "Aug-26",
+    "row": 29
+   }
+  },
+  {
+   "date": "2026-08-24",
+   "kwh_reported": 13163.607899999188,
+   "imr": 127726.57975,
+   "fmr": 127872.84206,
+   "kwh_recomputed_x90": 13163.607899999188,
+   "formula": "=(C30-B30)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_Aug-26.xlsx",
+    "sheet": "Aug-26",
+    "row": 30
+   }
+  },
+  {
+   "date": "2026-08-25",
+   "kwh_reported": 14944.76640000008,
+   "imr": 127872.84206,
+   "fmr": 128038.89502,
+   "kwh_recomputed_x90": 14944.76640000008,
+   "formula": "=(C31-B31)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_Aug-26.xlsx",
+    "sheet": "Aug-26",
+    "row": 31
+   }
+  },
+  {
+   "date": "2026-08-26",
+   "kwh_reported": 11490.860699999757,
+   "imr": 128038.89502,
+   "fmr": 128166.57125,
+   "kwh_recomputed_x90": 11490.860699999757,
+   "formula": "=(C32-B32)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_Aug-26.xlsx",
+    "sheet": "Aug-26",
+    "row": 32
+   }
+  },
+  {
+   "date": "2026-08-27",
+   "kwh_reported": 18788.35860000123,
+   "imr": 128166.57125,
+   "fmr": 128375.33079,
+   "kwh_recomputed_x90": 18788.35860000123,
+   "formula": "=(C33-B33)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_Aug-26.xlsx",
+    "sheet": "Aug-26",
+    "row": 33
+   }
+  },
+  {
+   "date": "2026-08-28",
+   "kwh_reported": 22452.871499999746,
+   "imr": 128375.33079,
+   "fmr": 128624.80714,
+   "kwh_recomputed_x90": 22452.871499999746,
+   "formula": "=(C34-B34)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_Aug-26.xlsx",
+    "sheet": "Aug-26",
+    "row": 34
+   }
+  },
+  {
+   "date": "2026-08-29",
+   "kwh_reported": 5031.395099999645,
+   "imr": 128624.80714,
+   "fmr": 128680.71153,
+   "kwh_recomputed_x90": 5031.395099999645,
+   "formula": "=(C35-B35)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_Aug-26.xlsx",
+    "sheet": "Aug-26",
+    "row": 35
+   }
+  },
+  {
+   "date": "2026-08-30",
+   "kwh_reported": 16345.991700000304,
+   "imr": 128680.71153,
+   "fmr": 128862.33366,
+   "kwh_recomputed_x90": 16345.991700000304,
+   "formula": "=(C36-B36)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_Aug-26.xlsx",
+    "sheet": "Aug-26",
+    "row": 36
+   }
+  },
+  {
+   "date": "2026-08-31",
+   "kwh_reported": 21182.562900000194,
+   "imr": 128862.33366,
+   "fmr": 129097.69547,
+   "kwh_recomputed_x90": 21182.562900000194,
+   "formula": "=(C37-B37)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_Aug-26.xlsx",
+    "sheet": "Aug-26",
+    "row": 37
+   }
+  },
+  {
+   "date": "2026-09-01",
+   "kwh_reported": 26293.76549999899,
+   "imr": 129097.69547,
+   "fmr": 129389.84842,
+   "kwh_recomputed_x90": 26293.76549999899,
+   "formula": "=(C7-B7)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_Sep-26.xlsx",
+    "sheet": "Sep-26",
+    "row": 7
+   }
+  },
+  {
+   "date": "2026-09-02",
+   "kwh_reported": 22216.950899999938,
+   "imr": 129389.84842,
+   "fmr": 129636.70343,
+   "kwh_recomputed_x90": 22216.950899999938,
+   "formula": "=(C8-B8)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_Sep-26.xlsx",
+    "sheet": "Sep-26",
+    "row": 8
+   }
+  },
+  {
+   "date": "2026-09-03",
+   "kwh_reported": 9729.085500000656,
+   "imr": 129636.70343,
+   "fmr": 129744.80438,
+   "kwh_recomputed_x90": 9729.085500000656,
+   "formula": "=(C9-B9)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_Sep-26.xlsx",
+    "sheet": "Sep-26",
+    "row": 9
+   }
+  },
+  {
+   "date": "2026-09-04",
+   "kwh_reported": 18073.5335999995,
+   "imr": 129744.80438,
+   "fmr": 129945.62142,
+   "kwh_recomputed_x90": 18073.5335999995,
+   "formula": "=(C10-B10)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_Sep-26.xlsx",
+    "sheet": "Sep-26",
+    "row": 10
+   }
+  },
+  {
+   "date": "2026-09-05",
+   "kwh_reported": 13830.026400000206,
+   "imr": 129945.62142,
+   "fmr": 130099.28838,
+   "kwh_recomputed_x90": 13830.026400000206,
+   "formula": "=(C11-B11)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_Sep-26.xlsx",
+    "sheet": "Sep-26",
+    "row": 11
+   }
+  },
+  {
+   "date": "2026-09-06",
+   "kwh_reported": 32055.603300000366,
+   "imr": 130099.28838,
+   "fmr": 130455.46175,
+   "kwh_recomputed_x90": 32055.603300000366,
+   "formula": "=(C12-B12)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_Sep-26.xlsx",
+    "sheet": "Sep-26",
+    "row": 12
+   }
+  },
+  {
+   "date": "2026-09-07",
+   "kwh_reported": 33119.23949999924,
+   "imr": 130455.46175,
+   "fmr": 130823.4533,
+   "kwh_recomputed_x90": 33119.23949999924,
+   "formula": "=(C13-B13)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_Sep-26.xlsx",
+    "sheet": "Sep-26",
+    "row": 13
+   }
+  },
+  {
+   "date": "2026-09-08",
+   "kwh_reported": 15626.49210000076,
+   "imr": 130823.4533,
+   "fmr": 130997.08099,
+   "kwh_recomputed_x90": 15626.49210000076,
+   "formula": "=(C14-B14)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_Sep-26.xlsx",
+    "sheet": "Sep-26",
+    "row": 14
+   }
+  },
+  {
+   "date": "2026-09-09",
+   "kwh_reported": 33542.267400000565,
+   "imr": 130997.08099,
+   "fmr": 131369.77285,
+   "kwh_recomputed_x90": 33542.267400000565,
+   "formula": "=(C15-B15)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_Sep-26.xlsx",
+    "sheet": "Sep-26",
+    "row": 15
+   }
+  },
+  {
+   "date": "2026-09-10",
+   "kwh_reported": 31980.34529999859,
+   "imr": 131369.77285,
+   "fmr": 131725.11002,
+   "kwh_recomputed_x90": 31980.34529999859,
+   "formula": "=(C16-B16)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_Sep-26.xlsx",
+    "sheet": "Sep-26",
+    "row": 16
+   }
+  },
+  {
+   "date": "2026-09-11",
+   "kwh_reported": 18171.796500000637,
+   "imr": 131725.11002,
+   "fmr": 131927.01887,
+   "kwh_recomputed_x90": 18171.796500000637,
+   "formula": "=(C17-B17)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_Sep-26.xlsx",
+    "sheet": "Sep-26",
+    "row": 17
+   }
+  },
+  {
+   "date": "2026-09-12",
+   "kwh_reported": 6939.134999999078,
+   "imr": 131927.01887,
+   "fmr": 132004.12037,
+   "kwh_recomputed_x90": 6939.134999999078,
+   "formula": "=(C18-B18)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_Sep-26.xlsx",
+    "sheet": "Sep-26",
+    "row": 18
+   }
+  },
+  {
+   "date": "2026-09-13",
+   "kwh_reported": 8489.739600001776,
+   "imr": 132004.12037,
+   "fmr": 132098.45081,
+   "kwh_recomputed_x90": 8489.739600001776,
+   "formula": "=(C19-B19)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_Sep-26.xlsx",
+    "sheet": "Sep-26",
+    "row": 19
+   }
+  },
+  {
+   "date": "2026-09-14",
+   "kwh_reported": 12972.486599999538,
+   "imr": 132098.45081,
+   "fmr": 132242.58955,
+   "kwh_recomputed_x90": 12972.486599999538,
+   "formula": "=(C20-B20)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_Sep-26.xlsx",
+    "sheet": "Sep-26",
+    "row": 20
+   }
+  },
+  {
+   "date": "2026-09-15",
+   "kwh_reported": 18538.05149999913,
+   "imr": 132242.58955,
+   "fmr": 132448.5679,
+   "kwh_recomputed_x90": 18538.05149999913,
+   "formula": "=(C21-B21)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_Sep-26.xlsx",
+    "sheet": "Sep-26",
+    "row": 21
+   }
+  },
+  {
+   "date": "2026-09-16",
+   "kwh_reported": 22983.831000001228,
+   "imr": 132448.5679,
+   "fmr": 132703.9438,
+   "kwh_recomputed_x90": 22983.831000001228,
+   "formula": "=(C22-B22)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_Sep-26.xlsx",
+    "sheet": "Sep-26",
+    "row": 22
+   }
+  },
+  {
+   "date": "2026-09-17",
+   "kwh_reported": 21359.387699999206,
+   "imr": 132703.9438,
+   "fmr": 132941.27033,
+   "kwh_recomputed_x90": 21359.387699999206,
+   "formula": "=(C23-B23)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_Sep-26.xlsx",
+    "sheet": "Sep-26",
+    "row": 23
+   }
+  },
+  {
+   "date": "2026-09-18",
+   "kwh_reported": 20868.758099998813,
+   "imr": 132941.27033,
+   "fmr": 133173.14542,
+   "kwh_recomputed_x90": 20868.758099998813,
+   "formula": "=(C24-B24)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_Sep-26.xlsx",
+    "sheet": "Sep-26",
+    "row": 24
+   }
+  },
+  {
+   "date": "2026-09-19",
+   "kwh_reported": 21026.23290000076,
+   "imr": 133173.14542,
+   "fmr": 133406.77023,
+   "kwh_recomputed_x90": 21026.23290000076,
+   "formula": "=(C25-B25)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_Sep-26.xlsx",
+    "sheet": "Sep-26",
+    "row": 25
+   }
+  },
+  {
+   "date": "2026-09-20",
+   "kwh_reported": 16268.091299999796,
+   "imr": 133406.77023,
+   "fmr": 133587.5268,
+   "kwh_recomputed_x90": 16268.091299999796,
+   "formula": "=(C26-B26)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_Sep-26.xlsx",
+    "sheet": "Sep-26",
+    "row": 26
+   }
+  },
+  {
+   "date": "2026-09-21",
+   "kwh_reported": 18370.483199999726,
+   "imr": 133587.5268,
+   "fmr": 133791.64328,
+   "kwh_recomputed_x90": 18370.483199999726,
+   "formula": "=(C27-B27)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_Sep-26.xlsx",
+    "sheet": "Sep-26",
+    "row": 27
+   }
+  },
+  {
+   "date": "2026-09-22",
+   "kwh_reported": 18020.206800001615,
+   "imr": 133791.64328,
+   "fmr": 133991.8678,
+   "kwh_recomputed_x90": 18020.206800001615,
+   "formula": "=(C28-B28)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_Sep-26.xlsx",
+    "sheet": "Sep-26",
+    "row": 28
+   }
+  },
+  {
+   "date": "2026-09-23",
+   "kwh_reported": 19546.77059999871,
+   "imr": 133991.8678,
+   "fmr": 134209.05414,
+   "kwh_recomputed_x90": 19546.77059999871,
+   "formula": "=(C29-B29)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_Sep-26.xlsx",
+    "sheet": "Sep-26",
+    "row": 29
+   }
+  },
+  {
+   "date": "2026-09-24",
+   "kwh_reported": 19852.755299999553,
+   "imr": 134209.05414,
+   "fmr": 134429.64031,
+   "kwh_recomputed_x90": 19852.755299999553,
+   "formula": "=(C30-B30)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_Sep-26.xlsx",
+    "sheet": "Sep-26",
+    "row": 30
+   }
+  },
+  {
+   "date": "2026-09-25",
+   "kwh_reported": 13792.806900000433,
+   "imr": 134429.64031,
+   "fmr": 134582.89372,
+   "kwh_recomputed_x90": 13792.806900000433,
+   "formula": "=(C31-B31)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_Sep-26.xlsx",
+    "sheet": "Sep-26",
+    "row": 31
+   }
+  },
+  {
+   "date": "2026-09-26",
+   "kwh_reported": 10216.108800000802,
+   "imr": 134582.89372,
+   "fmr": 134696.40604,
+   "kwh_recomputed_x90": 10216.108800000802,
+   "formula": "=(C32-B32)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_Sep-26.xlsx",
+    "sheet": "Sep-26",
+    "row": 32
+   }
+  },
+  {
+   "date": "2026-09-27",
+   "kwh_reported": 24320.088899999682,
+   "imr": 134696.40604,
+   "fmr": 134966.62925,
+   "kwh_recomputed_x90": 24320.088899999682,
+   "formula": "=(C33-B33)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_Sep-26.xlsx",
+    "sheet": "Sep-26",
+    "row": 33
+   }
+  },
+  {
+   "date": "2026-09-28",
+   "kwh_reported": 22986.0,
+   "imr": 134966.63,
+   "fmr": 135222.03,
+   "kwh_recomputed_x90": 22985.999999999476,
+   "formula": null,
+   "hardcoded": true,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_Sep-26.xlsx",
+    "sheet": "Sep-26",
+    "row": 34
+   }
+  },
+  {
+   "date": "2026-09-29",
+   "kwh_reported": 23163.232499998994,
+   "imr": 135222.03,
+   "fmr": 135479.39925,
+   "kwh_recomputed_x90": 23163.232499998994,
+   "formula": "=(C35-B35)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_Sep-26.xlsx",
+    "sheet": "Sep-26",
+    "row": 35
+   }
+  },
+  {
+   "date": "2026-09-30",
+   "kwh_reported": 21974.257800001942,
+   "imr": 135479.39925,
+   "fmr": 135723.55767,
+   "kwh_recomputed_x90": 21974.257800001942,
+   "formula": "=(C36-B36)*90",
+   "hardcoded": false,
+   "note": null,
+   "source": {
+    "file": "Daily_Generation_Sep-26.xlsx",
+    "sheet": "Sep-26",
+    "row": 36
+   }
+  }
+ ],
+ "n_days": 334,
+ "date_range": [
+  "2025-11-01",
+  "2026-09-30"
+ ],
+ "total_kwh_reported": 12210422.174300002,
+ "monthly_kwh": {
+  "2025-11": 773492.3703,
+  "2025-12": 1319163.5024999997,
+  "2026-01": 1223464.9617,
+  "2026-02": 1208232.9278999998,
+  "2026-03": 1566174.9726000004,
+  "2026-04": 1413585.2042999996,
+  "2026-05": 1448219.1537,
+  "2026-06": 1286868.6812000012,
+  "2026-07": 786301.2648000002,
+  "2026-08": 588591.6047999999,
+  "2026-09": 596327.5305000001
+ },
+ "flat_annualisation_kwh": 13343724.831196109,
+ "zero_days": [
+  "2025-11-08",
+  "2025-11-09",
+  "2025-11-10",
+  "2026-07-08"
+ ],
+ "issues": [
+  {
+   "type": "opening_row_excluded",
+   "file": "Daily_Generation_June-26.xlsx",
+   "sheet": "Nov-25",
+   "cell": "A7",
+   "date": "2025-10-31",
+   "kwh": 0
+  }
+ ],
+ "sheets": [
+  {
+   "file": "Daily_Generation_Aug-26.xlsx",
+   "sheet": "Aug-26",
+   "plant": "7.5 MWp Deoli Maharastra Site",
+   "headers": [
+    "Date",
+    "IMR (MWH)",
+    "FMR (MWH)",
+    "DIFFERENCE (KWH)"
+   ]
+  },
+  {
+   "file": "Daily_Generation_July-26.xlsx",
+   "sheet": "July-26",
+   "plant": "7.5 MWp Deoli Maharastra Site",
+   "headers": [
+    "Date",
+    "IMR (MWH)",
+    "FMR (MWH)",
+    "DIFFERENCE (KWH)"
+   ]
+  },
+  {
+   "file": "Daily_Generation_June-26.xlsx",
+   "sheet": "Nov-25",
+   "plant": "7.5 MWp Deoli Maharastra Site",
+   "headers": [
+    "Date",
+    "IMR (MWH)",
+    "FMR (MWH)",
+    "DIFFERENCE (KWH)"
+   ]
+  },
+  {
+   "file": "Daily_Generation_June-26.xlsx",
+   "sheet": "Dec-25",
+   "plant": "7.5 MWp Deoli Maharastra Site",
+   "headers": [
+    "Date",
+    "IMR (MWH)",
+    "FMR (MWH)",
+    "DIFFERENCE (KWH)"
+   ]
+  },
+  {
+   "file": "Daily_Generation_June-26.xlsx",
+   "sheet": "Jan-26",
+   "plant": "7.5 MWp Deoli Maharastra Site",
+   "headers": [
+    "Date",
+    "IMR (MWH)",
+    "FMR (MWH)",
+    "DIFFERENCE (KWH)"
+   ]
+  },
+  {
+   "file": "Daily_Generation_June-26.xlsx",
+   "sheet": "Feb-26",
+   "plant": "7.5 MWp Deoli Maharastra Site",
+   "headers": [
+    "Date",
+    "IMR (MWH)",
+    "FMR (MWH)",
+    "DIFFERENCE (KWH)"
+   ]
+  },
+  {
+   "file": "Daily_Generation_June-26.xlsx",
+   "sheet": "March-26",
+   "plant": "7.5 MWp Deoli Maharastra Site",
+   "headers": [
+    "Date",
+    "IMR (MWH)",
+    "FMR (MWH)",
+    "DIFFERENCE (KWH)"
+   ]
+  },
+  {
+   "file": "Daily_Generation_June-26.xlsx",
+   "sheet": "April-26",
+   "plant": "7.5 MWp Deoli Maharastra Site",
+   "headers": [
+    "Date",
+    "IMR (MWH)",
+    "FMR (MWH)",
+    "DIFFERENCE (KWH)"
+   ]
+  },
+  {
+   "file": "Daily_Generation_June-26.xlsx",
+   "sheet": "May-26",
+   "plant": "7.5 MWp Deoli Maharastra Site",
+   "headers": [
+    "Date",
+    "IMR (MWH)",
+    "FMR (MWH)",
+    "DIFFERENCE (KWH)"
+   ]
+  },
+  {
+   "file": "Daily_Generation_June-26.xlsx",
+   "sheet": "June-26",
+   "plant": "7.5 MWp Deoli Maharastra Site",
+   "headers": [
+    "Date",
+    "IMR (MWH)",
+    "FMR (MWH)",
+    "DIFFERENCE (KWH)"
+   ]
+  },
+  {
+   "file": "Daily_Generation_Sep-26.xlsx",
+   "sheet": "Sep-26",
+   "plant": "7.5 MWp Deoli Maharastra Site",
+   "headers": [
+    "Date",
+    "IMR (MWH)",
+    "FMR (MWH)",
+    "DIFFERENCE (KWH)"
+   ]
+  }
+ ]
+}

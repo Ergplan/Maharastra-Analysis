@@ -1,0 +1,23 @@
+import fs from 'node:fs';
+import { baseInput, defaultNewCustomer, defaultBess, type SeedCase } from '../../src/engine/seed.ts';
+import { runScenario } from '../../src/engine/scenario.ts';
+import { findBestAllocation, bessGrid } from '../../src/engine/optimise.ts';
+const seed = JSON.parse(fs.readFileSync('src/data/seed/seed_case.json', 'utf8')) as SeedCase;
+const site = { latitude: seed.plant.latitude, longitude: seed.plant.longitude };
+const s0 = baseInput(seed, 'tod_block'); s0.financeMethod = 'scaled';
+const r0 = runScenario(s0, site);
+const baseline: Record<string, number> = {}; for (const e of r0.economics) baseline[e.id] = e.broaderVariableSavingRs;
+let t = Date.now();
+const best = findBestAllocation(s0, site, [{ id: '411639023090', min: 0, max: 7.5, step: 0.25 }], 'owner_npv', baseline);
+console.log('S1 best', best.allocations, 'ownerNPV cr', (best.value / 1e7).toFixed(2), 'evaluated', best.evaluated, 'ms', Date.now() - t);
+console.log('S0 owner NPV cr', (r0.finance.consolidatedOwner.npvRs / 1e7).toFixed(2), 'factory C saving L', (r0.economics[0].broaderVariableSavingRs / 1e5).toFixed(1));
+console.log('S1 factory C saving L', (best.result.economics[0].broaderVariableSavingRs / 1e5).toFixed(1), 'expired', Math.round(best.result.bridge.expired), 'unalloc', Math.round(best.result.bridge.unallocatedResidual));
+// S2
+const s2 = { ...s0, allocationsMwp: { ...best.allocations, NEW132: 3 }, newCustomer: { ...defaultNewCustomer(seed, true), allocationMwp: 3 } };
+t = Date.now();
+const best2 = findBestAllocation(s2, site, [{ id: 'NEW132', min: 0, max: 7.5, step: 0.25 }], 'owner_npv', baseline);
+console.log('S2 best', best2.allocations, 'ownerNPV cr', (best2.value / 1e7).toFixed(2), 'evaluated', best2.evaluated, 'ms', Date.now() - t, 'new', best2.result.newCustomer);
+t = Date.now();
+const s3 = { ...s2, allocationsMwp: best2.allocations, bess: defaultBess(seed, true) };
+const g = bessGrid(s3, site, [0.5, 1, 2], [1, 2, 4]);
+console.log('BESS grid ms', Date.now() - t, g.recommendation, g.points.map(p => `${p.powerMw}/${p.energyMwh}: ${(p.incrementalNpvRs/1e7).toFixed(2)}cr dis ${Math.round(p.discharged/1000)}MWh`).join(' | '));
