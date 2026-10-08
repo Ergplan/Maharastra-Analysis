@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Term Sheet — Captive Solar Allocation</title>
+<style>
+  @page { size: A4 portrait; margin: 8mm 10mm; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body { font-family: "Helvetica Neue", Arial, sans-serif; color: #1f2a37; font-size: 8.2pt; line-height: 1.22; background: #fff; }
+  .page { width: 190mm; margin: 0 auto; }
+  h1 { font-size: 13.5pt; margin: 0 0 2px; letter-spacing: .2px; }
+  .sub { color: #5b6b7c; font-size: 8.4pt; margin: 0 0 8px; }
+  .meta { display: flex; justify-content: space-between; font-size: 8pt; color: #5b6b7c; margin-bottom: 6px; }
+  /* capacity bar */
+  .bar { display: flex; width: 100%; height: 40px; border-radius: 6px; overflow: hidden; border: 1px solid #cfd5db; }
+  .seg { display: flex; flex-direction: column; justify-content: center; padding: 0 10px; color: #fff; }
+  .seg b { font-size: 12.5pt; line-height: 1.05; }
+  .seg span { font-size: 8pt; opacity: .95; }
+  .seg.a { background: #3A7D44; } .seg.b { background: #7E57C2; } .seg.c { background: #1D6FB8; }
+  .scale { display: flex; justify-content: space-between; font-size: 7.6pt; color: #6b7280; margin: 3px 0 10px; }
+  /* columns */
+  .cols { display: grid; grid-template-columns: 34mm 1fr 1fr 1fr; gap: 0; border: 1px solid #cfd5db; border-radius: 6px; overflow: hidden; }
+  .cols > div { padding: 3px 6px; border-bottom: 1px solid #e6eaee; border-right: 1px solid #e6eaee; }
+  .cols > div:nth-child(4n) { border-right: none; }
+  .cols .hd { background: #f3f5f8; font-weight: 700; font-size: 9pt; }
+  .cols .hd.a { color: #2d6336; } .cols .hd.b { color: #5d3fa0; } .cols .hd.c { color: #15568f; }
+  .cols .lab { background: #fafbfc; font-weight: 600; color: #3b4652; font-size: 8pt; }
+  .big { font-size: 11.5pt; font-weight: 700; line-height: 1.1; }
+  .big small { display: block; font-size: 7.8pt; font-weight: 400; color: #5b6b7c; margin-top: 2px; }
+  .slot { background: #fff; }
+  .slot.tar { background: #fbfaf5; } .slot.lock { background: #f7f9fc; }
+  .note { font-size: 7.2pt; color: #5b6b7c; margin-top: 7px; }
+  .foot { display: flex; justify-content: space-between; margin-top: 6px; font-size: 7.6pt; color: #5b6b7c; border-top: 1px solid #e6eaee; padding-top: 5px; }
+  .sig { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 8px; }
+  .sig div { border-top: 1px solid #9aa3ad; padding-top: 4px; font-size: 7.8pt; color: #5b6b7c; }
+  .tag { display: inline-block; font-size: 7pt; padding: 1px 5px; border-radius: 8px; background: #fff2cc; color: #7a5b00; margin-left: 4px; vertical-align: middle; }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="meta"><span>jouleWise · Ergplan — Captive Solar Optimisation Studio</span><span>Indicative term sheet · draft for discussion · 8 October 2026</span></div>
+  <h1>Capacity allocation &amp; commercial terms — 7.5 MWp captive solar, MH</h1>
+  <p class="sub">Allocation of AC capacity across three offtaker groups under group-captive / open-access supply through the MSEDCL network (33 kV injection). Non-binding; subject to definitive PPAs, MSEDCL/SLDC open-access approvals and MERC regulations in force.</p>
+
+  <div class="bar">
+    <div class="seg a" style="flex: 3"><b>3.0 MW<sub style="font-size:7pt">AC</sub></b><span>Harrshiv + 7 Haldiram stores · existing</span></div>
+    <div class="seg b" style="flex: 4.5"><b>4.5 MW<sub style="font-size:7pt">AC</sub></b><span>Chettinad · new 132 kV group-captive consumer</span></div>
+    <div class="seg c" style="flex: 2.5"><b>2.5 MW<sub style="font-size:7pt">AC</sub></b><span>REL Charging Stations · new</span></div>
+  </div>
+  <div class="scale"><span>0</span><span>Total contracted 10.0 MW<sub>AC</sub> — against 7.5 MWp DC installed (inverter/export MW<sub>AC</sub> to be confirmed; see Capacity basis) <span class="tag">verify</span></span><span>10 MW<sub>AC</sub></span></div>
+
+  <div class="cols">
+    <div class="lab hd">Term</div><div class="hd a">Harrshiv + stores</div><div class="hd b">Chettinad</div><div class="hd c">REL Charging Stations</div>
+
+    <div class="lab">Tariff</div>
+    <div class="slot tar"><div class="big">₹4.00 / kWh<small>ex-bus, on energy credited (offset basis)</small></div></div>
+    <div class="slot tar"><div class="big">₹2.60 / kWh<small>ex-bus, on energy credited (offset basis)</small></div></div>
+    <div class="slot tar"><div class="big">₹2.50 / kWh<small>ex-bus, on energy credited (offset basis)</small></div></div>
+
+    <div class="lab">Lock-in</div>
+    <div class="slot lock"><div class="big">10 years<small>from CoD of allocation; no exit without replacement offtaker</small></div></div>
+    <div class="slot lock"><div class="big">12 months rolling<small>auto-renews monthly; exit on 12 months' notice</small></div></div>
+    <div class="slot lock"><div class="big">15 years<small>from CoD; aligned to charging-asset life</small></div></div>
+
+    <div class="lab">Contracted capacity</div>
+    <div>3.0 MW<sub>AC</sub> (≈3.75 MWp-equivalent share) — Harrshiv 2.25 MW<sub>AC</sub>, stores 0.75 MW<sub>AC</sub> pooled</div>
+    <div>4.5 MW<sub>AC</sub> (≈5.6 MWp-equivalent share); option to step down to 3.0 MW<sub>AC</sub> at each annual review</div>
+    <div>2.5 MW<sub>AC</sub> (≈3.1 MWp-equivalent share); ramp per station commissioning schedule</div>
+
+    <div class="lab">Tariff escalation</div>
+    <div>Nil for years 1–5; 2% p.a. simple from year 6, or as per MERC-approved index</div>
+    <div>Nil within lock-in; re-priced at each 12-month renewal by mutual agreement (cap ±5%)</div>
+    <div>Nil for years 1–10; 1.5% p.a. simple thereafter</div>
+
+    <div class="lab">Billing basis &amp; settlement</div>
+    <div>Monthly, on MSEDCL-credited units (direct + same-band credit); settlement as per MSEDCL practice; lapsed energy not billed</div>
+    <div>Monthly, on credited units at 132 kV meter; utilisation of share &lt;60% for 3 months triggers capacity review</div>
+    <div>Monthly, on credited units; banking per MERC DOA rules; lapsed energy not billed</div>
+
+    <div class="lab">Minimum offtake</div>
+    <div>None (existing load); demand-charge exposure stays with consumer</div>
+    <div>Take-or-pay on 50% of allocated energy after month 6, settled quarterly</div>
+    <div>Take-or-pay on 60% of allocated energy from year 2 (station ramp year 1 exempt)</div>
+
+    <div class="lab">Open-access charges &amp; losses</div>
+    <div>Wheeling, transmission, operating, ToSE, CSS/AS (if any), in-kind losses — to consumer's account as billed</div>
+    <div>Same; 132 kV drawal does not remove the 33 kV wheeling leg — path to be confirmed with MSEDCL/MSETCL</div>
+    <div>Same; LT/HT category per station connection to be confirmed</div>
+
+    <div class="lab">Group-captive eligibility</div>
+    <div>Haldiram group companies — common ownership; ≥26% equity and ≥51% proportional consumption to be evidenced</div>
+    <div>≥26% equity in SPV pro rata to share (≈₹3.5 Cr = 26% × 45% × ₹30 Cr); annual proportionality test; failure → CSS/AS payable by Chettinad</div>
+    <div>Equity subscription pro rata or captive-user agreement; failure → CSS/AS payable by REL</div>
+
+    <div class="lab">Payment &amp; security</div>
+    <div>Net 15 days from invoice; 1.25% p.m. late-payment charge</div>
+    <div>Net 15 days; 2 months' billing as bank guarantee / LC</div>
+    <div>Net 15 days; 3 months' billing as bank guarantee / LC</div>
+
+    <div class="lab">Metering &amp; scheduling</div>
+    <div colspan="3" style="grid-column: 2 / span 3">ABT main + check meters at 33 kV injection (MF 90 — certificate to be furnished); SLDC day-ahead schedule by SPV; consumer-side meters as per MSEDCL; monthly joint meter reading</div>
+
+    <div class="lab">Availability &amp; curtailment</div>
+    <div colspan="3" style="grid-column: 2 / span 3">SPV targets ≥98% availability (plant breakdowns such as 8-Jul-2026 are SPV risk; grid-caused outages are force majeure); SLDC backdown is deemed delivered for take-or-pay, not billable; generation below P90 in a contract year → 5% tariff rebate on shortfall energy</div>
+
+    <div class="lab">Change in law / regulation</div>
+    <div colspan="3" style="grid-column: 2 / span 3">Changes in MERC DOA/banking/ToD rules, CSS/AS, ToSE or duty after signing are passed through to the consumer at cost; parties renegotiate in good faith if a change removes &gt;15% of a consumer's annual saving</div>
+
+    <div class="lab">Termination &amp; exit</div>
+    <div>Early exit: NPV of remaining lock-in margin (tariff − ₹2.50 floor) or replacement offtaker acceptable to SPV</div>
+    <div>Exit on 12 months' notice without penalty; shorter notice → 3 months' average billing as compensation</div>
+    <div>Early exit: 2 years' average billing or replacement offtaker; SPV may re-allocate on 90 days' notice if stations not live by month 18</div>
+
+    <div class="lab">Conditions precedent</div>
+    <div colspan="3" style="grid-column: 2 / span 3">MSEDCL open-access permission per consumer and capacity; group-captive compliance evidence; metering certificate and approved export MW<sub>AC</sub>; resolution of pending MSEDCL items (wheeling/transmission-loss supplementary, recurring debit adjustments); board approvals of all parties</div>
+
+    <div class="lab">Governing law</div>
+    <div colspan="3" style="grid-column: 2 / span 3">Indian law; MERC jurisdiction for regulatory disputes; arbitration (Mumbai seat) for commercial disputes</div>
+  </div>
+
+  <p class="note"><b>Capacity basis.</b> Allocations are in MW<sub>AC</sub> as instructed. The plant is 7.5 MWp DC with inverter/export MW<sub>AC</sub> still undocumented, and 10 MW<sub>AC</sub> contracted exceeds the nameplate — consistent only with (a) augmentation / co-located wind, or (b) non-firm share-based allocations (each consumer receives its share of actual export). Shares are shown as MWp-equivalent in brackets (scaling to be fixed once MW<sub>AC</sub> is confirmed). Modelled (Year &amp; sizing): Chettinad uses ~57% of a 5 MWp share, Harrshiv 82–95%, stores 50–85%; ~4.9 GWh/yr lapses without a battery.</p>
+
+  <div class="sig"><div>For the SPV (Ortusun / group)</div><div>Harrshiv Healthy Foods &amp; More</div><div>Chettinad</div><div>REL Charging Stations</div></div>
+  <div class="foot"><span>Prepared with the Captive Solar Optimisation Studio — bill-calibrated, regulatory verification pending</span><span>Page 1 of 1</span></div>
+</div>
+</body>
+</html>
