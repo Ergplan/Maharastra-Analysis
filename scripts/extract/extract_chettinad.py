@@ -15,7 +15,7 @@ wb = load_workbook(src, data_only=True, read_only=True)
 ws = wb['15 min MH']
 sum_kw = defaultdict(lambda: [0.0] * 96); cnt = defaultdict(lambda: [0] * 96)
 tot_kw = [0.0] * 96; tot_cnt = [0] * 96
-n = 0; monthly_kwh = defaultdict(float); slot_of_block = {}
+n = 0; monthly_kwh = defaultdict(float); slot_of_block = {}; series = defaultdict(lambda: [0.0] * 96)
 for row in ws.iter_rows(min_row=3, values_only=True):
     _, month, day, hour, block, slot, demand = row[:7]
     if month is None or block is None or demand is None: continue
@@ -24,6 +24,7 @@ for row in ws.iter_rows(min_row=3, values_only=True):
     tot_kw[b] += float(demand); tot_cnt[b] += 1
     monthly_kwh[m] += float(demand) * 0.25
     slot_of_block[b] = slot; n += 1
+    series[f"{int(month):02d}-{int(day):02d}"][b] = float(demand)
 monthly = {m: [sum_kw[m][b] / cnt[m][b] if cnt[m][b] else 0 for b in range(96)] for m in sorted(sum_kw)}
 annual = [tot_kw[b] / tot_cnt[b] if tot_cnt[b] else 0 for b in range(96)]
 doc = {
@@ -35,6 +36,8 @@ doc = {
     'annualAvgDayKw': annual,
     'monthlyAvgDayKw': monthly,
     'slotOfBlock': [slot_of_block.get(b) for b in range(96)],
+    'daily': {k: [round(v, 2) for v in series[k]] for k in sorted(series)},
+    'daysPerMonth': {m: sum(1 for k in series if k.startswith(m)) for m in sorted({k[:2] for k in series})},
 }
 json.dump(doc, open(out, 'w'), indent=0)
 print(f"rows={n} annual={doc['annualKwh']/1e6:.3f} GWh avg={sum(annual)/96:.0f} kW peak={max(annual):.0f} kW min={min(annual):.0f} kW")

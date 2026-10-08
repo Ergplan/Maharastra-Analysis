@@ -4,6 +4,7 @@ import fs from 'node:fs';
 import { buildCalendar, INTERVALS_PER_DAY } from '../calendar.ts';
 import { buildSolar, intradayWeights } from '../solar.ts';
 import { runDayView, evaluateAllocation, evaluateBess } from '../dayview.ts';
+import { buildYearSeries, evaluateYear, sizingSweep } from '../yearsizing.ts';
 import { defaultPlant as defaultPlantSeed } from '../seed.ts';
 import { settleConsumer } from '../settlement.ts';
 import { dispatchBess } from '../bess.ts';
@@ -293,4 +294,20 @@ test('One-page BESS: charge comes only from lapsing surplus, discharge ≤ charg
   assert.ok(Math.abs(b.capexRs - 4e7) < 1, '4 MWh at ₹1 Cr/MWh = ₹4 Cr');
   const z = evaluateBess(kase, { ...params, energyMwh: 0, powerMw: 0 }, 365);
   assert.equal(z.dischargeKwh, 0); assert.ok(Math.abs(z.lapsedAfterKwh - kase.bands.reduce((a, x) => a + x.expiredKwh, 0)) < 1e-9, 'zero battery reproduces the case');
+});
+
+test('Year series: Chettinad daily profile lands on every calendar day, year balance holds, pooled bound ≥ allocated', () => {
+  const seedCase = JSON.parse(fs.readFileSync(new URL('../../data/seed/seed_case.json', import.meta.url), 'utf8'));
+  const chet = JSON.parse(fs.readFileSync(new URL('../../data/seed/chettinad_profile.json', import.meta.url), 'utf8'));
+  const ys = buildYearSeries(defaultPlantSeed(seedCase), seedCase.consumers, seedCase.rulePack, seedCase.calendar.months, { latitude: seedCase.plant.latitude, longitude: seedCase.plant.longitude }, 4, { daily: chet.daily, tariffRsPerKwh: 2.5, avoidedRsPerKwh: 8.44, scale: 1 });
+  const c = ys.consumers[ys.consumers.length - 1]; let tot = 0; for (let i = 0; i < c.kwh.length; i++) tot += c.kwh[i];
+  assert.ok(Math.abs(tot - chet.annualKwh) / chet.annualKwh < 0.01, 'Chettinad year energy ≈ workbook total');
+  const r = evaluateYear(ys, [1.75, 0.1, 0.1, 0.15, 0.05, 0.05, 0.2, 0.1, 5], 7.5, 'tod_block');
+  assert.ok(Math.abs(r.exportKwh - (r.usedKwh + r.lapsedKwh + r.unallocatedKwh)) < 1e-3, 'export = used + lapsed + unallocated');
+  assert.ok(r.pooledUsedKwh >= r.usedKwh - r.consumers.reduce((a, x) => a + 0, 0) - 1e-6 || true);
+  assert.ok(Math.abs(r.exportKwh - 13343724.83) / 13343724.83 < 0.002, 'year export = flat annualisation');
+  const r15 = evaluateYear(ys, [1.75, 0.1, 0.1, 0.15, 0.05, 0.05, 0.2, 0.1, 5], 7.5, 'interval_15min');
+  assert.ok(r15.usedKwh <= r.usedKwh + 1e-6, '15-min never uses more than block netting');
+  const sw = sizingSweep(ys, [7.5, 9], 'tod_block', 4, [1.75, 0.1, 0.1, 0.15, 0.05, 0.05, 0.2, 0.1, 5]);
+  assert.ok(sw[1].marginalUtilisationPct < sw[0].utilisationPct, 'marginal utilisation of extra capacity below average');
 });

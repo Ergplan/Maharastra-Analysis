@@ -39,6 +39,10 @@ Requirements: Node ≥ 22.6 (tests use Node's built-in TypeScript type-stripping
 
 The first tab is a printable one-page summary: plant export, useful solar, lapsing, SPV revenue and savings for three allocations on one representative day — current (factory only), the search's recommendation, and a chosen split with a **Chettinad slider** (default 5 MWp; stores keep their recommended shares, the factory takes the remainder). The ToD-zone chart draws consumption bars with the plant export as a translucent overlay (the hatched slice at the top is wasted solar). A **battery block** on the same base (default ₹1 Cr/MWh, 2-hour, charged from lapsing surplus, discharged into evening/night grid demand) shows SPV and owner-group economics for a size grid; "Best for group" / "Best for SPV" pick from it. "Print / PDF" uses the browser's print dialog.
 
+## Year & sizing
+
+Full-year (365 × 96) evaluation with the reported daily export, bill-calibrated loads and Chettinad's own 15-minute series per calendar day: month-by-month useful/lapsing, per-consumer year results, a full-year greedy re-allocation, and a plant-size sweep (4–15 MWp) showing marginal utilisation and payback of each added step.
+
 ## Day view (simple)
 
 The first tab shows one representative day (annual average, or any month's average) for the whole 7.5 MWp plant with **all factories and stores treated as eligible** and solar pooled across them. It draws the ToD-zone supply chart (solar used · in-band credit · grid below the demand line; surplus sold / lapsing above it), a 15-minute timeline, the day's energy balance with losses, and an **Add Chettinad** switch that drops the supplied 15-minute Maharashtra profile (`source-files/Chettinad_Consumption_profile.xlsx` → `src/data/seed/chettinad_profile.json`) onto the residual surplus and reports the gain (extra kWh sold, ₹/yr at ₹2.50, lapsing cut). Existing consumers keep first claim on solar; the new consumer only takes what is left.
